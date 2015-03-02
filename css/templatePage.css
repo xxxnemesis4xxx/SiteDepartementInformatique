@@ -38,11 +38,49 @@ header h1, em
 #titre_menu
 {
     display: inline-block; 
-	position: absolute;
-	width: 150px;
-	border: 0px solid black;
-	vertical-align: top;
-	right: 60px;
+    position: absolute;
+    width: 200px;
+    border: 1px solid darkgray;
+    right: 60px;
     top: 5px;
-	z-index: 150;
+    height : 30px;
+    background : WhiteSmoke;
+}
+
+#titre_menu ul {
+	margin-top : 0px;
+}
+
+#titre_menu ul li {/*
+	margin-left : -25px;
+	list-style-type: none;
+	color : blue;
+	*/
+	list-style-type: none;
+	color : blue;
+	width : 200px;
+	margin-left : -40px;
+	height : 32px;
+}
+
+#titre_menu a {
+	text-decoration: none;
+	margin-left : 25px;
+	top : 20px !important;
+}
+
+#titre_menu ul li ul {
+    display : none;
+    background : WhiteSmoke;
+}
+
+#titre_menu ul li:hover ul {
+	display : inline-block;
+	border: 1px solid darkgray;
+	margin-left : -16px;
+	width : 160px;
+}
+
+#titre_menu ul li ul li:hover {
+	background: yellow;
 }
