@@ -5,22 +5,29 @@
 		setlocale(LC_ALL, 'fr_CA');
 		?>	
 		<title>Template</title>
+		<link rel="stylesheet" href="css/templatePage.css">
+		<script type="text/javascript" script-name="wire-one" src="http://use.edgefonts.net/wire-one.js"></script>
 	</head>
 	</body>
 		<header>
 			<div id="titre_logo">
-				<a href="http://cll.qc.ca" target="_blank"><img src="bck_logo.png" alt="Cégep Lévis-Lauzon" /></a>
+				<a href="http://cll.qc.ca" target="_blank"><img src="images/logoLevis.png" alt="Cégep Lévis-Lauzon" /></a>
 			</div>
 			<div id="titre_principal">
 				<h1>Techniques de l'informatique </h1>
 			</div>
 			<div id="titre_menu">
-				<ul id="menu">
+				<ul>
 					<li><a href="#1">Accès Rapides</a>
 						<ul class="menuderoulant">
-							<li><a href="#2">Omnivox </a></li>
-							<li><a href="#3">Messagerie</a></li>
-							<li><a href="#4">Repro+</a></li>
+							<li><a href="#2">
+								<span>Omnivox</span> 
+							</a></li>
+							<li><a href="#3">
+								<span>Messagerie</span>
+							</a></li>
+							<li><a href="#4">
+								<span>Repro+<</a></li>
 							<li><a href="#5">Calendrier scolaire</a></li>
 							<li><a href="#6">Repertoire du personnel</a></li>
 							<li><a href="#7">Stage en entreprise</a></li>
