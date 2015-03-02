@@ -5,19 +5,17 @@
 		setlocale(LC_ALL, 'fr_CA');
 		?>	
 		<title>Template</title>
+		<link rel="stylesheet" href="css/templatePage.css">
 	</head>
 	</body>
 		<header>
 			<div id="titre_logo">
-					<a href="http://cll.qc.ca" target="_blank"><img src="bck_logo.png" alt="Cégep Lévis-Lauzon" /></a>
+				<a href="http://cll.qc.ca" target="_blank"><img src="images/logoLevis.png" alt="Cégep Lévis-Lauzon" /></a>
 			</div>
-			
 			<div id="titre_principal">
-			<h1>Techniques de l'informatique </h1>
+				<h1>Techniques de l'informatique </h1>
 			</div>
-			
 			<div id="titre_menu">
-			
 				<ul id="menu">
 					<li><a href="#1">Accès Rapides</a>
 						<ul class="menuderoulant">
