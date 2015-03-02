@@ -6,6 +6,7 @@
 		?>	
 		<title>Template</title>
 		<link rel="stylesheet" href="css/templatePage.css">
+		<script type="text/javascript" script-name="wire-one" src="http://use.edgefonts.net/wire-one.js"></script>
 	</head>
 	</body>
 		<header>
