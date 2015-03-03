@@ -22,16 +22,19 @@
 						<span>Accès Rapides</span>
 					</a>
 						<ul class="menuderoulant">
-							<li><a href="https://cll.omnivox.ca/intr/Module/Identification/Login/Login.aspx?ReturnUrl=/intr">
+							<li><a href="#2">
 								<span>Omnivox</span> 
 							</a></li>
-							<li><a href="https://alphonse2.clevislauzon.qc.ca/gw/webacc">
+							<li><a href="#3">
 								<span>Messagerie</span>
 							</a></li>
-							<li><a href="https://repro.clevislauzon.qc.ca/sysrepro/login/login.asp">
+							<li><a href="#4">
 								<span>Repro+</span>
 							</a></li>
-							<li><a href="http://cll.qc.ca/repertoire-personnel/">
+							<li><a href="#5">
+								<span>Calendrier scolaire</span>
+							</a></li>
+							<li><a href="#6">
 								<span>Repertoire du personnel</span>
 							</a></li>
 							<li><a href="#7">
@@ -43,16 +46,16 @@
 							<li><a href="http://www.clevislauzon.qc.ca/informatique/PDEA%20Version%20officielle%202010.pdf" target="_blank" >
 								<span>PDÉA</span>
 							</a></li>
-							<li><a href="http://www.cll.qc.ca/informatique/index2.php">
+							<li><a href="#8">
 								<span>Accueil</span>
 							</a></li>
-							<li><a href="http://cll.qc.ca/">
+							<li><a href="#9">
 								<span>Site du cégep</span>
 							</a></li>
-							<li><a href="https://www.facebook.com/pages/D%C3%A9partement-dinformatique-C%C3%A9gep-L%C3%A9vis-Lauzon/127878897268010">
+							<li><a href="#9">
 								<span>Facebook</span>
 							</a></li>
-							<li><a href="#bas">
+							<li><a href="#10">
 								<span>Nous joindre</span>
 							</a></li>
 						</ul>
