@@ -39,7 +39,7 @@
 								<span>Stage en entreprise</span>
 							</a></li>
 							<li><a href="http://cll.qc.ca/programmes/alternance-travail-etudes/"  target="_blank" >
-								Alternance Travail-Études
+								<span>Alternance Travail-Études</span>
 							</a></li>
 							<li><a href="http://www.clevislauzon.qc.ca/informatique/PDEA%20Version%20officielle%202010.pdf" target="_blank" >
 								<span>PDÉA</span>

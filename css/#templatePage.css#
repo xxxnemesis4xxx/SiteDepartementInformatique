@@ -69,7 +69,7 @@ header h1, em
 	height : 32px;
 }
 
-#titre_menu a {
+#titre_menu a {gu
 	display : block;
 	margin-top : 6px;
 	margin-left : 25px;
