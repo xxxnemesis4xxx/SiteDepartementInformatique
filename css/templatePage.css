@@ -40,11 +40,23 @@ header h1, em
     display: inline-block; 
     position: absolute;
     width: 200px;
-    border: 1px solid darkgray;
     right: 60px;
     top: 5px;
     height : 30px;
-    background : WhiteSmoke;
+	background-image: -webkit-linear-gradient(top, #ffffff, #8f8f8f);
+	background-image: -moz-linear-gradient(top, #ffffff, #8f8f8f);
+	background-image: -ms-linear-gradient(top, #ffffff, #8f8f8f);
+	background-image: -o-linear-gradient(top, #ffffff, #8f8f8f);
+	background-image: linear-gradient(to bottom, #ffffff, #8f8f8f);
+	-webkit-border-radius: 6;
+	-moz-border-radius: 6;
+	-webkit-box-shadow: 0px 1px 3px #666666;
+	-moz-box-shadow: 0px 1px 3px #666666;
+	box-shadow: 0px 1px 3px #666666;
+	font-family: Georgia;
+	color: #000e14;
+	border: solid #a6a6a6 2px;
+	border-radius: 6px;
 }
 
 #titre_menu:hover {
@@ -78,7 +90,20 @@ header h1, em
 
 #titre_menu ul li ul {
     display : none;
-    background : WhiteSmoke;
+    background-image: -webkit-linear-gradient(top, #ffffff, #8f8f8f);
+	background-image: -moz-linear-gradient(top, #ffffff, #8f8f8f);
+	background-image: -ms-linear-gradient(top, #ffffff, #8f8f8f);
+	background-image: -o-linear-gradient(top, #ffffff, #8f8f8f);
+	background-image: linear-gradient(to bottom, #ffffff, #8f8f8f);
+	-webkit-border-radius: 6;
+	-moz-border-radius: 6;
+	-webkit-box-shadow: 0px 1px 3px #666666;
+	-moz-box-shadow: 0px 1px 3px #666666;
+	box-shadow: 0px 1px 3px #666666;
+	font-family: Georgia;
+	color: #000e14;
+	border: solid #a6a6a6 2px;
+	border-radius: 6px;
     margin-top : 7px;
     margin-left : -1px;
 }

@@ -18,7 +18,9 @@
 			</div>
 			<div id="titre_menu">
 				<ul>
-					<li><a href="#1">Accès Rapides</a>
+					<li><a href="#1">
+						<span>Accès Rapides</span>
+					</a>
 						<ul class="menuderoulant">
 							<li><a href="#2">
 								<span>Omnivox</span> 
