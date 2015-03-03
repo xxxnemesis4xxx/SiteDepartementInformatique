@@ -1,6 +1,4 @@
 create database IF NOT EXISTS departementinformatique;
-use ambulancechicoutimi;
-
 
 DROP TABLE IF EXISTS departementinformatique.lienmenuderoulant;
 

@@ -168,6 +168,67 @@ header h1, em
 	min-width : 960px;
 }
 
+#pied-de-page div .largeur {
+	color : #e4e4e4;
+}
+
+.largeur {
+	width : 960px;
+	margin : 0 auto;
+}
+
+#pied-de-page .colonne {
+	background : transparent url("../images/font_ligne_verticale.png") no-repeat 0 0;
+	padding : 0 26px;
+	width : 908;
+	position : relative;
+}
+
+#pied-de-page .a-propos {
+	float : left;
+	padding : 22px 20px 0 0;
+	width : 202px;
+}
+
+#pied-de-page .carte {
+	float : left;
+	padding : 22px 0 0 21px;
+	width : 182px;
+}
+
+#pied-de-page .coordonnees {
+	float : left;
+	padding : 22px 0 0 20px;
+	width : 247px;
+}
+
+#pied-de-page .medias-sociaux {
+	padding : 0 0 0 20px;
+	width : 247px;
+	float : left;
+}
+
+#pied-de-page .liens {
+	position : absolute;
+	top : 0;
+	right : 26px;
+	padding : 42px 0 0 19px;
+	width : 195px;
+}
+
+.clearboth {
+	clear : both;
+	content : '.';
+	font-size : 0px;
+	line-height : 0px;
+	height : 0px;
+}
+
+#pied-de-page div .copyright {
+	position : relative;
+	min-width : 960px;
+}
+	
 
 
 
