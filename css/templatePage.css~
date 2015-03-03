@@ -85,13 +85,7 @@ header h1, em
 	display : block;
 	margin-top : 6px;
 	margin-left : 25px;
-	color : black;
-	font-family: Georgia;
 	text-decoration: none;
-}
-
-#titre_menu ul li ul li a:hover {
-	color : #4183c4;
 }
 
 #titre_menu ul li ul {
