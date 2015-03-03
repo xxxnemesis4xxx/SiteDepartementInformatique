@@ -283,5 +283,68 @@ ul {
 	display : none;
 }
 
+#pied-de-page .liens > div.premier {
+	background : none;
+	height : 27px;
+	position : relative;
+}
+
+#pied-de-page .liens > div {
+	background : transparent url("../images/ligne_horizontale.png") repeat-x 0 0;
+	padding : 20px 0 ;
+}
+
+#pied-de-page .liens .menu-personnel, #pied-de-page .liens .menu-omnivox{
+	margin : 0 20px;
+	width : 155px;
+}
+
+#pied-de-page .liens .menu-personnel a {
+	display : block;
+	font-size : 11px;
+	font-weight : bold;
+	text-transform : uppercase;
+	color : #e4e4e4;
+	padding : 4px 0 4px 60px;
+	width : 95px;
+	background : transparent url("../images/repertoire.png") no-repeat 0 center;
+}
+
+.menu-omnivox ul {
+	border : 1px solid #bdbdbd;
+	position : relative;
+	-webkit-border-radius : 2px;
+	-moz-border-radius : 2px;
+	border-radius : 2px;
+}
+
+#pied-de-page .liens .menu-omnivox a {
+	font-size : 22px;
+	text-transform : uppercase;
+	padding-top : 10px;
+	padding-bottom : 8px;
+	color : #4c4c4c;
+	background : whitesmoke url("../images/bouton_gris.png") repeat-x center center;
+}
+
+.menu-omnivox ul li a {
+	display : block;
+	border : 1px solid #fcfcfc;
+	font-size : 11px;
+	font-weight : bold;
+	color : #444444;
+	padding : 3px 6px;
+	text-decoration : none;
+}
+
+#pied-de-page .liens .menu-omnivox a img {
+	padding-left : 6px;
+}
+
+.menu-omnivox ul li a img {
+	margin-left : 5px;
+}
+
+
 
 
