@@ -139,6 +139,35 @@ header h1, em
 	padding-top : 10px !important;
 }
 
+/*********************************
+*
+*
+*
+*			CSS for FOOTER
+*
+*
+*
+**********************************/
+
+#pied-de-page {
+	display : block;
+	margin : 0;
+	padding : 0;
+	border : 0;
+	font-size : 100%;
+	vertical-align : baseline;
+}
+
+#font-noir {
+	background : transparent url("../images/font_footer.png") repeat center 0;
+	min-width: 960px;
+}
+
+#fond-noir-fade {
+	background : transparent url("../images/font_fader.png") repeat-x center 0;
+	min-width : 960px;
+}
+
 
 
 
