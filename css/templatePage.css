@@ -10,6 +10,10 @@ header h1, em
 	font-size: 40px;
 }
 
+ul {
+	list-style : none;
+}
+
 #titre_logo
 {
     display: inline-block; 
@@ -155,6 +159,7 @@ header h1, em
 	padding : 0;
 	border : 0;
 	font-size : 100%;
+	font : inherit;
 	vertical-align : baseline;
 }
 
@@ -168,7 +173,7 @@ header h1, em
 	min-width : 960px;
 }
 
-#pied-de-page div .largeur {
+#pied-de-page div.largeur {
 	color : #e4e4e4;
 }
 
@@ -224,11 +229,59 @@ header h1, em
 	height : 0px;
 }
 
-#pied-de-page div .copyright {
+#pied-de-page div.copyright {
 	position : relative;
 	min-width : 960px;
 }
 	
+#pied-de-page .colonne h3 {
+	padding-bottom : 2px;
+}
+
+#pied-de-page h3 {
+	font-size : 12px;
+	text-transform : uppercase;
+}
+
+#pied-de-page p {
+	margin-top : 0;
+}
+
+#pied-de-page .carte a {
+	display : block;
+	width : 182px;
+	height : 228px;
+	margin-top : 2px;
+	overflow : hidden;
+}
+
+#pied-de-page .medias-sociaux ul {
+	margin : 4px 0 0 0;
+	height : 48px;
+}
+
+#pied-de-page .medias-sociaux ul li P{
+	display : block;
+	float : left;
+	padding-right : 11px;
+	height : 48px;
+}
+
+#pied-de-page .medias-sociaux ul li.facebook a {
+	background-position : 0 0;
+}
+
+#pied-de-page .medias-sociaux ul li a {
+	display : inline-block;
+	width : 48px;
+	height : 48px;
+	background : transparent url("../images/sociaux.png") repeat 0 0;
+	text-decoration : none;
+}
+
+#pied-de-page .medias-sociaux ul li a span {
+	display : none;
+}
 
 
 
