@@ -8,7 +8,7 @@
 		<link rel="stylesheet" href="css/templatePage.css">
 		<!-- Adobe Text Style for Title -->
 		<script type="text/javascript" script-name="wire-one" src="http://use.edgefonts.net/wire-one.js"></script>
-		<script src="jquery-1.11.2.min.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 		<script type="text/javascript" src="javascript/verticalmenu.js"></script>
 	</head>
 	<body>
@@ -99,7 +99,7 @@
 						<span>Item 4</span>
 					</a>
 				</li>
-				<li class="active">
+				<li class="last">
 					<a href="#">
 						<span>Item 5</span>
 					</a>
