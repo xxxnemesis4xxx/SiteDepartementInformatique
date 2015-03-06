@@ -55,6 +55,10 @@
 				</ul>
 			</div>
 		</header>
+		
+		<div style="height:600px;">
+		</div>
+		
 		<footer id="pied-de-page">
 			<div id="font-noir">
 				<div id="fond-noir-fade">
