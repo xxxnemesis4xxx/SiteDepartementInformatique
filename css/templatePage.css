@@ -246,11 +246,11 @@ body {
   border-bottom: none;
 }
 
-.verticalmenu > ul > li.has-sub > a span {
+.verticalmenu > ul > li.subitems > a span {
   background: url(images/icon_plus.png) 96% center no-repeat;
 }
 
-.verticalmenu > ul > li.has-sub.active > a span {
+.verticalmenu > ul > li.subitems.active > a span {
   background: url(images/icon_minus.png) 96% center no-repeat;
 }
 

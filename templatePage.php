@@ -6,7 +6,10 @@
 		?>	
 		<title>Template</title>
 		<link rel="stylesheet" href="css/templatePage.css">
+		<!-- Adobe Text Style for Title -->
 		<script type="text/javascript" script-name="wire-one" src="http://use.edgefonts.net/wire-one.js"></script>
+		<script src="jquery-1.11.2.min.js"></script>
+		<script type="text/javascript" src="javascript/verticalmenu.js"></script>
 	</head>
 	<body>
 		<header>
@@ -57,14 +60,17 @@
 		</header>
 		
 		<div class="verticalmenu">
-			<ul class="vertical_menu">
+			<ul>
 				<li class="active">
 					<a href="#">
 						<span>Item 1</span>
 					</a>
 				</li>
 				<li class="subitems">
-					<span>Item 2</span
+					<a href="#">
+						<span>Item 2</span>
+					</a>
+					
 					<ul>
 						<li>
 							<a href="#">
@@ -76,12 +82,13 @@
 								<span>Item 2</span>
 							</a>
 						</li>
-						<li>
+						<li class="last">
 							<a href="#">
 								<span>Item 3</span>
 							</a>
 						</li>
 					</ul>
+				</li>
 				<li class="active">
 					<a href="#">
 						<span>Item 3</span>
