@@ -73,7 +73,33 @@ body {
 	border: solid #a6a6a6 2px;
 	border-radius: 6px;
 }
-	
+
+.menu a {
+	display : block;
+	height : 30px;
+	margin-top : -8px;
+	margin-left : -10px;
+}
+
+.menu:hover .menuderoulant {
+	display : block;
+}
+
+.menuderoulant {
+	display : none;
+	width : 200px;
+	font-size : 16px;
+}
+
+.menuderoulant li {
+	height : 24px;
+}
+
+.menuderoulant a {
+	margin-left : -50px;
+}
+
+
 
 /*********************************
 *
