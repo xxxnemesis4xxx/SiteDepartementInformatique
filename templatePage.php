@@ -123,7 +123,7 @@
 										</nav>
 									</div>
 														
-									<div>
+									<div class="deuxieme">
 									</div>
 														
 									<div class="dernier">

@@ -285,11 +285,20 @@ ul {
 
 #pied-de-page .liens > div.premier {
 	background : none;
-	height : 27px;
+	//height : 27px;
 	position : relative;
+	height : 70px;
+	margin-top : 40%;
 }
 
+/*
 #pied-de-page .liens > div {
+	background : transparent url("../images/ligne_horizontale.png") repeat-x 0 0;
+	padding : 20px 0 ;
+}
+*/
+
+.deuxieme {
 	background : transparent url("../images/ligne_horizontale.png") repeat-x 0 0;
 	padding : 20px 0 ;
 }
@@ -348,6 +357,10 @@ ul {
 
 .menu-omnivox ul li a img {
 	margin-left : 5px;
+}
+
+.dernier {
+	margin-top : -10%;
 }
 
 
