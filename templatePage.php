@@ -56,34 +56,50 @@
 			</div>
 		</header>
 		
-		<ul class="vertical_menu">
-			<li>
-				<a href="#">
-					<span>Item 1</span>
-				</a>
-			</li>
-			<li>
-				<a href="#">
-					<span>Item 2</span>
-				</a>
-			</li>
-			<li>
-				<a href="#">
-					<span>Item 3</span>
-				</a>
-			</li>
-			<li>
-				<a href="#">
-					<span>Item 4</span>
-				</a>
-			</li>
-			<li>
-				<a href="#">
-					<span>Item 5</span>
-				</a>
-			</li>
-			
-		</ul>
+		<div class="verticalmenu">
+			<ul class="vertical_menu">
+				<li class="active">
+					<a href="#">
+						<span>Item 1</span>
+					</a>
+				</li>
+				<li class="subitems">
+					<span>Item 2</span
+					<ul>
+						<li>
+							<a href="#">
+								<span>Item 1</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<span>Item 2</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<span>Item 3</span>
+							</a>
+						</li>
+					</ul>
+				<li class="active">
+					<a href="#">
+						<span>Item 3</span>
+					</a>
+				</li>
+				<li class="active"> 
+					<a href="#">
+						<span>Item 4</span>
+					</a>
+				</li>
+				<li class="active">
+					<a href="#">
+						<span>Item 5</span>
+					</a>
+				</li>
+				
+			</ul>
+		</div>
 		
 		<footer id="pied-de-page">
 			<div id="font-noir">
