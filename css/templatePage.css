@@ -327,7 +327,7 @@ ul {
 	background : whitesmoke url("../images/bouton_gris.png") repeat-x center center;
 }
 
-.menu-omnivox ul li {
+.menu-omnivox ul li, .menu-personnel ul li{
 	margin-left : -40px;
 	width : 155px;
 }
