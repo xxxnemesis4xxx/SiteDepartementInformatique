@@ -319,12 +319,17 @@ ul {
 }
 
 #pied-de-page .liens .menu-omnivox a {
-	font-size : 22px;
+	font-size : 20px;
 	text-transform : uppercase;
 	padding-top : 10px;
 	padding-bottom : 8px;
 	color : #4c4c4c;
 	background : whitesmoke url("../images/bouton_gris.png") repeat-x center center;
+}
+
+.menu-omnivox ul li {
+	margin-left : -40px;
+	width : 155px;
 }
 
 .menu-omnivox ul li a {
