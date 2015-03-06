@@ -147,7 +147,7 @@ ul {
 *
 *
 *
-*			CSS for FOOTER
+*			CSS for FOOTER 
 *
 *
 *
@@ -291,13 +291,6 @@ ul {
 	margin-top : 40%;
 }
 
-/*
-#pied-de-page .liens > div {
-	background : transparent url("../images/ligne_horizontale.png") repeat-x 0 0;
-	padding : 20px 0 ;
-}
-*/
-
 .deuxieme {
 	background : transparent url("../images/ligne_horizontale.png") repeat-x 0 0;
 	padding : 20px 0 ;
@@ -361,6 +354,14 @@ ul {
 
 .dernier {
 	margin-top : -10%;
+}
+
+.coordonnees a {
+	color : #A58EA2;
+}
+
+.coordonnees a:hover {
+	color : #D3CCC6; 
 }
 
 
