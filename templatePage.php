@@ -16,7 +16,7 @@
 			<div id="titre_principal">
 				<h1>Techniques de l'informatique </h1>
 			</div>
-			<div id="titre_menu">
+			<div class="menu">
 				<ul>
 					<li><a href="#1">
 						<span>Accès Rapides</span>
