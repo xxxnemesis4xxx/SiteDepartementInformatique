@@ -56,7 +56,7 @@
 			</div>
 		</header>
 		
-		<ul>
+		<ul class="vertical_menu">
 			<li>
 				<a href="#">
 					<span>Item 1</span>
