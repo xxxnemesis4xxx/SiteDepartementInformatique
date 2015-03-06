@@ -8,7 +8,7 @@
 		<link rel="stylesheet" href="css/templatePage.css">
 		<script type="text/javascript" script-name="wire-one" src="http://use.edgefonts.net/wire-one.js"></script>
 	</head>
-	</body>
+	<body>
 		<header>
 			<div id="titre_logo">
 				<a href="http://cll.qc.ca" target="_blank"><img src="images/logoLevis.png" alt="Cégep Lévis-Lauzon" /></a>

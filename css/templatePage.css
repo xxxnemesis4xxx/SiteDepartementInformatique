@@ -14,6 +14,10 @@ ul {
 	list-style : none;
 }
 
+body {
+	margin: 0px;
+}
+
 #titre_logo
 {
     display: inline-block; 
@@ -285,7 +289,6 @@ ul {
 
 #pied-de-page .liens > div.premier {
 	background : none;
-	//height : 27px;
 	position : relative;
 	height : 70px;
 	margin-top : 40%;
