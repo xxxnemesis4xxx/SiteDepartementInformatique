@@ -72,7 +72,6 @@
 		    		</span>
 		    	</a>
 		    	<ul>
-		    	<!--
 				<a href="#" style="border-left : 5px solid #008747">
 					<span>
 						Gestion
@@ -88,7 +87,6 @@
 						Réseau
 					</span>
 				</a>
-			-->
 		    	</ul>
 		    </li>
 		    <li>
@@ -106,35 +104,35 @@
 		    	</a>
 		    </li>
 		    <li>
-		    	<a href="#" style="border-left : 5px solid #fecf54">
+		    	<a href="#" style="border-left : 5px solid #1A0DDB">
 		    		<span>
 		    			Rallye
 		    		</span>
 		    	</a>
 		    </li>
 		    <li>
-		    	<a href="#" style="border-left : 5px solid #fecf54">
+		    	<a href="#" style="border-left : 5px solid #6800C8">
 		    		<span>
 		    			Photos
 		    		</span>
 		    	</a>
 		    </li>
 		    <li>
-		    	<a href="#" style="border-left : 5px solid #fecf54">
+		    	<a href="#" style="border-left : 5px solid #CB4CD3">
 		    		<span>
 		    			Vidéo
 		    		</span>
 		    	</a>
 		    </li>
 		    <li>
-		    	<a href="#" style="border-left : 5px solid #fecf54">
+		    	<a href="#" style="border-left : 5px solid #2B2F56">
 		    		<span>
 		    			Foire de l'emploie
 		    		</span>
 		    	</a>
 		    </li>
 		    <li>
-			 <a href="#" style="border-left : 5px solid #cf2130">
+			 <a href="#" style="border-left : 5px solid #EFEC00">
 			 	<span>
 			 		Club Robotique
 			 	</span>
@@ -146,30 +144,220 @@
 		    			Enseignants
 		    		</span>
 		    	</a>
+		    	<ul>
+		    		<li>
+		    			<a href="#">
+		    				<span>
+		    					Actuellement
+		    				</span>
+		    			</a>
+		    			<ul>
+						<li>
+							<a href="#">
+								<span>
+									Yvan Morrissey
+								</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<span>
+									Stéphane Mercier
+								</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<span>
+									Christian Asselin
+								</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<span>
+									Serge Lévesque
+								</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<span>
+									Olivier Lafleur
+								</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<span>
+									Mélissa Clermont
+								</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<span>
+									Gilles Champagne
+								</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<span>
+									Marc Deslandes
+								</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<span>
+									Nelson Marceau
+								</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<span>
+									Lise Provencher
+								</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<span>
+									Jocelyne Lapointe
+								</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<span>
+									Josée Lainesse
+								</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<span>
+									Guillaume Michaud
+								</span>
+							</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+		    			<a href="#">
+		    				<span>
+		    					Technicien(s)
+		    				</span>
+		    			</a>
+		    			<ul>
+						<li>
+							<a href="#">
+								<span>
+									Louis-Philippe Normand
+								</span>
+							</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+		    			<a href="#">
+		    				<span>
+		    					À la retraite
+		    				</span>
+		    			</a>
+		    			<ul>
+						<li>
+							<a href="#">
+								<span>
+									Luce Morin
+								</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<span>
+									Danielle Théberge
+								</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<span>
+									Nicolas Morency
+								</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<span>
+									Richard Landry
+								</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<span>
+									Jacques Chabot
+								</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<span>
+									Normand Lemyre
+								</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<span>
+									André Charron
+								</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<span>
+									Pierre rajotte
+								</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<span>
+									Tuy Nguyen
+								</span>
+							</a>
+						</li>
+					</ul>
+				</li>
+		    		
 		    </li>
 		    <li>
-		    	<a href="#" style="border-left : 5px solid #fecf54">
+		    	<a href="#" style="border-left : 5px solid #4B7347">
 		    		<span>
 		    			MSDNAA
 		    		</span>
 		    	</a>
 		    </li>
 		    <li>
-		    	<a href="#" style="border-left : 5px solid #fecf54">
+		    	<a href="#" style="border-left : 5px solid #0CC291">
 		    		<span>
 		    			PDEA
 		    		</span>
 		    	</a>
 		    </li>
 		    <li>
-		    	<a href="#" style="border-left : 5px solid #fecf54">
+		    	<a href="#" style="border-left : 5px solid #9AFF3C">
 		    		<span>
 		    			Alternance Travail-Études
 		    		</span>
 		    	</a>
 		    </li>
 		    <li>
-		    	<a href="#" style="border-left : 5px solid #fecf54">
+		    	<a href="#" style="border-left : 5px solid #FF6100">
 		    		<span>
 		    			Remise des diplômes
 		    		</span>
