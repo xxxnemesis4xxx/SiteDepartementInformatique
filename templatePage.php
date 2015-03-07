@@ -95,7 +95,6 @@
 							. (($current["openNewPage"] == true)?"target='_blank' ":"") 
 							. "style='border-left : 5px solid #" . $current["htmlCouleur"] 
 							. "'><span>" . utf8_encode($current["nomLien"]) . "</span></a><ul>";
-							$newSecondLayer = true;
 						} elseif ($current["layer"] == 2 and $next["layer"] == 2) {
 							echo "<li><a href='". $current["lien"] . "' " 
 							. (($current["openNewPage"] == true)?"target='_blank' ":"") 
@@ -106,8 +105,28 @@
 							. (($current["openNewPage"] == true)?"target='_blank' ":"") 
 							. "style='border-left : 5px solid #" . $current["htmlCouleur"] 
 							. "'><span>" . utf8_encode($current["nomLien"]) . "</span></a></li></ul></li>";
+						} elseif ($current["layer"] == 2 and $next["layer"] == 3) {
+							echo "<li><a href='". $current["lien"] . "' " 
+							. (($current["openNewPage"] == true)?"target='_blank' ":"") 
+							. "style='border-left : 5px solid #" . $current["htmlCouleur"] 
+							. "'><span>" . utf8_encode($current["nomLien"]) . "</span></a><ul>";
+						} elseif ($current["layer"] == 3 and $next["layer"] == 1) {
+							echo "<li><a href='". $current["lien"] . "' " 
+							. (($current["openNewPage"] == true)?"target='_blank' ":"") 
+							. "style='border-left : 5px solid #" . $current["htmlCouleur"] 
+							. "'><span>" . utf8_encode($current["nomLien"]) . "</span></a></li></ul></li></ul></li>";
+						} elseif ($current["layer"] == 3 and $next["layer"] == 3) {
+							echo "<li><a href='". $current["lien"] . "' " 
+							. (($current["openNewPage"] == true)?"target='_blank' ":"") 
+							. "style='border-left : 5px solid #" . $current["htmlCouleur"] 
+							. "'><span>" . utf8_encode($current["nomLien"]) . "</span></a></li>";
+						} elseif ($current["layer"] == 3 and $next["layer"] == 2) {
+							echo "<li><a href='". $current["lien"] . "' " 
+							. (($current["openNewPage"] == true)?"target='_blank' ":"") 
+							. "style='border-left : 5px solid #" . $current["htmlCouleur"] 
+							. "'><span>" . utf8_encode($current["nomLien"]) . "</span></a></li></ul></li>";
 						}
-						
+								
 						$current = $next;
 					}
 				}
