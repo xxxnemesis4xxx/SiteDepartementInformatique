@@ -71,18 +71,18 @@
 						<span>Item 2</span>
 					</a>
 					
-					<ul>
+					<ul class="second_layer">
 						<li>
-							<a href="#" class="second_layer">
+							<a href="#" >
 								<span>Item 1</span>
 							</a>
 						</li>
 						<li>
-							<a href="#" class="second_layer">
+							<a href="#" >
 								<span>Item 2</span>
 							</a>
 						</li>
-						<li class="second_layer last">
+						<li class="last">
 							<a href="#">
 								<span>Item 3</span>
 							</a>
