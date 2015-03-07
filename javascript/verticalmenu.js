@@ -1,3 +1,6 @@
+/*
+Credit : http://cssmenumaker.com/menu/modern-jquery-accordion-menu#
+*/
 ( function( $ ) {
 	$( document ).ready(function() {
 		$('.verticalmenu > ul > li > a').click(function() {
@@ -20,6 +23,3 @@
 		});
 	});
 } )( jQuery );
-
-
-

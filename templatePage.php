@@ -8,7 +8,7 @@
 		<link rel="stylesheet" href="css/templatePage.css">
 		<!-- Adobe Text Style for Title -->
 		<script type="text/javascript" script-name="wire-one" src="http://use.edgefonts.net/wire-one.js"></script>
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+		<script type="text/javascript" src="javascript/jquery-1.11.2.min.js"></script>
 		<script type="text/javascript" src="javascript/verticalmenu.js"></script>
 	</head>
 	<body>
@@ -62,27 +62,27 @@
 		<div class="verticalmenu">
 			<ul>
 				<li class="active">
-					<a href="#">
-						<span>Item 1</span>
+					<a class="vertical_title">
+						<span>Titre</span>
 					</a>
 				</li>
 				<li class="subitems">
-					<a href="#">
+					<a href="#" class="first_layer">
 						<span>Item 2</span>
 					</a>
 					
 					<ul>
 						<li>
-							<a href="#">
+							<a href="#" class="second_layer">
 								<span>Item 1</span>
 							</a>
 						</li>
 						<li>
-							<a href="#">
+							<a href="#" class="second_layer">
 								<span>Item 2</span>
 							</a>
 						</li>
-						<li class="last">
+						<li class="second_layer last">
 							<a href="#">
 								<span>Item 3</span>
 							</a>
@@ -90,17 +90,17 @@
 					</ul>
 				</li>
 				<li class="active">
-					<a href="#">
+					<a href="#" class="first_layer">
 						<span>Item 3</span>
 					</a>
 				</li>
 				<li class="active"> 
-					<a href="#">
+					<a href="#" class="first_layer">
 						<span>Item 4</span>
 					</a>
 				</li>
 				<li class="last">
-					<a href="#">
+					<a href="#" class="first_layer">
 						<span>Item 5</span>
 					</a>
 				</li>
