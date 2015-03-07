@@ -29,6 +29,8 @@ nomLien VARCHAR(100) NOT NULL,
 lien VARCHAR(20000),
 position INT NOT NULL,
 layer INT NOT NULL,
-referenceMenuId INT,
-CONSTRAINT fk_verticalmenu_verticalmenu FOREIGN KEY (`referenceMenuId`) REFERENCES departementinformatique.verticalmenu(`menuId`) ON UPDATE CASCADE
+renderHtmlPosition INT,
+htmlCouleur VARCHAR(6),
+CONSTRAINT fk_verticalmenu_renderHtmlPosition FOREIGN KEY (`renderHtmlPosition`) REFERENCES departementinformatique.verticalmenu(`menuId`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=INNODB;
+
