@@ -82,13 +82,33 @@
 				$result = $conn->query($sql);
 
 				if ($result->num_rows > 0) {
-					// output data of each row
-					while($row = $result->fetch_assoc()) {
+					$current = $result->fetch_assoc();
+					while($current != null) {
+						$next = $result->fetch_assoc();
+						if ($current["layer"] == 1 and $next["layer"] != 2) {
+							echo "<li><a href='". $current["lien"] . "' " 
+							. (($current["openNewPage"] == true)?"target='_blank' ":"") 
+							. "style='border-left : 5px solid #" . $current["htmlCouleur"] 
+							. "'><span>" . utf8_encode($current["nomLien"]) . "</span></a></li>";
+						} elseif ($current["layer"] == 1) {
+							echo "<li><a href='". $current["lien"] . "' " 
+							. (($current["openNewPage"] == true)?"target='_blank' ":"") 
+							. "style='border-left : 5px solid #" . $current["htmlCouleur"] 
+							. "'><span>" . utf8_encode($current["nomLien"]) . "</span></a><ul>";
+							$newSecondLayer = true;
+						} elseif ($current["layer"] == 2 and $next["layer"] == 2) {
+							echo "<li><a href='". $current["lien"] . "' " 
+							. (($current["openNewPage"] == true)?"target='_blank' ":"") 
+							. "style='border-left : 5px solid #" . $current["htmlCouleur"] 
+							. "'><span>" . utf8_encode($current["nomLien"]) . "</span></a></li>";
+						} elseif ($current["layer"] == 2 and $next["layer"] == 1) {
+							echo "<li><a href='". $current["lien"] . "' " 
+							. (($current["openNewPage"] == true)?"target='_blank' ":"") 
+							. "style='border-left : 5px solid #" . $current["htmlCouleur"] 
+							. "'><span>" . utf8_encode($current["nomLien"]) . "</span></a></li></ul></li>";
+						}
 						
-					    echo "<li><a href='". $row["lien"] . "' " 
-					    . (($row["openNewPage"] == true)?"target='_blank' ":"") 
-					    . "style='border-left : 5px solid #" . $row["htmlCouleur"] 
-					    . "'><span>" . utf8_encode($row["nomLien"]) . "</span></a></li>";
+						$current = $next;
 					}
 				}
 				
