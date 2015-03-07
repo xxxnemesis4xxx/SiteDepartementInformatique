@@ -59,54 +59,13 @@
 			</div>
 		</header>
 		
-		<div class="verticalmenu">
-			<ul>
-				<li class="active">
-					<a class="vertical_title">
-						<span>Titre</span>
-					</a>
-				</li>
-				<li class="subitems">
-					<a href="#" class="first_layer">
-						<span>Item 2</span>
-					</a>
-					
-					<ul class="second_layer">
-						<li>
-							<a href="#" >
-								<span>Item 1</span>
-							</a>
-						</li>
-						<li>
-							<a href="#" >
-								<span>Item 2</span>
-							</a>
-						</li>
-						<li class="last">
-							<a href="#">
-								<span>Item 3</span>
-							</a>
-						</li>
-					</ul>
-				</li>
-				<li class="active">
-					<a href="#" class="first_layer">
-						<span>Item 3</span>
-					</a>
-				</li>
-				<li class="active"> 
-					<a href="#" class="first_layer">
-						<span>Item 4</span>
-					</a>
-				</li>
-				<li class="last">
-					<a href="#" class="first_layer">
-						<span>Item 5</span>
-					</a>
-				</li>
-				
-			</ul>
-		</div>
+		<ul class="form">
+		    <li><a class="profile" href="#"><i class="icon-user"></i>Edit Profile</a></li>
+		    <li class="selected"><a class="messages" href="#"><i class="icon-envelope-alt"></i>Messages</a></li>
+		    <li><a class="settings" href="#"><i class="icon-cog"></i>App Settings</a></li>
+		    <li><a class="logout" href="#"><i class="icon-signout"></i>Logout</a></li>
+    		</ul>
+
 		
 		<footer id="pied-de-page">
 			<div id="font-noir">
