@@ -136,7 +136,7 @@ body {
 *
 *********************************/
 
-ul.form {
+ul.vertical_menu {
     position:relative;
     background:#fff;
     width:250px;
@@ -153,11 +153,11 @@ ul.form {
     z-index: 1;
 }
 
-ul li {
+ul.vertical_menu li {
 	height : 50px;
 }
 
-ul li ul {
+ul.vertical_menu li ul {
 	display : none;
 	position : relative;
 	top : -50px;
@@ -167,7 +167,7 @@ ul li ul {
 	padding-left : 0px;
 }
 
-.form li a {
+.vertical_menu li a {
     width:225px;
     padding-left:20px;
     height:50px;
@@ -185,49 +185,37 @@ ul li ul {
     transition:all 0.2s linear;         
 }
  
-.form li a:hover {
+.vertical_menu li a:hover {
     background:#efefef;
 }
     
-.form li:first-child a:hover, .form li:first-child a {
+.vertical_menu li:first-child a:hover, .form li:first-child a {
     -webkit-border-radius: 5px 5px 0 0;
     -moz-border-radius: 5px 5px 0 0;
     border-radius: 5px 5px 0 0;
 }
 
-.form li:last-child a:hover, .form li:last-child a {
+.vertical_menu li:last-child a:hover, .form li:last-child a {
     -webkit-border-radius: 0 0 5px 5px;
     -moz-border-radius: 0 0 5px 5px;
     border-radius: 0 0 5px 5px;
 }
 
-.form i {
-    margin-right:15px;
-    -webkit-transition:all 0.2s linear;
-    -moz-transition:all 0.2s linear;
-    -o-transition:all 0.2s linear;
-    transition:all 0.2s linear; 
-}
-
-.form li a:hover i {
+.vertical_menu li a:hover i {
     color:#ea4f35;
 }
 
-ul li:hover ul{
+ul.vertical_menu li:hover ul{
 	display : block
 	
 }
 
-ul li:hover ul li ul {
+ul.vertical_menu li:hover ul li ul {
 	display : none;
 }
 
-ul li ul li:hover ul {
+ul.vertical_menu li ul li:hover ul {
 	display : block;
-}
-
-.clear {
-	clear:both;
 }
 
 /*********************************

@@ -64,7 +64,7 @@
 			</div>
 		</header>
 		
-		<ul class="form">
+		<ul class="vertical_menu">
 			<?php
 				$servername = "localhost";
 				$username = "root";

@@ -29,16 +29,16 @@ nomLien VARCHAR(100) NOT NULL,
 lien VARCHAR(20000),
 position INT NOT NULL,
 layer INT NOT NULL,
-renderHtmlPosition INT,
-htmlCouleur VARCHAR(6),                  
-openNewPage boolean NOT NULL,
+renderHtmlPosition INT NOT NULL,
+htmlCouleur VARCHAR(6) NOT NULL,                  
+openNewPage boolean NOT NULL default FALSE,
 CONSTRAINT fk_verticalmenu_renderHtmlPosition FOREIGN KEY (`renderHtmlPosition`) REFERENCES departementinformatique.verticalmenu(`menuId`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=INNODB;
 
-INSERT INTO departementinformatique.verticalmenu VALUES (default,'Programmes', 'http://cll.qc.ca/programmes/techniques/techniques-de-linformatique-informatique-de-gestion-420-aa/', 1, 1, 1, '008747', TRUE);
-INSERT INTO departementinformatique.verticalmenu VALUES (default,'Gestion', 'http://cll.qc.ca/programmes/techniques/techniques-de-linformatique-informatique-industrielle-420-ab/', 1, 2, 1, '008747', TRUE);
-INSERT INTO departementinformatique.verticalmenu VALUES (default,'Industrielle', 'http://cll.qc.ca/programmes/techniques/informatique-gestion-de-reseaux/', 2, 2, 1, '008747', TRUE);
-INSERT INTO departementinformatique.verticalmenu VALUES (default,'Réseaux', NULL, 3, 2, 1, '008747', FALSE);
+INSERT INTO departementinformatique.verticalmenu VALUES (default,'Programmes', NULL, 1, 1, 1, '008747', FALSE);
+INSERT INTO departementinformatique.verticalmenu VALUES (default,'Gestion', 'http://cll.qc.ca/programmes/techniques/techniques-de-linformatique-informatique-de-gestion-420-aa/', 1, 2, 1, '008747', TRUE);
+INSERT INTO departementinformatique.verticalmenu VALUES (default,'Industrielle', 'http://cll.qc.ca/programmes/techniques/techniques-de-linformatique-informatique-industrielle-420-ab/', 2, 2, 1, '008747', TRUE);
+INSERT INTO departementinformatique.verticalmenu VALUES (default,'Réseaux', 'http://cll.qc.ca/programmes/techniques/informatique-gestion-de-reseaux/', 3, 2, 1, '008747', FALSE);
 INSERT INTO departementinformatique.verticalmenu VALUES (default,'Stages',NULL,2 , 1, 2, 'cf2130', FALSE);
 INSERT INTO departementinformatique.verticalmenu VALUES (default,'Activités', NULL, 3, 1, 3, 'fecf54', FALSE);
 INSERT INTO departementinformatique.verticalmenu VALUES (default,'Rallye', NULL, 4, 1, 4, '1A0DDB', FALSE);
