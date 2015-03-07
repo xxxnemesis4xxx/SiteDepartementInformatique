@@ -66,28 +66,28 @@
 		
 		<ul class="form">
 		    <li>
-		    	<a href="#" style="border-left : 5px solid #008747">
+		    	<a style="border-left : 5px solid #008747">
 		    		<span>
 		    			Programmes
 		    		</span>
 		    	</a>
 		    	<ul>
 		    		<li>
-					<a href="#" style="border-left : 5px solid #008747">
+					<a href="http://cll.qc.ca/programmes/techniques/techniques-de-linformatique-informatique-de-gestion-420-aa/" target="_blank" style="border-left : 5px solid #008747">
 						<span>
 							Gestion
 						</span>
 					</a>
 				</li>
 				<li>
-					<a href="#" style="border-left : 5px solid #008747">
+					<a href="http://cll.qc.ca/programmes/techniques/techniques-de-linformatique-informatique-industrielle-420-ab/" target="_blank" style="border-left : 5px solid #008747">
 						<span>
 							Industrielle
 						</span>
 					</a>
 				</li>
 				<li>
-					<a href="#" style="border-left : 5px solid #008747">
+					<a href="http://cll.qc.ca/programmes/techniques/informatique-gestion-de-reseaux/" target="_blank" style="border-left : 5px solid #008747">
 						<span>
 							Réseau
 						</span>
@@ -343,21 +343,21 @@
 		    		
 		    </li>
 		    <li>
-		    	<a href="#" style="border-left : 5px solid #4B7347">
+		    	<a href="http://e5.onthehub.com/WebStore/ProductsByMajorVersionList.aspx?ws=6c5a70be-a08b-e011-969d-0030487d8897&vsro=8&JSEnabled=1" style="border-left : 5px solid #4B7347">
 		    		<span>
 		    			MSDNAA
 		    		</span>
 		    	</a>
 		    </li>
 		    <li>
-		    	<a href="#" style="border-left : 5px solid #0CC291">
+		    	<a href="http://www.clevislauzon.qc.ca/informatique/PDEA%20Version%20officielle%202010.pdf" style="border-left : 5px solid #0CC291">
 		    		<span>
 		    			PDEA
 		    		</span>
 		    	</a>
 		    </li>
 		    <li>
-		    	<a href="#" style="border-left : 5px solid #9AFF3C">
+		    	<a href="http://cll.qc.ca/programmes/alternance-travail-etudes/" style="border-left : 5px solid #9AFF3C">
 		    		<span>
 		    			Alternance Travail-Études
 		    		</span>
