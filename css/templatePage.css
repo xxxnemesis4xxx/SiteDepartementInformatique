@@ -173,22 +173,6 @@ ul.form {
 .form li a:hover {
     background:#efefef;
 }
-
-.form li a.profile {
-    border-left:5px solid #008747;
-}
-
-.form li a.messages {
-        border-left:5px solid #fecf54;
-}
-
-.form li a.settings {
-        border-left:5px solid #cf2130;
-    }
-
-.form li a.logout {
-        border-left:5px solid #dde2d5;
-    }  
     
 .form li:first-child a:hover, .form li:first-child a {
     -webkit-border-radius: 5px 5px 0 0;

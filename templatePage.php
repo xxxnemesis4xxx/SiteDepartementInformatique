@@ -6,8 +6,13 @@
 		?>	
 		<title>Template</title>
 		<link rel="stylesheet" href="css/templatePage.css">
+		
+		<!-- Jquery Icon List -->
+		<link rel="stylesheet" href="//code.jquery.com/ui/1.11.3/themes/smoothness/jquery-ui.css">
+		
 		<!-- Adobe Text Style for Title -->
 		<script type="text/javascript" script-name="wire-one" src="http://use.edgefonts.net/wire-one.js"></script>
+		
 		<script type="text/javascript" src="javascript/jquery-1.11.2.min.js"></script>
 		<script type="text/javascript" src="javascript/verticalmenu.js"></script>
 	</head>
@@ -60,10 +65,116 @@
 		</header>
 		
 		<ul class="form">
-		    <li><a class="profile" href="#"><i class="icon-user"></i>Edit Profile</a></li>
-		    <li class="selected"><a class="messages" href="#"><i class="icon-envelope-alt"></i>Messages</a></li>
-		    <li><a class="settings" href="#"><i class="icon-cog"></i>App Settings</a></li>
-		    <li><a class="logout" href="#"><i class="icon-signout"></i>Logout</a></li>
+		    <li>
+		    	<a href="#" style="border-left : 5px solid #008747">
+		    		<span>
+		    			Programmes
+		    		</span>
+		    	</a>
+		    	<ul>
+		    	<!--
+				<a href="#" style="border-left : 5px solid #008747">
+					<span>
+						Gestion
+					</span>
+				</a>
+				<a href="#" style="border-left : 5px solid #008747">
+					<span>
+						Industrielle
+					</span>
+				</a>
+				<a href="#" style="border-left : 5px solid #008747">
+					<span>
+						Réseau
+					</span>
+				</a>
+			-->
+		    	</ul>
+		    </li>
+		    <li>
+			 <a href="#" style="border-left : 5px solid #cf2130">
+			 	<span>
+			 		Stage
+			 	</span>
+			 </a>
+		    </li>
+		    <li>
+		    	<a href="#" style="border-left : 5px solid #fecf54">
+		    		<span>
+		    			Activités
+		    		</span>
+		    	</a>
+		    </li>
+		    <li>
+		    	<a href="#" style="border-left : 5px solid #fecf54">
+		    		<span>
+		    			Rallye
+		    		</span>
+		    	</a>
+		    </li>
+		    <li>
+		    	<a href="#" style="border-left : 5px solid #fecf54">
+		    		<span>
+		    			Photos
+		    		</span>
+		    	</a>
+		    </li>
+		    <li>
+		    	<a href="#" style="border-left : 5px solid #fecf54">
+		    		<span>
+		    			Vidéo
+		    		</span>
+		    	</a>
+		    </li>
+		    <li>
+		    	<a href="#" style="border-left : 5px solid #fecf54">
+		    		<span>
+		    			Foire de l'emploie
+		    		</span>
+		    	</a>
+		    </li>
+		    <li>
+			 <a href="#" style="border-left : 5px solid #cf2130">
+			 	<span>
+			 		Club Robotique
+			 	</span>
+			 </a>
+		    </li>
+		    <li>
+		    	<a href="#" style="border-left : 5px solid #AEAEAE">
+		    		<span>
+		    			Enseignants
+		    		</span>
+		    	</a>
+		    </li>
+		    <li>
+		    	<a href="#" style="border-left : 5px solid #fecf54">
+		    		<span>
+		    			MSDNAA
+		    		</span>
+		    	</a>
+		    </li>
+		    <li>
+		    	<a href="#" style="border-left : 5px solid #fecf54">
+		    		<span>
+		    			PDEA
+		    		</span>
+		    	</a>
+		    </li>
+		    <li>
+		    	<a href="#" style="border-left : 5px solid #fecf54">
+		    		<span>
+		    			Alternance Travail-Études
+		    		</span>
+		    	</a>
+		    </li>
+		    <li>
+		    	<a href="#" style="border-left : 5px solid #fecf54">
+		    		<span>
+		    			Remise des diplômes
+		    		</span>
+		    	</a>
+		    </li>
     		</ul>
 
 		
