@@ -152,98 +152,98 @@
 		    	</a>
 		    	<ul>
 		    		<li>
-		    			<a href="#">
+		    			<a href="#" style="border-left : 5px solid #AEAEAE">
 		    				<span>
 		    					Actuellement
 		    				</span>
 		    			</a>
 		    			<ul>
 						<li>
-							<a href="#">
+							<a href="#" style="border-left : 5px solid #AEAEAE">
 								<span>
 									Yvan Morrissey
 								</span>
 							</a>
 						</li>
 						<li>
-							<a href="#">
+							<a href="#" style="border-left : 5px solid #AEAEAE">
 								<span>
 									Stéphane Mercier
 								</span>
 							</a>
 						</li>
 						<li>
-							<a href="#">
+							<a href="#" style="border-left : 5px solid #AEAEAE">
 								<span>
 									Christian Asselin
 								</span>
 							</a>
 						</li>
 						<li>
-							<a href="#">
+							<a href="#" style="border-left : 5px solid #AEAEAE">
 								<span>
 									Serge Lévesque
 								</span>
 							</a>
 						</li>
 						<li>
-							<a href="#">
+							<a href="#" style="border-left : 5px solid #AEAEAE">
 								<span>
 									Olivier Lafleur
 								</span>
 							</a>
 						</li>
 						<li>
-							<a href="#">
+							<a href="#" style="border-left : 5px solid #AEAEAE">
 								<span>
 									Mélissa Clermont
 								</span>
 							</a>
 						</li>
 						<li>
-							<a href="#">
+							<a href="#" style="border-left : 5px solid #AEAEAE">
 								<span>
 									Gilles Champagne
 								</span>
 							</a>
 						</li>
 						<li>
-							<a href="#">
+							<a href="#" style="border-left : 5px solid #AEAEAE">
 								<span>
 									Marc Deslandes
 								</span>
 							</a>
 						</li>
 						<li>
-							<a href="#">
+							<a href="#" style="border-left : 5px solid #AEAEAE">
 								<span>
 									Nelson Marceau
 								</span>
 							</a>
 						</li>
 						<li>
-							<a href="#">
+							<a href="#" style="border-left : 5px solid #AEAEAE">
 								<span>
 									Lise Provencher
 								</span>
 							</a>
 						</li>
 						<li>
-							<a href="#">
+							<a href="#" style="border-left : 5px solid #AEAEAE">
 								<span>
 									Jocelyne Lapointe
 								</span>
 							</a>
 						</li>
 						<li>
-							<a href="#">
+							<a href="#" style="border-left : 5px solid #AEAEAE">
 								<span>
 									Josée Lainesse
 								</span>
 							</a>
 						</li>
 						<li>
-							<a href="#">
+							<a href="#" style="border-left : 5px solid #AEAEAE">
 								<span>
 									Guillaume Michaud
 								</span>
@@ -252,14 +252,14 @@
 					</ul>
 				</li>
 				<li>
-		    			<a href="#">
+		    			<a href="#" style="border-left : 5px solid #AEAEAE">
 		    				<span>
 		    					Technicien(s)
 		    				</span>
 		    			</a>
 		    			<ul>
 						<li>
-							<a href="#">
+							<a href="#" style="border-left : 5px solid #AEAEAE">
 								<span>
 									Louis-Philippe Normand
 								</span>
@@ -268,70 +268,70 @@
 					</ul>
 				</li>
 				<li>
-		    			<a href="#">
+		    			<a href="#" style="border-left : 5px solid #AEAEAE">
 		    				<span>
 		    					À la retraite
 		    				</span>
 		    			</a>
 		    			<ul>
 						<li>
-							<a href="#">
+							<a href="#" style="border-left : 5px solid #AEAEAE">
 								<span>
 									Luce Morin
 								</span>
 							</a>
 						</li>
 						<li>
-							<a href="#">
+							<a href="#" style="border-left : 5px solid #AEAEAE">
 								<span>
 									Danielle Théberge
 								</span>
 							</a>
 						</li>
 						<li>
-							<a href="#">
+							<a href="#" style="border-left : 5px solid #AEAEAE">
 								<span>
 									Nicolas Morency
 								</span>
 							</a>
 						</li>
 						<li>
-							<a href="#">
+							<a href="#" style="border-left : 5px solid #AEAEAE">
 								<span>
 									Richard Landry
 								</span>
 							</a>
 						</li>
 						<li>
-							<a href="#">
+							<a href="#" style="border-left : 5px solid #AEAEAE">
 								<span>
 									Jacques Chabot
 								</span>
 							</a>
 						</li>
 						<li>
-							<a href="#">
+							<a href="#" style="border-left : 5px solid #AEAEAE">
 								<span>
 									Normand Lemyre
 								</span>
 							</a>
 						</li>
 						<li>
-							<a href="#">
+							<a href="#" style="border-left : 5px solid #AEAEAE">
 								<span>
 									André Charron
 								</span>
 							</a>
 						</li>
 						<li>
-							<a href="#">
+							<a href="#" style="border-left : 5px solid #AEAEAE">
 								<span>
 									Pierre rajotte
 								</span>
 							</a>
 						</li>
 						<li>
-							<a href="#">
+							<a href="#" style="border-left : 5px solid #AEAEAE">
 								<span>
 									Tuy Nguyen
 								</span>
