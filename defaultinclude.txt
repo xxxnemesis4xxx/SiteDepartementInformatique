@@ -1,0 +1,7 @@
+<?php
+			header('Content-Type: text/html; charset=utf-8');
+			setlocale(LC_ALL, 'fr_CA');
+?>
+<link rel="stylesheet" href="css/templatePage.css">
+<!-- Adobe Text Style for Title -->
+<script type="text/javascript" script-name="wire-one" src="http://use.edgefonts.net/wire-one.js"></script>
