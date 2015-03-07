@@ -30,10 +30,10 @@ lien VARCHAR(20000),
 position INT NOT NULL,
 layer INT NOT NULL,
 renderHtmlPosition INT,
-htmlCouleur VARCHAR(6),
+htmlCouleur VARCHAR(6),                  
+openNewPage boolean NOT NULL,
 CONSTRAINT fk_verticalmenu_renderHtmlPosition FOREIGN KEY (`renderHtmlPosition`) REFERENCES departementinformatique.verticalmenu(`menuId`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=INNODB;
-
 
 INSERT INTO departementinformatique.verticalmenu VALUES (default,'Programmes', NULL, 1, 1, 1, '008747');
 INSERT INTO departementinformatique.verticalmenu VALUES (default,'Gestion', NULL, 1, 2, 1, '008747');
