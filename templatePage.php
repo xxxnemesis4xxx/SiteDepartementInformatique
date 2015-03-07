@@ -72,21 +72,27 @@
 		    		</span>
 		    	</a>
 		    	<ul>
-				<a href="#" style="border-left : 5px solid #008747">
-					<span>
-						Gestion
-					</span>
-				</a>
-				<a href="#" style="border-left : 5px solid #008747">
-					<span>
-						Industrielle
-					</span>
-				</a>
-				<a href="#" style="border-left : 5px solid #008747">
-					<span>
-						Réseau
-					</span>
-				</a>
+		    		<li>
+					<a href="#" style="border-left : 5px solid #008747">
+						<span>
+							Gestion
+						</span>
+					</a>
+				</li>
+				<li>
+					<a href="#" style="border-left : 5px solid #008747">
+						<span>
+							Industrielle
+						</span>
+					</a>
+				</li>
+				<li>
+					<a href="#" style="border-left : 5px solid #008747">
+						<span>
+							Réseau
+						</span>
+					</a>
+				</li>
 		    	</ul>
 		    </li>
 		    <li>
@@ -333,6 +339,7 @@
 						</li>
 					</ul>
 				</li>
+			</ul>
 		    		
 		    </li>
 		    <li>
