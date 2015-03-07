@@ -64,6 +64,7 @@
 			</div>
 		</header>
 		
+		<!--
 		<ul class="form">
 		    <li>
 		    	<a style="border-left : 5px solid #008747">
@@ -371,6 +372,7 @@
 		    	</a>
 		    </li>
     		</ul>
+    		-->
 
 		
 		<footer id="pied-de-page">

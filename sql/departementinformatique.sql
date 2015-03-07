@@ -35,9 +35,9 @@ openNewPage boolean NOT NULL,
 CONSTRAINT fk_verticalmenu_renderHtmlPosition FOREIGN KEY (`renderHtmlPosition`) REFERENCES departementinformatique.verticalmenu(`menuId`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=INNODB;
 
-INSERT INTO departementinformatique.verticalmenu VALUES (default,'Programmes', NULL, 1, 1, 1, '008747', FALSE);
-INSERT INTO departementinformatique.verticalmenu VALUES (default,'Gestion', NULL, 1, 2, 1, '008747', FALSE);
-INSERT INTO departementinformatique.verticalmenu VALUES (default,'Industrielle', NULL, 2, 2, 1, '008747', FALSE);
+INSERT INTO departementinformatique.verticalmenu VALUES (default,'Programmes', 'http://cll.qc.ca/programmes/techniques/techniques-de-linformatique-informatique-de-gestion-420-aa/', 1, 1, 1, '008747', TRUE);
+INSERT INTO departementinformatique.verticalmenu VALUES (default,'Gestion', 'http://cll.qc.ca/programmes/techniques/techniques-de-linformatique-informatique-industrielle-420-ab/', 1, 2, 1, '008747', TRUE);
+INSERT INTO departementinformatique.verticalmenu VALUES (default,'Industrielle', 'http://cll.qc.ca/programmes/techniques/informatique-gestion-de-reseaux/', 2, 2, 1, '008747', TRUE);
 INSERT INTO departementinformatique.verticalmenu VALUES (default,'Réseaux', NULL, 3, 2, 1, '008747', FALSE);
 INSERT INTO departementinformatique.verticalmenu VALUES (default,'Stages',NULL,2 , 1, 2, 'cf2130', FALSE);
 INSERT INTO departementinformatique.verticalmenu VALUES (default,'Activités', NULL, 3, 1, 3, 'fecf54', FALSE);
@@ -73,7 +73,7 @@ INSERT INTO departementinformatique.verticalmenu VALUES (default,'Normand Lemyre
 INSERT INTO departementinformatique.verticalmenu VALUES (default,'André Charon', NULL, 7, 3, 12, 'AEAEAE', FALSE);
 INSERT INTO departementinformatique.verticalmenu VALUES (default,'Pierre Rajotte', NULL, 8, 3, 12, 'AEAEAE', FALSE);
 INSERT INTO departementinformatique.verticalmenu VALUES (default,'Tuy Nguyen', NULL, 9, 3, 12, 'AEAEAE', FALSE);
-INSERT INTO departementinformatique.verticalmenu VALUES (default,'MSDNAA', NULL, 10, 1, 13, '4B7347', FALSE);
-INSERT INTO departementinformatique.verticalmenu VALUES (default,'PDEA', NULL, 11, 1, 14, '0CC291', FALSE);
-INSERT INTO departementinformatique.verticalmenu VALUES (default,'Alternance Travail-Études', NULL, 12, 1, 15, '9AFF3C', FALSE);
+INSERT INTO departementinformatique.verticalmenu VALUES (default,'MSDNAA', 'http://e5.onthehub.com/WebStore/ProductsByMajorVersionList.aspx?ws=6c5a70be-a08b-e011-969d-0030487d8897&vsro=8&JSEnabled=1', 10, 1, 13, '4B7347', TRUE);
+INSERT INTO departementinformatique.verticalmenu VALUES (default,'PDEA', 'http://www.clevislauzon.qc.ca/informatique/PDEA%20Version%20officielle%202010.pdf', 11, 1, 14, '0CC291', TRUE);
+INSERT INTO departementinformatique.verticalmenu VALUES (default,'Alternance Travail-Études', 'http://cll.qc.ca/programmes/alternance-travail-etudes/', 12, 1, 15, '9AFF3C', TRUE);
 INSERT INTO departementinformatique.verticalmenu VALUES (default,'Remise des diplômes', NULL, 13, 1, 16, 'FF6100', FALSE);
