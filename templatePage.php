@@ -31,38 +31,70 @@
 					</a>
 						<ul class="menuderoulant">
 							<?php
-							$servername = "localhost";
-							$username = "root";
-							$password = "admin123*";
-							$dbname = "departementinformatique";
+								$servername = "localhost";
+								$username = "root";
+								$password = "admin123*";
+								$dbname = "departementinformatique";
+					
+								// Create connection
+								$conn = new mysqli($servername, $username, $password, $dbname);
+								// Check connection
+								if ($conn->connect_error) {
+										die("Erreur de connection: " . $conn->connect_error);
+								} 
+								
+								$sql = "SELECT * from lienmenuderoulant;";
+								$result = $conn->query($sql);
 				
-							// Create connection
-							$conn = new mysqli($servername, $username, $password, $dbname);
-							// Check connection
-							if ($conn->connect_error) {
-									die("Erreur de connection: " . $conn->connect_error);
-							} 
-							
-							$sql = "SELECT * from lienmenuderoulant;";
-							$result = $conn->query($sql);
-			
-							if ($result->num_rows > 0) {
-								// output data of each row
-								while($row = $result->fetch_assoc()) {
-								    echo "<li><a href='". $row["lien"] . "' ><span>" . utf8_encode($row["nomLien"]) . "</span></a></li>";
+								if ($result->num_rows > 0) {
+									// output data of each row
+									while($row = $result->fetch_assoc()) {
+									    echo "<li><a href='". $row["lien"] . "' ><span>" . utf8_encode($row["nomLien"]) . "</span></a></li>";
+									}
+								} else {
+										echo "0 results";
 								}
-							} else {
-									echo "0 results";
-							}
-				
-				
-							$conn->close();
-						?>
+					
+					
+								$conn->close();
+							?>
 						</ul>
 					</li>
 				</ul>
 			</div>
 		</header>
+		
+		<ul class="form">
+			<?php
+				$servername = "localhost";
+				$username = "root";
+				$password = "admin123*";
+				$dbname = "departementinformatique";
+	
+				// Create connection
+				$conn = new mysqli($servername, $username, $password, $dbname);
+				// Check connection
+				if ($conn->connect_error) {
+						die("Erreur de connection: " . $conn->connect_error);
+				} 
+				
+				$sql = "select * from verticalmenu order by renderHtmlPosition, layer,position;";
+				$result = $conn->query($sql);
+
+				if ($result->num_rows > 0) {
+					// output data of each row
+					while($row = $result->fetch_assoc()) {
+						
+					    echo "<li><a href='". $row["lien"] . "' " 
+					    . (($row["openNewPage"] == true)?"target='_blank' ":"") 
+					    . "style='border-left : 5px solid #" . $row["htmlCouleur"] 
+					    . "'><span>" . utf8_encode($row["nomLien"]) . "</span></a></li>";
+					}
+				}
+				
+				$conn->close();
+			?>
+		</ul>
 		
 		<!--
 		<ul class="form">
