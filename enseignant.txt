@@ -1,0 +1,9 @@
+<style>
+	.enseing {
+		height : 125%;
+		width : 100%;
+		min-width : 200px;
+	}
+</style>
+
+<img class="enseing" src="images/yvan.png" alt="Enseignants">
