@@ -18,6 +18,7 @@
 		<?php include("header.txt"); ?>
 		
 		<table class="indexTable">
+		<!--
 			<tr>
 				<td>
 					<?php include("pub.txt") ?>
@@ -54,6 +55,7 @@
 					<?php include("evenement.txt") ?>
 				</td>
 			</tr>
+		-->
 		</table>
 		
 		
