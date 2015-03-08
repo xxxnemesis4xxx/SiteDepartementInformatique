@@ -1,0 +1,9 @@
+<style>
+	.imgpub2 {
+		height : 125%;
+		width : 100%;
+		min-width : 200px;
+	}
+</style>
+
+<img class="imgpub2" src="images/Pub2.png" alt="Plus d'options!">

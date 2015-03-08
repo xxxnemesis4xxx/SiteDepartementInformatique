@@ -1,6 +1,8 @@
 <style>
 	.imgpub {
 		height : 140%;
+		width : 100%;
+		min-width : 220px;
 	}
 </style>
 

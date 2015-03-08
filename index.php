@@ -24,7 +24,10 @@
 				</td>
 				<td colspan="3">
 					<?php include("slider.txt") ?>
-				<td>Element 5</td>
+				</td>
+				<td>
+					<?php include("pub2.txt") ?>
+				</td>
 			</tr>
 			<tr>
 				<td rowspan="2">Element 1</td>
