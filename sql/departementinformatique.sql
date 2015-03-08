@@ -1,5 +1,14 @@
+/* Create our Database */
 create database IF NOT EXISTS departementinformatique;
 
+
+/****************************************************
+*
+*
+* Table Containing Links for General drop down menu
+*
+*
+****************************************************/
 DROP TABLE IF EXISTS departementinformatique.lienmenuderoulant;
 
 CREATE TABLE IF NOT EXISTS departementinformatique.lienmenuderoulant(
@@ -19,6 +28,14 @@ INSERT INTO departementinformatique.lienmenuderoulant VALUES(default,'Site du c�
 INSERT INTO departementinformatique.lienmenuderoulant VALUES(default,'Facebook','https://www.facebook.com/pages/D%C3%A9partement-dinformatique-C%C3%A9gep-L%C3%A9vis-Lauzon/127878897268010');
 INSERT INTO departementinformatique.lienmenuderoulant VALUES(default,'Nous joindre','#bas');
 
+
+/********************************************************
+*
+*
+* Table containing Details for generating Vertical menu
+*
+*
+********************************************************/
 
 
 DROP TABLE IF EXISTS departementinformatique.verticalmenu;
@@ -77,3 +94,21 @@ INSERT INTO departementinformatique.verticalmenu VALUES (default,'MSDNAA', 'http
 INSERT INTO departementinformatique.verticalmenu VALUES (default,'PDEA', 'http://www.clevislauzon.qc.ca/informatique/PDEA%20Version%20officielle%202010.pdf', 11, 1, 14, '0CC291', TRUE);
 INSERT INTO departementinformatique.verticalmenu VALUES (default,'Alternance Travail-Études', 'http://cll.qc.ca/programmes/alternance-travail-etudes/', 12, 1, 15, '9AFF3C', TRUE);
 INSERT INTO departementinformatique.verticalmenu VALUES (default,'Remise des diplômes', NULL, 13, 1, 16, 'FF6100', FALSE);
+
+
+/***************************************************
+*
+*
+* Table containing info for Rendering index
+*
+*
+***************************************************/
+DROP TABLE IF EXISTS departementinformatique.displaymenu;
+
+CREATE TABLE IF NOT EXISTS departementinformatique.displaymenu(
+itemId INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+nomFichier VARCHAR(100) NOT NULL,
+colspan INT NOT NULL DEFAULT 1,
+rowspan INT NUL NULL DEFAULT 1,
+position INT NOT NULL UNIQUE
+) ENGINE=INNODB;
