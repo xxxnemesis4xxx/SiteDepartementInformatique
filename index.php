@@ -2,11 +2,22 @@
 	<head>
 		 <?php include("defaultinclude.txt"); ?>
 		 <title>Accueil</title>
+		 <link rel="stylesheet" href="css/index.css">
+		 <script src="javascript/jquery-1.11.2.min.js"></script>
+		 <script src="javascript/unslider.min.js"></script>
+		
+		 
+		 <script>
+		 	$(function() {
+			    $('.banner').unslider();
+			});
+		 </script>
 	</head>
+	
 	<body>
 		<?php include("header.txt"); ?>
 		
-		<table>
+		<table class="indexTable">
 			<tr>
 				<td>Element 1</td>
 				<td>Element 2</td>

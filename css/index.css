@@ -1,0 +1,20 @@
+/********************************
+*
+*
+*			Table CSS
+*
+*
+********************************/
+.indexTable {
+	display : block;
+	width : 100%;
+	border-spacing : 20px;
+}
+
+.indexTable tr {
+}
+
+.indexTable td {
+	border : 4px solid black;
+	padding : 100px;
+}
