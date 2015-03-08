@@ -6,4 +6,4 @@
 	}
 </style>
 
-<img class="pdea" src="images/pdea.png" alt="Enseignants">
+<img class="pdea" src="images/pdea.png" alt="Pdea">

@@ -1,0 +1,6 @@
+<style>
+	.emploi {
+	}
+</style>
+
+<img class="emploi" src="images/emploi.png" alt="Foire de l'emploi">
