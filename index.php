@@ -50,7 +50,9 @@
 				<td>
 					<?php include("rally.txt") ?>
 				</td>
-				<td>Element 5</td>
+				<td>	
+					<?php include("evenement.txt") ?>
+				</td>
 			</tr>
 		</table>
 		

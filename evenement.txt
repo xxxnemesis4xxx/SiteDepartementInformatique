@@ -1,0 +1,8 @@
+<style>
+	.evenement {
+		height : 320px;
+	}
+</style>
+
+
+<img class="evenement" src="images/evenement.png" alt="Événements">
