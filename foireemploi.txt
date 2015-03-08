@@ -1,6 +1,6 @@
 <style>
 	.emploi {
-		width : 100%;
+		width : 100%;git 
 	}
 </style>
 

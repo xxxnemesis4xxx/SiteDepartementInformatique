@@ -44,8 +44,9 @@
 				</td>
 			</tr>
 			<tr>
-				<td>Element 2</td>
-				<td>Element 3</td>
+				<td colspan="2">
+					<?php include("video.txt") ?>
+				</td>
 				<td>Element 4</td>
 				<td>Element 5</td>
 			</tr>
