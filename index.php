@@ -30,7 +30,7 @@
 				</td>
 			</tr>
 			<tr>
-				<td rowspan="2">Element 1</td>
+				<td rowspan="2"><?php include("enseignant.txt") ?></td>
 				<td>Element 2</td>
 				<td>Element 3</td>
 				<td colspan="2" style="text-align:center">Element 4</td>
