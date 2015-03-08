@@ -47,7 +47,9 @@
 				<td colspan="2">
 					<?php include("video.txt") ?>
 				</td>
-				<td>Element 4</td>
+				<td>
+					<?php include("rally.txt") ?>
+				</td>
 				<td>Element 5</td>
 			</tr>
 		</table>

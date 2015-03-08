@@ -1,6 +1,8 @@
 <style>
 	.diplome {
-		width:100%
+		width:100%;
+		min-width : 300px;
+		padding-left : 30px;
 	}
 </style>
 
