@@ -1,0 +1,80 @@
+<style>
+	.slider {
+		position:relative;
+	}
+	
+	.slider ul {
+		margin-left : -40px;
+		margin-top : 0px;
+	}
+	
+	.slider li {
+		list-style : none;
+	}
+	
+	.slider ul li {
+		float:left;
+	}
+	
+	.slider img {
+	}
+	
+	.slider span {
+		position: relative;
+		left: 7%;
+		bottom: 40;
+		z-index: 1;
+		color: #000000;
+		background: #fff;
+		text-shadow: 1px 1px 1px #BBBBBB;
+		font-size: 25px;
+		line-height: 30px;
+		opacity: 0.5;	
+		margin-bottom : -30px;
+	}	
+	
+	.slider div {
+		margin-bottom : -30px;
+	}
+</style>
+
+<div class="slider">
+	<ul>
+		<li>
+			<img src="images/gestion_slider.jpg" alt="Informatique de gestion">
+			<div>
+				<span>Informatique de Gestion</span>
+			</div>
+		</li>
+		<li>
+			<img src="images/reseau_slider.jpg" alt="Gestion de réseau informatique">
+			<div>
+				<span>Gestion de réseau informatique</span>
+			</div>
+		</li>
+		<li>
+			<img src="images/industrielle_slider.jpg" alt="Informatique industrielle">
+			<div>
+				<span>Informatique industrielle</span>
+			</div>
+		</li>
+		<li>
+			<img src="images/techno_slider.jpg" alt="Nouvelles Technologie">
+			<div>
+				<span>Nouvelles Technologie</span>
+			</div>
+		</li>
+		<li>
+			<img src="images/robotique_slider.jpg" alt="Club Robotique">
+			<div>
+				<span>Club Robotique</span>
+			</div>
+		</li>
+		<li>
+			<img src="images/activite_slider.jpg" alt="Activités du programme">
+			<div>
+				<span>Activités du programme</span>
+			</div>
+		</li>
+	</ul>
+</div>

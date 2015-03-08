@@ -9,7 +9,7 @@
 		 
 		 <script>
 		 	$(function() {
-			    $('.banner').unslider();
+			    $('.slider').unslider();
 			});
 		 </script>
 	</head>
@@ -20,9 +20,8 @@
 		<table class="indexTable">
 			<tr>
 				<td>Element 1</td>
-				<td>Element 2</td>
-				<td>Element 3</td>
-				<td>Element 4</td>
+				<td colspan="3">
+					<?php include("slider.txt") ?>
 				<td>Element 5</td>
 			</tr>
 			<tr>
