@@ -60,44 +60,6 @@
 			
 			$conn->close();
 		?>
-		<!--
-			<tr>
-				<td>
-					<?php include("pub.txt") ?>
-				</td>
-				<td colspan="3">
-					<?php include("slider.txt") ?>
-				</td>
-				<td>
-					<?php include("pub2.txt") ?>
-				</td>
-			</tr>
-			<tr>
-				<td rowspan="2">
-					<?php include("enseignant.txt") ?>
-				</td>
-				<td>
-					<?php include("pdea.txt") ?>
-				</td>
-				<td>
-					<?php include("diplome.txt")?>
-				</td>
-				<td colspan="2">
-					<?php include("foireemploi.txt") ?>
-				</td>
-			</tr>
-			<tr>
-				<td colspan="2">
-					<?php include("video.txt") ?>
-				</td>
-				<td>
-					<?php include("rally.txt") ?>
-				</td>
-				<td>	
-					<?php include("evenement.txt") ?>
-				</td>
-			</tr>
-		-->
 		</table>
 		
 		
