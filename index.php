@@ -19,7 +19,9 @@
 		
 		<table class="indexTable">
 			<tr>
-				<td>Element 1</td>
+				<td>
+					<?php include("pub.txt") ?>
+				</td>
 				<td colspan="3">
 					<?php include("slider.txt") ?>
 				<td>Element 5</td>
