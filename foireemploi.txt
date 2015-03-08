@@ -1,7 +1,8 @@
 <style>
 	.emploi {
-		margin-left : 13px;
+		width : 100%;
 	}
 </style>
 
-<img class="emploi" src="images/emploi.png" alt="Foire de l'emploi">
+
+<img class="emploi" src="images/Foire2.png" alt="Foire de l'emploi">

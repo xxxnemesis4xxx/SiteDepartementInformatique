@@ -36,7 +36,9 @@
 				<td>
 					<?php include("pdea.txt") ?>
 				</td>
-				<td>Element 3</td>
+				<td>
+					<?php include("diplome.txt")?>
+				</td>
 				<td colspan="2">
 					<?php include("foireemploi.txt") ?>
 				</td>

@@ -1,0 +1,7 @@
+<style>
+	.diplome {
+		width:100%
+	}
+</style>
+
+<img class="diplome" src="images/diplome.png" alt="Diplômés">
