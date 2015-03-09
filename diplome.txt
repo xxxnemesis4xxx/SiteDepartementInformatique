@@ -2,7 +2,7 @@
 	.diplome {
 		width:100%;
 		min-width : 300px;
-		padding-left : 30px;
+		max-height : 320px;
 	}
 </style>
 

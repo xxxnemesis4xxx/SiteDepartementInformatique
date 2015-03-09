@@ -109,19 +109,20 @@ CREATE TABLE IF NOT EXISTS departementinformatique.displaymenu(
 itemId INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
 nomFichier VARCHAR(100) NOT NULL,
 colspan INT NOT NULL DEFAULT 1,
-rowspan INT NOL NULL DEFAULT 1,
+rowspan INT NOT NULL DEFAULT 1,
 position INT NOT NULL UNIQUE,
-lastCols BOOLEAN NOT NULL DEFAULT FALSE
+lastCols BOOLEAN NOT NULL DEFAULT FALSE,
+backgroundColor BOOLEAN NOT NULL DEFAULT TRUE
 ) ENGINE=INNODB;
 
 
-INSERT INTO departementinformatique.displaymenu VALUES (default, 'pub.txt', default, default, 1, FALSE);
-INSERT INTO departementinformatique.displaymenu VALUES (default, 'slider.txt', 3, default, 2, FALSE);
-INSERT INTO departementinformatique.displaymenu VALUES (default, 'pub2.txt', default, default, 3, TRUE);
-INSERT INTO departementinformatique.displaymenu VALUES (default, 'enseignant.txt', default, 2, 4, FALSE);
-INSERT INTO departementinformatique.displaymenu VALUES (default, 'pdea.txt', default, default, 5, FALSE);
-INSERT INTO departementinformatique.displaymenu VALUES (default, 'diplome.txt', default, default, 6, FALSE);
-INSERT INTO departementinformatique.displaymenu VALUES (default, 'foireemploi.txt', 2, default, 7, TRUE);
-INSERT INTO departementinformatique.displaymenu VALUES (default, 'video.txt', 2, default, 8, FALSE);
-INSERT INTO departementinformatique.displaymenu VALUES (default, 'rally.txt', default, default, 9, FALSE);
-INSERT INTO departementinformatique.displaymenu VALUES (default, 'evenement.txt', default, default, 10, TRUE);
+INSERT INTO departementinformatique.displaymenu VALUES (default, 'pub.txt', default, default, 1, false, default);
+INSERT INTO departementinformatique.displaymenu VALUES (default, 'slider.txt', 3, default, 2, false, default);
+INSERT INTO departementinformatique.displaymenu VALUES (default, 'pub2.txt', default, default, 3, true, default);
+INSERT INTO departementinformatique.displaymenu VALUES (default, 'enseignant.txt', default, 2, 4, false, default);
+INSERT INTO departementinformatique.displaymenu VALUES (default, 'pdea.txt', default, default, 5, false, default);
+INSERT INTO departementinformatique.displaymenu VALUES (default, 'diplome.txt', default, default, 6, false, false);
+INSERT INTO departementinformatique.displaymenu VALUES (default, 'foireemploi.txt', 2, default, 7, true, default);
+INSERT INTO departementinformatique.displaymenu VALUES (default, 'video.txt', 2, default, 8, false, default);
+INSERT INTO departementinformatique.displaymenu VALUES (default, 'rally.txt', default, default, 9, false, default);
+INSERT INTO departementinformatique.displaymenu VALUES (default, 'evenement.txt', default, default, 10, true, default);
