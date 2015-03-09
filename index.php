@@ -3,15 +3,7 @@
 		 <?php include("defaultinclude.txt"); ?>
 		 <title>Accueil</title>
 		 <link rel="stylesheet" href="css/index.css">
-		 <script src="javascript/jquery-1.11.2.min.js"></script>
-		 <script src="javascript/unslider.min.js"></script>
 		
-		 
-		 <script>
-		 	$(function() {
-			    $('.slider').unslider();
-			});
-		 </script>
 	</head>
 	
 	<body>
@@ -44,7 +36,7 @@
 						echo "<tr>";
 						$firstValue = false;
 					}
-					echo "<td colspan='" . $current["colspan"] . "' rowspan='" . $current["rowspan"]  . "'>";
+					echo "<td colspan='" . $current["colspan"] . "' rowspan='" . $current["rowspan"]  . "'" . (($current["backgroundColor"] == false)?"style='background-color:transparent'":"") .">";
 					include ($current["nomFichier"]);
 					echo "</td>";
 					if ($current["lastCols"] == true and $nextValue != null) {
@@ -60,44 +52,6 @@
 			
 			$conn->close();
 		?>
-		<!--
-			<tr>
-				<td>
-					<?php include("pub.txt") ?>
-				</td>
-				<td colspan="3">
-					<?php include("slider.txt") ?>
-				</td>
-				<td>
-					<?php include("pub2.txt") ?>
-				</td>
-			</tr>
-			<tr>
-				<td rowspan="2">
-					<?php include("enseignant.txt") ?>
-				</td>
-				<td>
-					<?php include("pdea.txt") ?>
-				</td>
-				<td>
-					<?php include("diplome.txt")?>
-				</td>
-				<td colspan="2">
-					<?php include("foireemploi.txt") ?>
-				</td>
-			</tr>
-			<tr>
-				<td colspan="2">
-					<?php include("video.txt") ?>
-				</td>
-				<td>
-					<?php include("rally.txt") ?>
-				</td>
-				<td>	
-					<?php include("evenement.txt") ?>
-				</td>
-			</tr>
-		-->
 		</table>
 		
 		

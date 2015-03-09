@@ -1,8 +1,9 @@
 <style>
 	.emploi {
-		width : 100%;git 
+		width : 100%;
+		max-height : 320px;
 	}
 </style>
 
 
-<img class="emploi" src="images/Foire2.png" alt="Foire de l'emploi">
+<img class="emploi" src="images/Foire.png" alt="Foire de l'emploi">
