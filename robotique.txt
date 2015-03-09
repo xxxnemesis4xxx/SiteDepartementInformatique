@@ -9,4 +9,6 @@
 	}
 </style>
 
-<img id="robotique" src="images/robotique.png" alt="Club Robotique">
+<a href="robotique.php">
+	<img id="robotique" src="images/robotique.png" alt="Club Robotique">
+</a>
