@@ -9,6 +9,7 @@
 	display : block;
 	width : 100%;
 	border-spacing : 20px;
+	table-layout : fixed;
 }
 
 .indexTable td {

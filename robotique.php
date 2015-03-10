@@ -3,6 +3,9 @@
 	 	<?php
 	 		include("defaultinclude.txt"); 
 	 	?>
+	 	<title>
+	 		Robotique
+	 	</title>
 	</head>
 	<body>
 		<?php

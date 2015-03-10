@@ -1,0 +1,10 @@
+<style>
+	#robotique {
+		height : 100%;
+		width : 100%;
+	}
+</style>
+
+<a href="robotique.php">
+	<img id="robotique" src="images/robotique.png" alt="Club Robotique">
+</a>

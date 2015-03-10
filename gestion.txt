@@ -1,0 +1,11 @@
+<style>
+	#gestion {
+		height : 100%;
+		width : 100%;
+	}
+</style>
+
+<a href="http://cll.qc.ca/programmes/techniques/techniques-de-linformatique-informatique-de-gestion-420-aa/" target="_blank">
+	<img id="gestion" src="images/gestion.png" alt="Informatique de Gestion">
+</a>
+	

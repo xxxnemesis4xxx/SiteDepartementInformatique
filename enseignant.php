@@ -3,6 +3,9 @@
 	 	<?php
 	 		include("defaultinclude.txt"); 
 	 	?>
+	 	<title>
+	 		Enseignants
+	 	</title>
 	</head>
 	<body>
 		<?php

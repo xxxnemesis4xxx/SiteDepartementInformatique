@@ -1,8 +1,10 @@
 <style>
 	#pdea {
+		height : 100%;
 		width : 100%;
-		min-width : 200px;
 	}
 </style>
 
-<img id="pdea" src="images/pdea.png" alt="Pdea">
+<a href="http://www.clevislauzon.qc.ca/informatique/PDEA%20Version%20officielle%202010.pdf" target="_blank">
+	<img id="pdea" src="images/pdea.png" alt="Pdea">
+</a>

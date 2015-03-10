@@ -3,6 +3,9 @@
 	 	<?php
 	 		include("defaultinclude.txt"); 
 	 	?>
+	 	<title>
+	 		Événements
+	 	</title>
 	</head>
 	<body>
 		<?php
