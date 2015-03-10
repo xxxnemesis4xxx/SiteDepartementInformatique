@@ -96,7 +96,7 @@ INSERT INTO departementinformatique.verticalmenu VALUES (default,'Liens Utilies'
 INSERT INTO departementinformatique.verticalmenu VALUES (default,'Alternance Travail-Études', 'http://cll.qc.ca/programmes/alternance-travail-etudes/', 1, 2, 7, '9AFF3C', TRUE);
 INSERT INTO departementinformatique.verticalmenu VALUES (default,'MSDNAA', 'http://e5.onthehub.com/WebStore/ProductsByMajorVersionList.aspx?ws=6c5a70be-a08b-e011-969d-0030487d8897&vsro=8&JSEnabled=1', 2, 2, 7, '4B7347', TRUE);
 INSERT INTO departementinformatique.verticalmenu VALUES (default,'PDEA', 'http://www.clevislauzon.qc.ca/informatique/PDEA%20Version%20officielle%202010.pdf', 3, 2, 7, '0CC291', TRUE);
-INSERT INTO departementinformatique.verticalmenu VALUES (default,'Stages',NULL, 4, 2, 7, '6F4876', FALSE);
+INSERT INTO departementinformatique.verticalmenu VALUES (default,'Stages',NULL, 1, 1, 8, '6F4876', FALSE);
 
 
 /***************************************************
