@@ -4,7 +4,7 @@
 	 		include("defaultinclude.txt"); 
 	 	?>
 	 	<title>
-	 		Robotique
+	 		Enseignants
 	 	</title>
 	</head>
 	<body>
