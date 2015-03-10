@@ -92,11 +92,17 @@ INSERT INTO departementinformatique.verticalmenu VALUES (default,'André Charon'
 INSERT INTO departementinformatique.verticalmenu VALUES (default,'Pierre Rajotte', NULL, 8, 3, 5, '2D8460', false);
 INSERT INTO departementinformatique.verticalmenu VALUES (default,'Tuy Nguyen', NULL, 9, 3, 5, '45D096', false);
 INSERT INTO departementinformatique.verticalmenu VALUES (default,'Club Robotique', NULL, 1, 1, 6, 'EFEC00', false);
-INSERT INTO departementinformatique.verticalmenu VALUES (default,'Liens Utilies',NULL, 1, 1, 7, 'DB00FF', false);
-INSERT INTO departementinformatique.verticalmenu VALUES (default,'Alternance Travail-Études', 'http://cll.qc.ca/programmes/alternance-travail-etudes/', 1, 2, 7, '9AFF3C', true);
-INSERT INTO departementinformatique.verticalmenu VALUES (default,'MSDNAA', 'http://e5.onthehub.com/WebStore/ProductsByMajorVersionList.aspx?ws=6c5a70be-a08b-e011-969d-0030487d8897&vsro=8&JSEnabled=1', 2, 2, 7, '4B7347', true);
-INSERT INTO departementinformatique.verticalmenu VALUES (default,'PDEA', 'http://www.clevislauzon.qc.ca/informatique/PDEA%20Version%20officielle%202010.pdf', 3, 2, 7, '0CC291', true);
-INSERT INTO departementinformatique.verticalmenu VALUES (default,'Stages','stage.php', 1, 1, 8, '6F4876', false);
+INSERT INTO departementinformatique.verticalmenu VALUES (default,'Liens Utilies',NULL, 1, 1, 8, 'DB00FF', false);
+INSERT INTO departementinformatique.verticalmenu VALUES (default,'Alternance Travail-Études', 'http://cll.qc.ca/programmes/alternance-travail-etudes/', 1, 2, 8, '9AFF3C', true);
+INSERT INTO departementinformatique.verticalmenu VALUES (default,'MSDNAA', 'http://e5.onthehub.com/WebStore/ProductsByMajorVersionList.aspx?ws=6c5a70be-a08b-e011-969d-0030487d8897&vsro=8&JSEnabled=1', 2, 2, 8, '4B7347', true);
+INSERT INTO departementinformatique.verticalmenu VALUES (default,'PDEA', 'http://www.clevislauzon.qc.ca/informatique/PDEA%20Version%20officielle%202010.pdf', 3, 2, 8, '0CC291', true);
+INSERT INTO departementinformatique.verticalmenu VALUES (default,'Stages','stage.php', 1, 1, 7, '6F4876', false);
+INSERT INTO departementinformatique.verticalmenu VALUES (default,'Critères d\'admissibilités',NULL, 1, 2, 7, 'B1EA0A', false);
+INSERT INTO departementinformatique.verticalmenu VALUES (default,'Dates des Stages',NULL, 2, 2, 7, '2E5109', false);
+INSERT INTO departementinformatique.verticalmenu VALUES (default,'Document d\'information', NULL, 3, 2, 7, '1B2D07', false);
+INSERT INTO departementinformatique.verticalmenu VALUES (default,'Formation des Étudiants', NULL, 4, 2, 7, '2D843C', false);
+INSERT INTO departementinformatique.verticalmenu VALUES (default,'Responsables des Stages', NULL, 5, 2, 7, '11D031', false);
+INSERT INTO departementinformatique.verticalmenu VALUES (default,'Stages en France', NULL, 6, 2, 7, '45D096', false);
 
 
 /***************************************************
@@ -128,4 +134,3 @@ INSERT INTO departementinformatique.displaymenu VALUES (default, 'enseignant.txt
 INSERT INTO departementinformatique.displaymenu VALUES (default, 'pdea.txt', default, default, 9, false);
 INSERT INTO departementinformatique.displaymenu VALUES (default, 'evenement.txt', 2, 2, 8, true);
 INSERT INTO departementinformatique.displaymenu VALUES (default, 'robotique.txt', default, default, 7, false);
-
