@@ -1,0 +1,1 @@
+<img src="images/Industriel.png" alt="Informatique Industrielle">
