@@ -97,7 +97,7 @@ INSERT INTO departementinformatique.verticalmenu VALUES (default,'Alternance Tra
 INSERT INTO departementinformatique.verticalmenu VALUES (default,'MSDNAA', 'http://e5.onthehub.com/WebStore/ProductsByMajorVersionList.aspx?ws=6c5a70be-a08b-e011-969d-0030487d8897&vsro=8&JSEnabled=1', 2, 2, 8, '4B7347', true);
 INSERT INTO departementinformatique.verticalmenu VALUES (default,'PDEA', 'http://www.clevislauzon.qc.ca/informatique/PDEA%20Version%20officielle%202010.pdf', 3, 2, 8, '0CC291', true);
 INSERT INTO departementinformatique.verticalmenu VALUES (default,'Stages','stage.php', 1, 1, 7, '6F4876', false);
-INSERT INTO departementinformatique.verticalmenu VALUES (default,'Critères d\'admissibilités',NULL, 1, 2, 7, 'B1EA0A', false);
+INSERT INTO departementinformatique.verticalmenu VALUES (default,'Critères d\'admissibilités','stagecritere', 1, 2, 7, 'B1EA0A', false);
 INSERT INTO departementinformatique.verticalmenu VALUES (default,'Dates des Stages',NULL, 2, 2, 7, '2E5109', false);
 INSERT INTO departementinformatique.verticalmenu VALUES (default,'Document d\'information', NULL, 3, 2, 7, '1B2D07', false);
 INSERT INTO departementinformatique.verticalmenu VALUES (default,'Formation des Étudiants', NULL, 4, 2, 7, '2D843C', false);
