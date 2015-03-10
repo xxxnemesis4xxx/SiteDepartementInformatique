@@ -1,1 +1,8 @@
-<img src="images/enseignant.png" alt="Enseignants">
+<style>
+	#enseign {
+		width:707px;
+		height:660;
+	}		
+</style>
+
+<img id="enseign" src="images/enseignant.png" alt="Enseignants">

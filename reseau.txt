@@ -1,1 +1,8 @@
-<img src="images/Reseau.png" alt="Gestion de reseaux">
+<style>
+	#reseau {
+		height : 320px;
+		width : 320px;
+	}
+</style>
+
+<img id="reseau" src="images/Reseau.png" alt="Gestion de reseaux">

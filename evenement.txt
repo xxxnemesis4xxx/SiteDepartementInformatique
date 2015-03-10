@@ -1,4 +1,8 @@
+<style>
+	#evenement {
+		width:707px;
+		height:660px;
+	}
+</style>
 
-
-
-<img class="evenement" src="images/evenement.png" alt="Événements">
+<img id="evenement" src="images/evenement.png" alt="Événements">
