@@ -5,4 +5,6 @@
 	}
 </style>
 
-<img id="indus" src="images/Industriel.png" alt="Informatique Industrielle">
+<a href="http://cll.qc.ca/programmes/techniques/techniques-de-linformatique-informatique-industrielle-420-ab/" target="_blank">
+	<img id="indus" src="images/Industriel.png" alt="Informatique Industrielle">
+</a>
