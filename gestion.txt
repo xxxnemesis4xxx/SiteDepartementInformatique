@@ -1,7 +1,7 @@
 <style>
 	#gestion {
-		height : 320px;
-		width : 320px;
+		height : 100%;
+		width : 100%;
 	}
 </style>
 
