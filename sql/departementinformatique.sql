@@ -57,7 +57,7 @@ CONSTRAINT fk_verticalmenu_renderHtmlPosition FOREIGN KEY (`renderHtmlPosition`)
 INSERT INTO departementinformatique.verticalmenu VALUES (default,'Programmes', NULL, 1, 1, 1, '008747', false);
 INSERT INTO departementinformatique.verticalmenu VALUES (default,'Gestion', 'http://cll.qc.ca/programmes/techniques/techniques-de-linformatique-informatique-de-gestion-420-aa/', 1, 2, 1, '873400', true);
 INSERT INTO departementinformatique.verticalmenu VALUES (default,'Industrielle', 'http://cll.qc.ca/programmes/techniques/techniques-de-linformatique-informatique-industrielle-420-ab/', 2, 2, 1, '870020', true);
-INSERT INTO departementinformatique.verticalmenu VALUES (default,'Réseaux', 'http://cll.qc.ca/programmes/techniques/informatique-gestion-de-reseaux/', 3, 2, 1, '240087', false);
+INSERT INTO departementinformatique.verticalmenu VALUES (default,'Réseaux', 'http://cll.qc.ca/programmes/techniques/informatique-gestion-de-reseaux/', 3, 2, 1, '240087', true);
 INSERT INTO departementinformatique.verticalmenu VALUES (default,'Événements', NULL, 1, 1, 2, 'cf2130', false);
 INSERT INTO departementinformatique.verticalmenu VALUES (default,'Activités', NULL, 1, 2, 2, 'fecf54', false);
 INSERT INTO departementinformatique.verticalmenu VALUES (default,'Foire de l\'emploie', NULL, 3, 2, 2, '2B2F56', false);
@@ -96,13 +96,13 @@ INSERT INTO departementinformatique.verticalmenu VALUES (default,'Liens Utilies'
 INSERT INTO departementinformatique.verticalmenu VALUES (default,'Alternance Travail-Études', 'http://cll.qc.ca/programmes/alternance-travail-etudes/', 1, 2, 8, '9AFF3C', true);
 INSERT INTO departementinformatique.verticalmenu VALUES (default,'MSDNAA', 'http://e5.onthehub.com/WebStore/ProductsByMajorVersionList.aspx?ws=6c5a70be-a08b-e011-969d-0030487d8897&vsro=8&JSEnabled=1', 2, 2, 8, '4B7347', true);
 INSERT INTO departementinformatique.verticalmenu VALUES (default,'PDEA', 'http://www.clevislauzon.qc.ca/informatique/PDEA%20Version%20officielle%202010.pdf', 3, 2, 8, '0CC291', true);
-INSERT INTO departementinformatique.verticalmenu VALUES (default,'Stages','stage.php', 1, 1, 7, '6F4876', false);
-INSERT INTO departementinformatique.verticalmenu VALUES (default,'Critères d\'admissibilités','stagecritere', 1, 2, 7, 'B1EA0A', false);
-INSERT INTO departementinformatique.verticalmenu VALUES (default,'Dates des Stages',NULL, 2, 2, 7, '2E5109', false);
-INSERT INTO departementinformatique.verticalmenu VALUES (default,'Document d\'information', NULL, 3, 2, 7, '1B2D07', false);
-INSERT INTO departementinformatique.verticalmenu VALUES (default,'Formation des Étudiants', NULL, 4, 2, 7, '2D843C', false);
-INSERT INTO departementinformatique.verticalmenu VALUES (default,'Responsables des Stages', NULL, 5, 2, 7, '11D031', false);
-INSERT INTO departementinformatique.verticalmenu VALUES (default,'Stages en France', NULL, 6, 2, 7, '45D096', false);
+INSERT INTO departementinformatique.verticalmenu VALUES (default,'Stages', NULL, 1, 1, 7, '6F4876', false);
+INSERT INTO departementinformatique.verticalmenu VALUES (default,'Critères d\'admissibilités','stagecritere.php', 1, 2, 7, 'B1EA0A', false);
+INSERT INTO departementinformatique.verticalmenu VALUES (default,'Dates des Stages','datestages.php', 2, 2, 7, '2E5109', false);
+INSERT INTO departementinformatique.verticalmenu VALUES (default,'Document d\'information', 'http://www.cll.qc.ca/informatique/2014_Lettre_stage_H-2014GIR_1.pdf' , 3, 2, 7, '1B2D07', true);
+INSERT INTO departementinformatique.verticalmenu VALUES (default,'Formation des Étudiants', 'formationetudiant.php', 4, 2, 7, '2D843C', false);
+INSERT INTO departementinformatique.verticalmenu VALUES (default,'Responsables des Stages', 'responsablestage.php', 5, 2, 7, '11D031', false);
+INSERT INTO departementinformatique.verticalmenu VALUES (default,'Stages en France', 'france.php', 6, 2, 7, '45D096', false);
 
 
 /***************************************************
