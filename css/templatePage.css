@@ -467,5 +467,13 @@ ul.vertical_menu li ul li:hover ul {
 	margin-top : -15px;
 }
 
+.facebook {
+  display: inline-block;
+  width: 48px;
+  height: 48px;
+  background: transparent url("../images/sociaux.png") repeat 0 0;
+  text-decoration: none;
+}
+
 
 
