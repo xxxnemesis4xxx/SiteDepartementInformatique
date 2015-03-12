@@ -431,3 +431,41 @@ ul.vertical_menu li ul li:hover ul {
 	color : #D3CCC6; 
 }
 
+
+/**************************************************
+*
+*
+*				CSS for Content
+*
+*
+**************************************************/
+.contenu {
+	position : absolute;
+	top : 150px;
+	left : 260px;
+	width : 70%;
+}
+
+.titreTemplate {
+	text-align: center;
+	font : normal normal bold 60px/normal "wire-one", Helvetica, sans-serif;
+	color : #FF8004;
+}
+
+.textTemplate, .contenu ul li {
+	color : #013161;
+	padding-left : 17%;
+}
+
+.sousTitre {
+	padding-left: 17%;
+	width : 70%;
+	color : #d06700;
+}
+
+.contenu ul {
+	margin-top : -15px;
+}
+
+
+
