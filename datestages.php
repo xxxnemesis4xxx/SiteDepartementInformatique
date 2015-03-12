@@ -6,19 +6,6 @@
 	 	<title>
 	 		Critères 
 	 	</title>
-	 	
-	 	<script src="javascript/jquery-1.11.2.min.js"></script>
-	 	<script>
-	 	$(function() {
-	 		var heightDiv = $(".contenu").height();
-	 		var heightMenu = $(".vertical_menu").height();
-	 		var result = heightDiv-heightMenu;
-	 		
-	 		if (heightDiv > heightMenu) {
-	 			$(".contentFix").height(result);
-	 		}
-	 	});
-	 	</script>
 	</head>
 	<body>
 		<?php
