@@ -14,6 +14,8 @@
 		
 		if (heightDiv > heightMenu) {
 			$(".contentFix").height(result);
+		} else {
+			$(".contentFix").height(10);
 		}
 	});
 	$(window).resize(function() {
@@ -23,6 +25,9 @@
 		
 		if (heightDiv > heightMenu) {
 			$(".contentFix").height(result);
+		} else {
+			$(".contentFix").height(10);
 		}
+		
 	});
 </script>

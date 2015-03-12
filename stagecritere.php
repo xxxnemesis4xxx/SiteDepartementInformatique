@@ -25,6 +25,7 @@
 				2) Que le travail demandé à la ou au stagiaire soit composé essentiellement de programmation et/ou d’analyse et/ou de soutien technique et/ou gestion de réseaux.
 			</p>
 		</div>
+		<div class="contentFix"></div>
 		
 		<?php 
 			include("footer.txt");
