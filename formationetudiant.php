@@ -4,7 +4,7 @@
 	 		include("defaultinclude.txt"); 
 	 	?>
 	 	<title>
-	 		Critères 
+	 		Formation
 	 	</title>          
 	</head>                       
 	<body>                                              
@@ -13,7 +13,7 @@
 		?>                      
 		<?php 
 			include("verticalmenu.txt");
-		?>
+		?>    
 		<div class="contenu">
 			<h1 class="titreTemplate">Formation des étudiants</h1>
 			<p class="textTemplate">

@@ -4,7 +4,7 @@
 	 		include("defaultinclude.txt"); 
 	 	?>
 	 	<title>
-	 		Critères 
+	 		Dates
 	 	</title>
 	</head>
 	<body>
