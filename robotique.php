@@ -1,7 +1,7 @@
 <html>
 	<head>
 	 	<?php
-	 		include("defaultinclude.txt"); 
+	 		include("defaultinclude.php"); 
 	 	?>
 	 	<title>
 	 		Robotique
@@ -9,13 +9,13 @@
 	</head>
 	<body>
 		<?php
-			include("header.txt");
+			include("header.php");
 		?>
 		<?php 
-			include("verticalmenu.txt");
+			include("verticalmenu.php");
 		?>
 		<?php 
-			include("footer.txt");
+			include("footer.php");
 		?>
 	</body>
 </html>

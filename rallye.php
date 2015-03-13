@@ -1,7 +1,7 @@
 <html>
 	<head>
 	 	<?php
-	 		include("defaultinclude.txt"); 
+	 		include("defaultinclude.php"); 
 	 	?>
 	 	<title>
 	 		Rallye
@@ -10,8 +10,8 @@
 	</head>
 	<body>
 		<?php
-			include("header.txt");
-			include("verticalmenu.txt");
+			include("header.php");
+			include("verticalmenu.php");
 		?>
 		<script>
 			$(function() {
@@ -88,7 +88,7 @@
 		</div>
 		<div class="contentFix"></div>
 		<?php 
-			include("footer.txt");
+			include("footer.php");
 		?>
 	</body>
 </html>

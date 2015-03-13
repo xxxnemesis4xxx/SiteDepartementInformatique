@@ -1,7 +1,7 @@
 <html>
 	<head>
 	 	<?php
-	 		include("defaultinclude.txt"); 
+	 		include("defaultinclude.php"); 
 	 	?>
 	 	<title>
 	 		Diplômés
@@ -9,10 +9,10 @@
 	</head>
 	<body>
 		<?php
-			include("header.txt");
+			include("header.php");
 		?>
 		<?php 
-			include("verticalmenu.txt");
+			include("verticalmenu.php");
 		?>
 			<div class="contenu">
 				<h1 class="titreTemplate">Diplômés</h1>
@@ -45,7 +45,7 @@
 		</div>
 		<div class="contentFix"></div>
 		<?php 
-			include("footer.txt");
+			include("footer.php");
 		?>
 	</body>
 </html>
