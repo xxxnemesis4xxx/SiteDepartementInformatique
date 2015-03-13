@@ -64,33 +64,33 @@ INSERT INTO departementinformatique.verticalmenu VALUES (default,'Foire de l\'em
 INSERT INTO departementinformatique.verticalmenu VALUES (default,'Rallye', 'rallye.php', 4, 2, 2, '1A0DDB', false);
 INSERT INTO departementinformatique.verticalmenu VALUES (default,'Remise des Diplomes', 'diplome.php', 5, 2, 2, '836E37', false);
 INSERT INTO departementinformatique.verticalmenu VALUES (default,'Vidéos Promotionnelles', 'videopromo.php', 6, 2, 2, 'CB4CD3', false);
-INSERT INTO departementinformatique.verticalmenu VALUES (default,'Enseignants', NULL, 1 , 1, 3, 'AEAEAE', false);
+INSERT INTO departementinformatique.verticalmenu VALUES (default,'Enseignants', 'enseignant.php', 1 , 1, 3, 'AEAEAE', false);
 INSERT INTO departementinformatique.verticalmenu VALUES (default,'Actuellement', NULL, 1, 2, 3, '957777', false);
-INSERT INTO departementinformatique.verticalmenu VALUES (default,'Yvan Morrissey', NULL, 1, 3, 3, '8C2F19', false);
-INSERT INTO departementinformatique.verticalmenu VALUES (default,'Stéphane Mercier', NULL, 2, 3, 3, '779395', FALSE);
-INSERT INTO departementinformatique.verticalmenu VALUES (default,'Christian Asselin', NULL, 3, 3, 3, '8C1919', false);
-INSERT INTO departementinformatique.verticalmenu VALUES (default,'Serge Lévesque', NULL, 4, 3, 3, '6E3E33', false);
-INSERT INTO departementinformatique.verticalmenu VALUES (default,'Olivier Lafleur', NULL, 5, 3, 3, '382723', false);
-INSERT INTO departementinformatique.verticalmenu VALUES (default,'Mélissage Clermont', NULL, 6, 3, 3, 'F0AB80', false);
-INSERT INTO departementinformatique.verticalmenu VALUES (default,'Gilles Champagne', NULL, 7, 3, 3, 'A18964', false);
-INSERT INTO departementinformatique.verticalmenu VALUES (default,'Marc Deslandes', NULL, 8, 3, 3, '1B1306', false);
-INSERT INTO departementinformatique.verticalmenu VALUES (default,'Nelson Marceau', NULL, 9, 3, 3, '7C7C7C', false);
-INSERT INTO departementinformatique.verticalmenu VALUES (default,'Lise Provencher', NULL, 10, 3, 3, '493E2E', false);
-INSERT INTO departementinformatique.verticalmenu VALUES (default,'Jocelyne Lapointe', NULL, 11, 3, 3, 'A1855A', false);
-INSERT INTO departementinformatique.verticalmenu VALUES (default,'Josée Lainesse', NULL, 12, 3, 3, 'A99F33', false);
-INSERT INTO departementinformatique.verticalmenu VALUES (default,'Guillaume Michaud', NULL, 13, 3, 3, '575008', false);
+INSERT INTO departementinformatique.verticalmenu VALUES (default,'Yvan Morrissey', 'yvanmorrissey.php', 1, 3, 3, '8C2F19', false);
+INSERT INTO departementinformatique.verticalmenu VALUES (default,'Stéphane Mercier', 'stephanemercier.php', 2, 3, 3, '779395', FALSE);
+INSERT INTO departementinformatique.verticalmenu VALUES (default,'Christian Asselin', 'christianasselin.php', 3, 3, 3, '8C1919', false);
+INSERT INTO departementinformatique.verticalmenu VALUES (default,'Serge Lévesque', 'sergelevesque.php', 4, 3, 3, '6E3E33', false);
+INSERT INTO departementinformatique.verticalmenu VALUES (default,'Olivier Lafleur', 'olivierlafleur.php', 5, 3, 3, '382723', false);
+INSERT INTO departementinformatique.verticalmenu VALUES (default,'Mélissa Clermont', 'melissageclermont.php', 6, 3, 3, 'F0AB80', false);
+INSERT INTO departementinformatique.verticalmenu VALUES (default,'Gilles Champagne', 'gilleschampagne.php', 7, 3, 3, 'A18964', false);
+INSERT INTO departementinformatique.verticalmenu VALUES (default,'Marc Deslandes', 'marcdeslandes.php', 8, 3, 3, '1B1306', false);
+INSERT INTO departementinformatique.verticalmenu VALUES (default,'Nelson Marceau', 'nelsonmarceau.php', 9, 3, 3, '7C7C7C', false);
+INSERT INTO departementinformatique.verticalmenu VALUES (default,'Lise Provencher', 'liseprovencher.php', 10, 3, 3, '493E2E', false);
+INSERT INTO departementinformatique.verticalmenu VALUES (default,'Jocelyne Lapointe', 'jocelynelapointe.php', 11, 3, 3, 'A1855A', false);
+INSERT INTO departementinformatique.verticalmenu VALUES (default,'Josée Lainesse', 'joseelainesse.php', 12, 3, 3, 'A99F33', false);
+INSERT INTO departementinformatique.verticalmenu VALUES (default,'Guillaume Michaud', 'guillaumemichaud.php', 13, 3, 3, '575008', false);
 INSERT INTO departementinformatique.verticalmenu VALUES (default,'Technicien(s)', NULL, 2, 2, 4, '779395', false);
-INSERT INTO departementinformatique.verticalmenu VALUES (default,'Louis-Philippe Normand', NULL, 1, 3, 4, '6B7C37', false);
+INSERT INTO departementinformatique.verticalmenu VALUES (default,'Louis-Philippe Normand', 'louisphilippenormand.php', 1, 3, 4, '6B7C37', false);
 INSERT INTO departementinformatique.verticalmenu VALUES (default,'À la retraite', NULL, 3, 2, 5, '599959', false);
-INSERT INTO departementinformatique.verticalmenu VALUES (default,'Luc Morin', NULL, 1, 3, 5, '759612', false);
-INSERT INTO departementinformatique.verticalmenu VALUES (default,'Danielle Théberge', NULL, 2, 3, 5, 'B1EA0A', false);
-INSERT INTO departementinformatique.verticalmenu VALUES (default,'Nicolas Morency', NULL, 3, 3, 5, '7EEA0A', false);
-INSERT INTO departementinformatique.verticalmenu VALUES (default,'Richard Landry', NULL, 4, 3, 5, '2E5109', false);
-INSERT INTO departementinformatique.verticalmenu VALUES (default,'Jacques Chabot', NULL, 5, 3, 5, '1B2D07', false);
-INSERT INTO departementinformatique.verticalmenu VALUES (default,'Normand Lemyre', NULL, 6, 3, 5, '11D031', false);
-INSERT INTO departementinformatique.verticalmenu VALUES (default,'André Charon', NULL, 7, 3, 5, '2D843C', false);
-INSERT INTO departementinformatique.verticalmenu VALUES (default,'Pierre Rajotte', NULL, 8, 3, 5, '2D8460', false);
-INSERT INTO departementinformatique.verticalmenu VALUES (default,'Tuy Nguyen', NULL, 9, 3, 5, '45D096', false);
+INSERT INTO departementinformatique.verticalmenu VALUES (default,'Luc Morin', 'lucmorin.php', 1, 3, 5, '759612', false);
+INSERT INTO departementinformatique.verticalmenu VALUES (default,'Danielle Théberge', 'danielletheberge.php', 2, 3, 5, 'B1EA0A', false);
+INSERT INTO departementinformatique.verticalmenu VALUES (default,'Nicolas Morency', 'nicolasmorency.php', 3, 3, 5, '7EEA0A', false);
+INSERT INTO departementinformatique.verticalmenu VALUES (default,'Richard Landry', 'richardlandry.php', 4, 3, 5, '2E5109', false);
+INSERT INTO departementinformatique.verticalmenu VALUES (default,'Jacques Chabot', 'jacqueschabot.php', 5, 3, 5, '1B2D07', false);
+INSERT INTO departementinformatique.verticalmenu VALUES (default,'Normand Lemyre', 'nordmandlemyre.php', 6, 3, 5, '11D031', false);
+INSERT INTO departementinformatique.verticalmenu VALUES (default,'André Charon', 'andrecharon.php', 7, 3, 5, '2D843C', false);
+INSERT INTO departementinformatique.verticalmenu VALUES (default,'Pierre Rajotte', 'pierrerajotte.php', 8, 3, 5, '2D8460', false);
+INSERT INTO departementinformatique.verticalmenu VALUES (default,'Tuy Nguyen', 'tuynguyen.php', 9, 3, 5, '45D096', false);
 INSERT INTO departementinformatique.verticalmenu VALUES (default,'Club Robotique', 'clubrobot.php', 1, 1, 6, 'EFEC00', false);
 INSERT INTO departementinformatique.verticalmenu VALUES (default,'Liens Utilies',NULL, 1, 1, 8, 'DB00FF', false);
 INSERT INTO departementinformatique.verticalmenu VALUES (default,'Alternance Travail-Études', 'http://cll.qc.ca/programmes/alternance-travail-etudes/', 1, 2, 8, '9AFF3C', true);
@@ -143,5 +143,36 @@ INSERT INTO departementinformatique.displaymenu VALUES (default, 'robotique.txt'
 *
 *
 *********************************************************/
+DROP TABLE IF EXISTS departementinformatique.enseignants;
 
+CREATE TABLE IF NOT EXISTS departementinformatique.enseignants(
+enseignantId INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+nom VARCHAR(80) NOT NULL,
+pathPicture VARCHAR(200) NOT NULL,
+pathFile VARCHAR(200) NOT NULL,
+renderPosition INT NOT NULL UNIQUE
+) ENGINE=INNODB;
 
+INSERT INTO departementinformatique.enseignants VALUES(default, 'Yvan Morrissey', 'images/photoProfileDefault.png', 'yvanmorrissey.php', 1);
+INSERT INTO departementinformatique.enseignants VALUES(default, 'Stéphane Mercier', 'images/photoProfileDefault.png', 'stephanemercier.php', 2);
+INSERT INTO departementinformatique.enseignants VALUES(default, 'Christian Asselin', 'images/photoProfileDefault.png', 'christianasselin.php', 3);
+INSERT INTO departementinformatique.enseignants VALUES(default, 'Serge Lévesque', 'images/photoProfileDefault.png', 'sergelevesque.php', 4);
+INSERT INTO departementinformatique.enseignants VALUES(default, 'Olivier Lafleur', 'images/photoProfileDefault.png', 'olivierlafleur.php', 5);
+INSERT INTO departementinformatique.enseignants VALUES(default, 'Mélissa Clermont', 'images/photoProfileDefault.png', 'melissageclermont.php', 6);
+INSERT INTO departementinformatique.enseignants VALUES(default, 'Gilles Champagne', 'images/photoProfileDefault.png', 'gilleschampagne.php', 7);
+INSERT INTO departementinformatique.enseignants VALUES(default, 'Marc Deslandes', 'images/photoProfileDefault.png', 'marcdeslandes.php', 8);
+INSERT INTO departementinformatique.enseignants VALUES(default, 'Nelson Marceau', 'images/photoProfileDefault.png', 'nelsonmarceau.php', 9);
+INSERT INTO departementinformatique.enseignants VALUES(default, 'Lise Provencher', 'images/photoProfileDefault.png', 'liseprovencher.php', 10);
+INSERT INTO departementinformatique.enseignants VALUES(default, 'Jocelyne Lapointe', 'images/photoProfileDefault.png', 'jocelynelapointe.php', 11);
+INSERT INTO departementinformatique.enseignants VALUES(default, 'Josée Lainesse', 'images/photoProfileDefault.png', 'joseelainesse.php', 12);
+INSERT INTO departementinformatique.enseignants VALUES(default, 'Guillaume Michaud', 'images/photoProfileDefault.png', 'guillaumemichaud.php', 13);
+INSERT INTO departementinformatique.enseignants VALUES(default, 'Louis-Philippe Normand', 'images/photoProfileDefault.png', 'louisphilippenormand.php', 14);
+INSERT INTO departementinformatique.enseignants VALUES(default, 'Luc Morin', 'images/photoProfileDefault.png', 'lucmorin.php', 15);
+INSERT INTO departementinformatique.enseignants VALUES(default, 'Danielle Théberge', 'images/photoProfileDefault.png', 'danielletheberge.php', 16);
+INSERT INTO departementinformatique.enseignants VALUES(default, 'Nicolas Morency', 'images/photoProfileDefault.png', 'nicolasmorency.php', 17);
+INSERT INTO departementinformatique.enseignants VALUES(default, 'Richard Landry', 'images/photoProfileDefault.png', 'richardlandry.php', 18);
+INSERT INTO departementinformatique.enseignants VALUES(default, 'Jacques Chabot', 'images/photoProfileDefault.png', 'jacqueschabot.php', 19);
+INSERT INTO departementinformatique.enseignants VALUES(default, 'Normand Lemyre', 'images/photoProfileDefault.png', 'nordmandlemyre.php', 20);
+INSERT INTO departementinformatique.enseignants VALUES(default, 'André Charon', 'images/photoProfileDefault.png', 'andrecharon.php', 21);
+INSERT INTO departementinformatique.enseignants VALUES(default, 'Pierre Rajotte', 'images/photoProfileDefault.png', 'pierrerajotte.php', 22);
+INSERT INTO departementinformatique.enseignants VALUES(default, 'Tuy Nguyen', 'images/photoProfileDefault.png', 'tuynguyen.php', 23);
