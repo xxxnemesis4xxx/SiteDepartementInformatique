@@ -16,7 +16,7 @@ menuId INT NOT NULL auto_increment PRIMARY KEY,
 nomLien varchar(100) NOT NULL,
 lien varchar(20000) NOT NULL,
 renderHtmlPosition INT NOT NULL UNIQUE)
-ENGINE=INNODB;
+ENGINE=INNODB DEFAULT CHARSET=utf8;
 
 INSERT INTO equipe6h15.lienmenuderoulant VALUES(default,'Omnivox','https://cll.omnivox.ca/intr/Module/Identification/Login/Login.aspx?ReturnUrl=/intr', 1);
 INSERT INTO equipe6h15.lienmenuderoulant VALUES(default,'Messagerie','https://alphonse2.clevislauzon.qc.ca/gw/webacc', 2);
@@ -52,7 +52,7 @@ renderHtmlPosition INT NOT NULL,
 htmlCouleur VARCHAR(6) NOT NULL,                  
 openNewPage boolean NOT NULL default FALSE,
 CONSTRAINT fk_verticalmenu_renderHtmlPosition FOREIGN KEY (`renderHtmlPosition`) REFERENCES equipe6h15.verticalmenu(`menuId`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=INNODB;
+) ENGINE=INNODB DEFAULT CHARSET=utf8;
 
 INSERT INTO equipe6h15.verticalmenu VALUES (default,'Programmes', 'programmes.php', 1, 1, 1, '008747', false);
 INSERT INTO equipe6h15.verticalmenu VALUES (default,'Gestion', 'http://cll.qc.ca/programmes/techniques/techniques-de-linformatique-informatique-de-gestion-420-aa/', 1, 2, 1, '873400', true);
@@ -122,7 +122,7 @@ colspan INT NOT NULL DEFAULT 1,
 rowspan INT NOT NULL DEFAULT 1,
 position INT NOT NULL UNIQUE,
 lastCols BOOLEAN NOT NULL DEFAULT FALSE
-) ENGINE=INNODB;
+) ENGINE=INNODB DEFAULT CHARSET=utf8;
 
 
 INSERT INTO equipe6h15.displaymenu VALUES (default, 'pub.html', default, default, 1, false);
@@ -151,7 +151,7 @@ nom VARCHAR(80) NOT NULL,
 pathPicture VARCHAR(200) NOT NULL,
 pathFile VARCHAR(200) NOT NULL,
 renderPosition INT NOT NULL UNIQUE
-) ENGINE=INNODB;
+) ENGINE=INNODB DEFAULT CHARSET=utf8;
 
 INSERT INTO equipe6h15.enseignants VALUES(default, 'Yvan Morrissey', 'Images/photoProfileDefault.png', 'yvanmorrissey.php', 1);
 INSERT INTO equipe6h15.enseignants VALUES(default, 'Stéphane Mercier', 'Images/photoProfileDefault.png', 'stephanemercier.php', 2);
