@@ -58,7 +58,7 @@ INSERT INTO departementinformatique.verticalmenu VALUES (default,'Programmes', '
 INSERT INTO departementinformatique.verticalmenu VALUES (default,'Gestion', 'http://cll.qc.ca/programmes/techniques/techniques-de-linformatique-informatique-de-gestion-420-aa/', 1, 2, 1, '873400', true);
 INSERT INTO departementinformatique.verticalmenu VALUES (default,'Industrielle', 'http://cll.qc.ca/programmes/techniques/techniques-de-linformatique-informatique-industrielle-420-ab/', 2, 2, 1, '870020', true);
 INSERT INTO departementinformatique.verticalmenu VALUES (default,'Réseaux', 'http://cll.qc.ca/programmes/techniques/informatique-gestion-de-reseaux/', 3, 2, 1, '240087', true);
-INSERT INTO departementinformatique.verticalmenu VALUES (default,'Événements', NULL, 1, 1, 2, 'cf2130', false);
+INSERT INTO departementinformatique.verticalmenu VALUES (default,'Événements', 'evenement.php', 1, 1, 2, 'cf2130', false);
 INSERT INTO departementinformatique.verticalmenu VALUES (default,'Activités', 'activite.php', 1, 2, 2, 'fecf54', false);
 INSERT INTO departementinformatique.verticalmenu VALUES (default,'Foire de l\'emploie', 'foireemploi.php', 3, 2, 2, '2B2F56', false);
 INSERT INTO departementinformatique.verticalmenu VALUES (default,'Rallye', 'rallye.php', 4, 2, 2, '1A0DDB', false);

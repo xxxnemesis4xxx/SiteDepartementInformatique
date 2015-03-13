@@ -10,10 +10,13 @@
 	<body>
 		<?php
 			include("header.txt");
-		?>
-		<?php 
 			include("verticalmenu.txt");
 		?>
+		
+			
+			<div class="contenu">
+				<h1 class="titreTemplate">Les Événements </h1>
+			</div>
 		<?php 
 			include("footer.txt");
 		?>
