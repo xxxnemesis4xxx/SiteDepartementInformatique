@@ -55,6 +55,6 @@
 		</table>
 		
 		
-		<?php include("footer.txt"); ?>
+		<?php include("footer.php"); ?>
 	</body>
 </html>
