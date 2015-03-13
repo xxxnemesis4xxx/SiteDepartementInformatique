@@ -59,11 +59,11 @@ INSERT INTO departementinformatique.verticalmenu VALUES (default,'Gestion', 'htt
 INSERT INTO departementinformatique.verticalmenu VALUES (default,'Industrielle', 'http://cll.qc.ca/programmes/techniques/techniques-de-linformatique-informatique-industrielle-420-ab/', 2, 2, 1, '870020', true);
 INSERT INTO departementinformatique.verticalmenu VALUES (default,'Réseaux', 'http://cll.qc.ca/programmes/techniques/informatique-gestion-de-reseaux/', 3, 2, 1, '240087', true);
 INSERT INTO departementinformatique.verticalmenu VALUES (default,'Événements', NULL, 1, 1, 2, 'cf2130', false);
-INSERT INTO departementinformatique.verticalmenu VALUES (default,'Activités', NULL, 1, 2, 2, 'fecf54', false);
-INSERT INTO departementinformatique.verticalmenu VALUES (default,'Foire de l\'emploie', NULL, 3, 2, 2, '2B2F56', false);
-INSERT INTO departementinformatique.verticalmenu VALUES (default,'Rallye', NULL, 4, 2, 2, '1A0DDB', false);
-INSERT INTO departementinformatique.verticalmenu VALUES (default,'Remise des Diplomes', NULL, 5, 2, 2, '836E37', false);
-INSERT INTO departementinformatique.verticalmenu VALUES (default,'Vidéos Promotionnelles', NULL, 6, 2, 2, 'CB4CD3', false);
+INSERT INTO departementinformatique.verticalmenu VALUES (default,'Activités', 'activite.php', 1, 2, 2, 'fecf54', false);
+INSERT INTO departementinformatique.verticalmenu VALUES (default,'Foire de l\'emploie', 'foireemploi.php', 3, 2, 2, '2B2F56', false);
+INSERT INTO departementinformatique.verticalmenu VALUES (default,'Rallye', 'rallye.php', 4, 2, 2, '1A0DDB', false);
+INSERT INTO departementinformatique.verticalmenu VALUES (default,'Remise des Diplomes', 'diplome.php', 5, 2, 2, '836E37', false);
+INSERT INTO departementinformatique.verticalmenu VALUES (default,'Vidéos Promotionnelles', 'videopromo.php', 6, 2, 2, 'CB4CD3', false);
 INSERT INTO departementinformatique.verticalmenu VALUES (default,'Enseignants', NULL, 1 , 1, 3, 'AEAEAE', false);
 INSERT INTO departementinformatique.verticalmenu VALUES (default,'Actuellement', NULL, 1, 2, 3, '957777', false);
 INSERT INTO departementinformatique.verticalmenu VALUES (default,'Yvan Morrissey', NULL, 1, 3, 3, '8C2F19', false);
