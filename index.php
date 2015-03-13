@@ -7,7 +7,7 @@
 	</head>
 	
 	<body>
-		<?php include("header.txt"); ?>
+		<?php include("header.php"); ?>
 		
 		<table class="indexTable">
 		
