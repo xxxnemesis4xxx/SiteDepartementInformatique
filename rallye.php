@@ -82,7 +82,7 @@
 			
 			<h2 class="sousTitre">Rallye 2013</h2>
 			<img class="arrow" src="images/arrowdown.png">
-				<div id="photo" class="Hide">
+				<div class="Hide">
 					<p class="textTemplate">
 						<?php
 							showImgs("images/rallye2013/");
