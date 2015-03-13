@@ -71,7 +71,7 @@ INSERT INTO departementinformatique.verticalmenu VALUES (default,'Stéphane Merc
 INSERT INTO departementinformatique.verticalmenu VALUES (default,'Christian Asselin', 'christianasselin.php', 3, 3, 3, '8C1919', false);
 INSERT INTO departementinformatique.verticalmenu VALUES (default,'Serge Lévesque', 'sergelevesque.php', 4, 3, 3, '6E3E33', false);
 INSERT INTO departementinformatique.verticalmenu VALUES (default,'Olivier Lafleur', 'olivierlafleur.php', 5, 3, 3, '382723', false);
-INSERT INTO departementinformatique.verticalmenu VALUES (default,'Mélissa Clermont', 'melissageclermont.php', 6, 3, 3, 'F0AB80', false);
+INSERT INTO departementinformatique.verticalmenu VALUES (default,'Mélissa Clermont', 'melissaclermont.php', 6, 3, 3, 'F0AB80', false);
 INSERT INTO departementinformatique.verticalmenu VALUES (default,'Gilles Champagne', 'gilleschampagne.php', 7, 3, 3, 'A18964', false);
 INSERT INTO departementinformatique.verticalmenu VALUES (default,'Marc Deslandes', 'marcdeslandes.php', 8, 3, 3, '1B1306', false);
 INSERT INTO departementinformatique.verticalmenu VALUES (default,'Nelson Marceau', 'nelsonmarceau.php', 9, 3, 3, '7C7C7C', false);
@@ -158,7 +158,7 @@ INSERT INTO departementinformatique.enseignants VALUES(default, 'Stéphane Merci
 INSERT INTO departementinformatique.enseignants VALUES(default, 'Christian Asselin', 'images/photoProfileDefault.png', 'christianasselin.php', 3);
 INSERT INTO departementinformatique.enseignants VALUES(default, 'Serge Lévesque', 'images/photoProfileDefault.png', 'sergelevesque.php', 4);
 INSERT INTO departementinformatique.enseignants VALUES(default, 'Olivier Lafleur', 'images/photoProfileDefault.png', 'olivierlafleur.php', 5);
-INSERT INTO departementinformatique.enseignants VALUES(default, 'Mélissa Clermont', 'images/photoProfileDefault.png', 'melissageclermont.php', 6);
+INSERT INTO departementinformatique.enseignants VALUES(default, 'Mélissa Clermont', 'images/photoProfileDefault.png', 'melissaclermont.php', 6);
 INSERT INTO departementinformatique.enseignants VALUES(default, 'Gilles Champagne', 'images/photoProfileDefault.png', 'gilleschampagne.php', 7);
 INSERT INTO departementinformatique.enseignants VALUES(default, 'Marc Deslandes', 'images/photoProfileDefault.png', 'marcdeslandes.php', 8);
 INSERT INTO departementinformatique.enseignants VALUES(default, 'Nelson Marceau', 'images/photoProfileDefault.png', 'nelsonmarceau.php', 9);
