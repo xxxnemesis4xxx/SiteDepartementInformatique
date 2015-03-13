@@ -18,6 +18,7 @@
 			$(".contentFix").height(10);
 		}
 	});
+
 	$(window).resize(function() {
 		var heightDiv = $(".contenu").height();
 		var heightMenu = $(".vertical_menu").height();

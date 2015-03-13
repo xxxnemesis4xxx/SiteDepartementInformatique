@@ -467,5 +467,37 @@ ul.vertical_menu li ul li:hover ul {
 	margin-top : -15px;
 }
 
+.facebook {
+  display: inline-block;
+  width: 48px;
+  height: 48px;
+  background: transparent url("../images/sociaux.png") repeat 0 0;
+  text-decoration: none;
+}
+
+.rallyeImg {
+	width : 100px !important;
+	height : 56px !important;
+}
+
+.rallyeImg2 {
+	width : 100%;
+	height : 100%;
+}
+
+.Hide {
+	display : none;
+}
+
+.arrow {
+	display : block;
+	position : relative;
+	padding-left : 17%;
+	left : 50px;
+	margin-top : -50px;
+	height : 30px !important;
+	width : initial !important;
+}
+
 
 
