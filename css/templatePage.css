@@ -499,5 +499,26 @@ ul.vertical_menu li ul li:hover ul {
 	width : initial !important;
 }
 
+.dimensionTable {
+	display : block;
+	width : 100%;
+	border-spacing : 20px;
+	table-layout : fixed;
+	padding-left : 10%;
+}
 
+.dimensionTable td {
+	padding : 0px;
+	width : 25%;
+}
+
+.dimensionTable img {
+	width : 100%;
+	height : 100%;
+}
+
+.nomEnseignant {
+	overflow : hidden;
+	text-align : center;
+}
 
