@@ -17,11 +17,6 @@
 		} else {
 			$(".contentFix").height(10);
 		}
-		
-		$("img").click(function() {
-			$(this).toggleClass("rallyeImg");
-			$(window).trigger("resize");
-		});
 	});
 
 	$(window).resize(function() {

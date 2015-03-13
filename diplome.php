@@ -24,7 +24,7 @@
 						    
 						    
 						    //$extension = strtolower ( info["extension"]);
-						    switch(array_shift(array_slice($info,2,3))) {
+						    switch(strtolower(array_shift(array_slice($info,2,3)))) {
 						    case "jpg":
 						    case "png" :
 						    case "gif" :
