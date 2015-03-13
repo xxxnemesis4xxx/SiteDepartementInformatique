@@ -125,15 +125,15 @@ lastCols BOOLEAN NOT NULL DEFAULT FALSE
 ) ENGINE=INNODB;
 
 
-INSERT INTO equipe6h15.displaymenu VALUES (default, 'pub.txt', default, default, 1, false);
-INSERT INTO equipe6h15.displaymenu VALUES (default, 'gestion.txt', default, default, 2, false);
-INSERT INTO equipe6h15.displaymenu VALUES (default, 'industrielle.txt', default, default, 3, false);
-INSERT INTO equipe6h15.displaymenu VALUES (default, 'reseau.txt', default, default, 4, false);
-INSERT INTO equipe6h15.displaymenu VALUES (default, 'pub2.txt', default, default, 5, true);
-INSERT INTO equipe6h15.displaymenu VALUES (default, 'enseignant.txt', 2, 2, 6, false);
-INSERT INTO equipe6h15.displaymenu VALUES (default, 'pdea.txt', default, default, 9, false);
-INSERT INTO equipe6h15.displaymenu VALUES (default, 'evenement.txt', 2, 2, 8, true);
-INSERT INTO equipe6h15.displaymenu VALUES (default, 'robotique.txt', default, default, 7, false);
+INSERT INTO equipe6h15.displaymenu VALUES (default, 'pub.html', default, default, 1, false);
+INSERT INTO equipe6h15.displaymenu VALUES (default, 'gestion.html', default, default, 2, false);
+INSERT INTO equipe6h15.displaymenu VALUES (default, 'industrielle.html', default, default, 3, false);
+INSERT INTO equipe6h15.displaymenu VALUES (default, 'reseau.html', default, default, 4, false);
+INSERT INTO equipe6h15.displaymenu VALUES (default, 'pub2.html', default, default, 5, true);
+INSERT INTO equipe6h15.displaymenu VALUES (default, 'enseignant.html', 2, 2, 6, false);
+INSERT INTO equipe6h15.displaymenu VALUES (default, 'pdea.html', default, default, 9, false);
+INSERT INTO equipe6h15.displaymenu VALUES (default, 'evenement.html', 2, 2, 8, true);
+INSERT INTO equipe6h15.displaymenu VALUES (default, 'robotique.html', default, default, 7, false);
 
 
 /********************************************************
