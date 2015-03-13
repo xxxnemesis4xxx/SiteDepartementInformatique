@@ -36,7 +36,7 @@
 						echo "<tr>";
 						$firstValue = false;
 					}
-					echo "<td colspan='" . $current["colspan"] . "' rowspan='" . $current["rowspan"]  . "'" . (($current["backgroundColor"] == false)?"style='background-color:transparent'":"") .">";
+					echo "<td colspan='" . $current["colspan"] . "' rowspan='" . $current["rowspan"]  . "' >";
 					include ($current["nomFichier"]);
 					echo "</td>";
 					if ($current["lastCols"] == true and $nextValue != null) {
