@@ -1,6 +1,6 @@
 <html>
 	<head>
-		 <?php include("defaultinclude.txt"); ?>
+		 <?php include("defaultinclude.php"); ?>
 		 <title>Accueil</title>
 		 <link rel="stylesheet" href="css/index.css">
 		
