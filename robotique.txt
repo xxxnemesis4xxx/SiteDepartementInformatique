@@ -5,6 +5,6 @@
 	}
 </style>
 
-<a href="robotique.php">
+<a href="clubrobot.php">
 	<img id="robotique" src="images/robotique.png" alt="Club Robotique">
 </a>

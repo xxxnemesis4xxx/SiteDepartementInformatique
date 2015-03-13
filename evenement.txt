@@ -5,6 +5,6 @@
 	}
 </style>
 
-<a href="evenement.php">
+<a href="activite.php">
 	<img id="evenement" src="images/evenement.png" alt="Événements">
 </a>
