@@ -91,7 +91,7 @@ INSERT INTO departementinformatique.verticalmenu VALUES (default,'Normand Lemyre
 INSERT INTO departementinformatique.verticalmenu VALUES (default,'André Charon', NULL, 7, 3, 5, '2D843C', false);
 INSERT INTO departementinformatique.verticalmenu VALUES (default,'Pierre Rajotte', NULL, 8, 3, 5, '2D8460', false);
 INSERT INTO departementinformatique.verticalmenu VALUES (default,'Tuy Nguyen', NULL, 9, 3, 5, '45D096', false);
-INSERT INTO departementinformatique.verticalmenu VALUES (default,'Club Robotique', NULL, 1, 1, 6, 'EFEC00', false);
+INSERT INTO departementinformatique.verticalmenu VALUES (default,'Club Robotique', 'clubrobot.php', 1, 1, 6, 'EFEC00', false);
 INSERT INTO departementinformatique.verticalmenu VALUES (default,'Liens Utilies',NULL, 1, 1, 8, 'DB00FF', false);
 INSERT INTO departementinformatique.verticalmenu VALUES (default,'Alternance Travail-Études', 'http://cll.qc.ca/programmes/alternance-travail-etudes/', 1, 2, 8, '9AFF3C', true);
 INSERT INTO departementinformatique.verticalmenu VALUES (default,'MSDNAA', 'http://e5.onthehub.com/WebStore/ProductsByMajorVersionList.aspx?ws=6c5a70be-a08b-e011-969d-0030487d8897&vsro=8&JSEnabled=1', 2, 2, 8, '4B7347', true);
