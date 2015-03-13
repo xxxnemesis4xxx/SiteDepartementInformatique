@@ -10,10 +10,12 @@
 	<body>
 		<?php
 			include("header.txt");
-		?>
-		<?php 
 			include("verticalmenu.txt");
 		?>
+		
+		<p class="textTemplate">
+		</p>
+		
 		<?php 
 			include("footer.txt");
 		?>

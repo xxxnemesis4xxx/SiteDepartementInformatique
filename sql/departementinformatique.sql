@@ -134,3 +134,14 @@ INSERT INTO departementinformatique.displaymenu VALUES (default, 'enseignant.txt
 INSERT INTO departementinformatique.displaymenu VALUES (default, 'pdea.txt', default, default, 9, false);
 INSERT INTO departementinformatique.displaymenu VALUES (default, 'evenement.txt', 2, 2, 8, true);
 INSERT INTO departementinformatique.displaymenu VALUES (default, 'robotique.txt', default, default, 7, false);
+
+
+/********************************************************
+*
+*
+*	Table containing info for Rendering Teachers
+*
+*
+*********************************************************/
+
+
