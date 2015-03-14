@@ -1,7 +1,7 @@
 <html>
 	<head>
 	 	<?php
-	 		include("defaultinclude.txt"); 
+	 		include("defaultinclude.php"); 
 	 	?>
 	 	<title>
 	 		Enseignants
@@ -9,8 +9,8 @@
 	</head>
 	<body>
 		<?php
-			include("header.txt");
-			include("verticalmenu.txt");
+			include("header.php");
+			include("verticalmenu.php");
 		?>
 		
 		<div class="contenu">
@@ -18,9 +18,9 @@
 			<tr>
 				<?php
 					$servername = "localhost";
-					$username = "root";
-					$password = "admin123*";
-					$dbname = "departementinformatique";
+					$username = "equipe6h15";
+					$password = "ebola-info";
+					$dbname = "equipe6h15";
 					
 					// Create connection
 					$conn = new mysqli($servername, $username, $password, $dbname);
@@ -58,7 +58,7 @@
 		<div class="contentFix"></div>
 		
 		<?php 
-			include("footer.txt");
+			include("footer.php");
 		?>
 	</body>
 </html>

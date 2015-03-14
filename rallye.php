@@ -1,7 +1,7 @@
 <html>
 	<head>
 	 	<?php
-	 		include("defaultinclude.txt"); 
+	 		include("defaultinclude.php"); 
 	 	?>
 	 	<title>
 	 		Rallye
@@ -10,18 +10,18 @@
 	</head>
 	<body>
 		<?php
-			include("header.txt");
-			include("verticalmenu.txt");
+			include("header.php");
+			include("verticalmenu.php");
 		?>
 		<script>
 			$(function() {
 				$('.arrow').click(function() {
 						$(this).next('div').toggleClass("Hide");
 						
-						if ($(this).attr('src') === "images/arrowdown.png") {
-							$(this).attr('src','images/arrowup.png')
+						if ($(this).attr('src') === "Images/arrowdown.png") {
+							$(this).attr('src','Images/arrowup.png')
 						} else { 
-							$(this).attr('src','images/arrowdown.png')
+							$(this).attr('src','Images/arrowdown.png')
 						}
 						
 						$(window).trigger("resize");
@@ -39,7 +39,7 @@
 			
 			<?php
 				//Get Years of all rallye Folders
-				$dossier = opendir("images/");
+				$dossier = opendir("Images/");
 				$rallyeFolders = array();
 				 while($image = readdir($dossier)){
 				    //$extension = strtolower ( pathinfo($image)["extension"]);
@@ -57,11 +57,11 @@
 				 //Get Images for Each Year
 				 foreach($rallyeFolders as $key => $val) {
 				 	 echo "<h2 class=\"sousTitre\">". $val . "</h2>"; 
-				 	 echo "<img class=\"arrow\" src=\"images/arrowdown.png\">";
+				 	 echo "<img class=\"arrow\" src=\"Images/arrowdown.png\">";
 				 	 echo "<div class=\"Hide\">";
 				 	 echo "<p class=\"textTemplate\">";
 				 	 
-				 	 $dossier = opendir("images/rallye". $val . "/");
+				 	 $dossier = opendir("Images/rallye". $val . "/");
 					 while($image = readdir($dossier)){
 					    $info = pathinfo($image);
 					    
@@ -77,7 +77,7 @@
 					    }
 					    
 					    if($uneImage){ 
-					       echo "<img class=\"rallyeImg2 rallyeImg\" src=\"images/rallye".$val. "/" . array_shift(array_slice($info,1,2)) .  "\">";
+					       echo "<img class=\"rallyeImg2 rallyeImg\" src=\"Images/rallye".$val. "/" . array_shift(array_slice($info,1,2)) .  "\">";
 					    } 
 					 }
 					 
@@ -88,7 +88,7 @@
 		</div>
 		<div class="contentFix"></div>
 		<?php 
-			include("footer.txt");
+			include("footer.php");
 		?>
 	</body>
 </html>

@@ -1,6 +1,6 @@
 <header>
 	<div id="titre_logo">
-		<a href="http://cll.qc.ca" target="_blank"><img src="images/logoLevis.png" alt="Cégep Lévis-Lauzon" /></a>
+		<a href="http://cll.qc.ca" target="_blank"><img src="Images/logoLevis.png" alt="Cégep Lévis-Lauzon" /></a>
 	</div>
 	<div id="titre_principal">
 		<h1>Techniques de l'informatique </h1>
@@ -13,9 +13,9 @@
 				<ul class="menuderoulant">
 					<?php
 						$servername = "localhost";
-						$username = "root";
-						$password = "admin123*";
-						$dbname = "departementinformatique";
+						$username = "equipe6h15";
+						$password = "ebola-info";
+						$dbname = "equipe6h15";
 			
 						// Create connection
 						$conn = new mysqli($servername, $username, $password, $dbname);

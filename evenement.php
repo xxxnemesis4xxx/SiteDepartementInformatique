@@ -1,7 +1,7 @@
 <html>
 	<head>
 	 	<?php
-	 		include("defaultinclude.txt"); 
+	 		include("defaultinclude.php"); 
 	 	?>
 	 	<title>
 	 		Événements
@@ -9,8 +9,8 @@
 	</head>
 	<body>
 		<?php
-			include("header.txt");
-			include("verticalmenu.txt");
+			include("header.php");
+			include("verticalmenu.php");
 		?>
 		
 			
@@ -18,7 +18,7 @@
 				<h1 class="titreTemplate">Les Événements </h1>
 			</div>
 		<?php 
-			include("footer.txt");
+			include("footer.php");
 		?>
 	</body>
 </html>

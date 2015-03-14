@@ -1,6 +1,6 @@
 header
 {
-    background : transparent url("../images/logoFont.jpg") repeat-x 0 43px;
+    background : transparent url("../Images/logoFont.jpg") repeat-x 0 43px;
     width : 100%;
 }
 
@@ -232,12 +232,12 @@ ul.vertical_menu li ul li:hover ul {
 }
 
 #font-noir {
-	background : transparent url("../images/font_footer.png") repeat center 0;
+	background : transparent url("../Images/font_footer.png") repeat center 0;
 	min-width: 960px;
 }
 
 #fond-noir-fade {
-	background : transparent url("../images/font_fader.png") repeat-x center 0;
+	background : transparent url("../Images/font_fader.png") repeat-x center 0;
 	min-width : 960px;
 }
 
@@ -251,7 +251,7 @@ ul.vertical_menu li ul li:hover ul {
 }
 
 #pied-de-page .colonne {
-	background : transparent url("../images/font_ligne_verticale.png") no-repeat 0 0;
+	background : transparent url("../Images/font_ligne_verticale.png") no-repeat 0 0;
 	padding : 0 26px;
 	width : 908;
 	position : relative;
@@ -343,7 +343,7 @@ ul.vertical_menu li ul li:hover ul {
 	display : inline-block;
 	width : 48px;
 	height : 48px;
-	background : transparent url("../images/sociaux.png") repeat 0 0;
+	background : transparent url("../Images/sociaux.png") repeat 0 0;
 	text-decoration : none;
 }
 
@@ -359,7 +359,7 @@ ul.vertical_menu li ul li:hover ul {
 }
 
 .deuxieme, .copyright{
-	background : transparent url("../images/ligne_horizontale.png") repeat-x 0 0;
+	background : transparent url("../Images/ligne_horizontale.png") repeat-x 0 0;
 	padding : 20px 0 ;
 }
 
@@ -376,7 +376,7 @@ ul.vertical_menu li ul li:hover ul {
 	color : #e4e4e4;
 	padding : 4px 0 4px 60px;
 	width : 95px;
-	background : transparent url("../images/repertoire.png") no-repeat 0 center;
+	background : transparent url("../Images/repertoire.png") no-repeat 0 center;
 }
 
 .menu-omnivox ul {
@@ -393,7 +393,7 @@ ul.vertical_menu li ul li:hover ul {
 	padding-top : 10px;
 	padding-bottom : 8px;
 	color : #4c4c4c;
-	background : whitesmoke url("../images/bouton_gris.png") repeat-x center center;
+	background : whitesmoke url("../Images/bouton_gris.png") repeat-x center center;
 }
 
 .menu-omnivox ul li, .menu-personnel ul li{
@@ -471,7 +471,7 @@ ul.vertical_menu li ul li:hover ul {
   display: inline-block;
   width: 48px;
   height: 48px;
-  background: transparent url("../images/sociaux.png") repeat 0 0;
+  background: transparent url("../Images/sociaux.png") repeat 0 0;
   text-decoration: none;
 }
 

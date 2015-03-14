@@ -1,21 +1,21 @@
 <html>
 	<head>
-		 <?php include("defaultinclude.txt"); ?>
+		 <?php include("defaultinclude.php"); ?>
 		 <title>Accueil</title>
 		 <link rel="stylesheet" href="css/index.css">
 		
 	</head>
 	
 	<body>
-		<?php include("header.txt"); ?>
+		<?php include("header.php"); ?>
 		
 		<table class="indexTable">
 		
 		<?php
 			$servername = "localhost";
-			$username = "root";
-			$password = "admin123*";
-			$dbname = "departementinformatique";
+			$username = "equipe6h15";
+			$password = "ebola-info";
+			$dbname = "equipe6h15";
 			
 			// Create connection
 			$conn = new mysqli($servername, $username, $password, $dbname);
@@ -36,7 +36,7 @@
 						echo "<tr>";
 						$firstValue = false;
 					}
-					echo "<td colspan='" . $current["colspan"] . "' rowspan='" . $current["rowspan"]  . "'" . (($current["backgroundColor"] == false)?"style='background-color:transparent'":"") .">";
+					echo "<td colspan='" . $current["colspan"] . "' rowspan='" . $current["rowspan"]  . "' >";
 					include ($current["nomFichier"]);
 					echo "</td>";
 					if ($current["lastCols"] == true and $nextValue != null) {
@@ -55,6 +55,6 @@
 		</table>
 		
 		
-		<?php include("footer.txt"); ?>
+		<?php include("footer.php"); ?>
 	</body>
 </html>

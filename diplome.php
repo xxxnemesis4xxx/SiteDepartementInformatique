@@ -1,7 +1,7 @@
 <html>
 	<head>
 	 	<?php
-	 		include("defaultinclude.txt"); 
+	 		include("defaultinclude.php"); 
 	 	?>
 	 	<title>
 	 		Diplômés
@@ -9,16 +9,16 @@
 	</head>
 	<body>
 		<?php
-			include("header.txt");
+			include("header.php");
 		?>
 		<?php 
-			include("verticalmenu.txt");
+			include("verticalmenu.php");
 		?>
 			<div class="contenu">
 				<h1 class="titreTemplate">Diplômés</h1>
 				<p class="textTemplate">
 					<?php
-						 $dossier = opendir("images/diplome/");
+						 $dossier = opendir("Images/diplome/");
 						 while($image = readdir($dossier)){
 						    $info = pathinfo($image);
 						    
@@ -37,7 +37,7 @@
 						    
 						    if($uneImage){ 
 						       echo "<h2 class=\"sousTitre\">". explode(".",array_shift(array_slice($info,1,2)))[0] . "</h2><p class=\"textTemplate\">"; 
-						       echo "<img style=\"width:100%;\" src=\"images/diplome/" . array_shift(array_slice($info,1,2)) .  "\"></p>";
+						       echo "<img style=\"width:100%;\" src=\"Images/diplome/" . array_shift(array_slice($info,1,2)) .  "\"></p>";
 						    } 
 						 }
 					 ?>
@@ -45,7 +45,7 @@
 		</div>
 		<div class="contentFix"></div>
 		<?php 
-			include("footer.txt");
+			include("footer.php");
 		?>
 	</body>
 </html>

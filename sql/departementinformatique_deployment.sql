@@ -16,7 +16,7 @@ menuId INT NOT NULL auto_increment PRIMARY KEY,
 nomLien varchar(100) NOT NULL,
 lien varchar(20000) NOT NULL,
 renderHtmlPosition INT NOT NULL UNIQUE)
-ENGINE=INNODB;
+ENGINE=INNODB DEFAULT CHARSET=utf8;
 
 INSERT INTO equipe6h15.lienmenuderoulant VALUES(default,'Omnivox','https://cll.omnivox.ca/intr/Module/Identification/Login/Login.aspx?ReturnUrl=/intr', 1);
 INSERT INTO equipe6h15.lienmenuderoulant VALUES(default,'Messagerie','https://alphonse2.clevislauzon.qc.ca/gw/webacc', 2);
@@ -52,7 +52,7 @@ renderHtmlPosition INT NOT NULL,
 htmlCouleur VARCHAR(6) NOT NULL,                  
 openNewPage boolean NOT NULL default FALSE,
 CONSTRAINT fk_verticalmenu_renderHtmlPosition FOREIGN KEY (`renderHtmlPosition`) REFERENCES equipe6h15.verticalmenu(`menuId`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=INNODB;
+) ENGINE=INNODB DEFAULT CHARSET=utf8;
 
 INSERT INTO equipe6h15.verticalmenu VALUES (default,'Programmes', 'programmes.php', 1, 1, 1, '008747', false);
 INSERT INTO equipe6h15.verticalmenu VALUES (default,'Gestion', 'http://cll.qc.ca/programmes/techniques/techniques-de-linformatique-informatique-de-gestion-420-aa/', 1, 2, 1, '873400', true);
@@ -122,18 +122,18 @@ colspan INT NOT NULL DEFAULT 1,
 rowspan INT NOT NULL DEFAULT 1,
 position INT NOT NULL UNIQUE,
 lastCols BOOLEAN NOT NULL DEFAULT FALSE
-) ENGINE=INNODB;
+) ENGINE=INNODB DEFAULT CHARSET=utf8;
 
 
-INSERT INTO equipe6h15.displaymenu VALUES (default, 'pub.txt', default, default, 1, false);
-INSERT INTO equipe6h15.displaymenu VALUES (default, 'gestion.txt', default, default, 2, false);
-INSERT INTO equipe6h15.displaymenu VALUES (default, 'industrielle.txt', default, default, 3, false);
-INSERT INTO equipe6h15.displaymenu VALUES (default, 'reseau.txt', default, default, 4, false);
-INSERT INTO equipe6h15.displaymenu VALUES (default, 'pub2.txt', default, default, 5, true);
-INSERT INTO equipe6h15.displaymenu VALUES (default, 'enseignant.txt', 2, 2, 6, false);
-INSERT INTO equipe6h15.displaymenu VALUES (default, 'pdea.txt', default, default, 9, false);
-INSERT INTO equipe6h15.displaymenu VALUES (default, 'evenement.txt', 2, 2, 8, true);
-INSERT INTO equipe6h15.displaymenu VALUES (default, 'robotique.txt', default, default, 7, false);
+INSERT INTO equipe6h15.displaymenu VALUES (default, 'pub.html', default, default, 1, false);
+INSERT INTO equipe6h15.displaymenu VALUES (default, 'gestion.html', default, default, 2, false);
+INSERT INTO equipe6h15.displaymenu VALUES (default, 'industrielle.html', default, default, 3, false);
+INSERT INTO equipe6h15.displaymenu VALUES (default, 'reseau.html', default, default, 4, false);
+INSERT INTO equipe6h15.displaymenu VALUES (default, 'pub2.html', default, default, 5, true);
+INSERT INTO equipe6h15.displaymenu VALUES (default, 'enseignant.html', 2, 2, 6, false);
+INSERT INTO equipe6h15.displaymenu VALUES (default, 'pdea.html', default, default, 9, false);
+INSERT INTO equipe6h15.displaymenu VALUES (default, 'evenement.html', 2, 2, 8, true);
+INSERT INTO equipe6h15.displaymenu VALUES (default, 'robotique.html', default, default, 7, false);
 
 
 /********************************************************
@@ -151,28 +151,28 @@ nom VARCHAR(80) NOT NULL,
 pathPicture VARCHAR(200) NOT NULL,
 pathFile VARCHAR(200) NOT NULL,
 renderPosition INT NOT NULL UNIQUE
-) ENGINE=INNODB;
+) ENGINE=INNODB DEFAULT CHARSET=utf8;
 
-INSERT INTO equipe6h15.enseignants VALUES(default, 'Yvan Morrissey', 'images/photoProfileDefault.png', 'yvanmorrissey.php', 1);
-INSERT INTO equipe6h15.enseignants VALUES(default, 'Stéphane Mercier', 'images/photoProfileDefault.png', 'stephanemercier.php', 2);
-INSERT INTO equipe6h15.enseignants VALUES(default, 'Christian Asselin', 'images/photoProfileDefault.png', 'christianasselin.php', 3);
-INSERT INTO equipe6h15.enseignants VALUES(default, 'Serge Lévesque', 'images/photoProfileDefault.png', 'sergelevesque.php', 4);
-INSERT INTO equipe6h15.enseignants VALUES(default, 'Olivier Lafleur', 'images/photoProfileDefault.png', 'olivierlafleur.php', 5);
-INSERT INTO equipe6h15.enseignants VALUES(default, 'Mélissa Clermont', 'images/photoProfileDefault.png', 'melissaclermont.php', 6);
-INSERT INTO equipe6h15.enseignants VALUES(default, 'Gilles Champagne', 'images/photoProfileDefault.png', 'gilleschampagne.php', 7);
-INSERT INTO equipe6h15.enseignants VALUES(default, 'Marc Deslandes', 'images/photoProfileDefault.png', 'marcdeslandes.php', 8);
-INSERT INTO equipe6h15.enseignants VALUES(default, 'Nelson Marceau', 'images/photoProfileDefault.png', 'nelsonmarceau.php', 9);
-INSERT INTO equipe6h15.enseignants VALUES(default, 'Lise Provencher', 'images/photoProfileDefault.png', 'liseprovencher.php', 10);
-INSERT INTO equipe6h15.enseignants VALUES(default, 'Jocelyne Lapointe', 'images/photoProfileDefault.png', 'jocelynelapointe.php', 11);
-INSERT INTO equipe6h15.enseignants VALUES(default, 'Josée Lainesse', 'images/photoProfileDefault.png', 'joseelainesse.php', 12);
-INSERT INTO equipe6h15.enseignants VALUES(default, 'Guillaume Michaud', 'images/photoProfileDefault.png', 'guillaumemichaud.php', 13);
-INSERT INTO equipe6h15.enseignants VALUES(default, 'Louis-Philippe Normand', 'images/photoProfileDefault.png', 'louisphilippenormand.php', 14);
-INSERT INTO equipe6h15.enseignants VALUES(default, 'Luc Morin', 'images/photoProfileDefault.png', 'lucmorin.php', 15);
-INSERT INTO equipe6h15.enseignants VALUES(default, 'Danielle Théberge', 'images/photoProfileDefault.png', 'danielletheberge.php', 16);
-INSERT INTO equipe6h15.enseignants VALUES(default, 'Nicolas Morency', 'images/photoProfileDefault.png', 'nicolasmorency.php', 17);
-INSERT INTO equipe6h15.enseignants VALUES(default, 'Richard Landry', 'images/photoProfileDefault.png', 'richardlandry.php', 18);
-INSERT INTO equipe6h15.enseignants VALUES(default, 'Jacques Chabot', 'images/photoProfileDefault.png', 'jacqueschabot.php', 19);
-INSERT INTO equipe6h15.enseignants VALUES(default, 'Normand Lemyre', 'images/photoProfileDefault.png', 'nordmandlemyre.php', 20);
-INSERT INTO equipe6h15.enseignants VALUES(default, 'André Charon', 'images/photoProfileDefault.png', 'andrecharon.php', 21);
-INSERT INTO equipe6h15.enseignants VALUES(default, 'Pierre Rajotte', 'images/photoProfileDefault.png', 'pierrerajotte.php', 22);
-INSERT INTO equipe6h15.enseignants VALUES(default, 'Tuy Nguyen', 'images/photoProfileDefault.png', 'tuynguyen.php', 23);
+INSERT INTO equipe6h15.enseignants VALUES(default, 'Yvan Morrissey', 'Images/photoProfileDefault.png', 'yvanmorrissey.php', 1);
+INSERT INTO equipe6h15.enseignants VALUES(default, 'Stéphane Mercier', 'Images/photoProfileDefault.png', 'stephanemercier.php', 2);
+INSERT INTO equipe6h15.enseignants VALUES(default, 'Christian Asselin', 'Images/photoProfileDefault.png', 'christianasselin.php', 3);
+INSERT INTO equipe6h15.enseignants VALUES(default, 'Serge Lévesque', 'Images/photoProfileDefault.png', 'sergelevesque.php', 4);
+INSERT INTO equipe6h15.enseignants VALUES(default, 'Olivier Lafleur', 'Images/photoProfileDefault.png', 'olivierlafleur.php', 5);
+INSERT INTO equipe6h15.enseignants VALUES(default, 'Mélissa Clermont', 'Images/photoProfileDefault.png', 'melissaclermont.php', 6);
+INSERT INTO equipe6h15.enseignants VALUES(default, 'Gilles Champagne', 'Images/photoProfileDefault.png', 'gilleschampagne.php', 7);
+INSERT INTO equipe6h15.enseignants VALUES(default, 'Marc Deslandes', 'Images/photoProfileDefault.png', 'marcdeslandes.php', 8);
+INSERT INTO equipe6h15.enseignants VALUES(default, 'Nelson Marceau', 'Images/photoProfileDefault.png', 'nelsonmarceau.php', 9);
+INSERT INTO equipe6h15.enseignants VALUES(default, 'Lise Provencher', 'Images/photoProfileDefault.png', 'liseprovencher.php', 10);
+INSERT INTO equipe6h15.enseignants VALUES(default, 'Jocelyne Lapointe', 'Images/photoProfileDefault.png', 'jocelynelapointe.php', 11);
+INSERT INTO equipe6h15.enseignants VALUES(default, 'Josée Lainesse', 'Images/photoProfileDefault.png', 'joseelainesse.php', 12);
+INSERT INTO equipe6h15.enseignants VALUES(default, 'Guillaume Michaud', 'Images/photoProfileDefault.png', 'guillaumemichaud.php', 13);
+INSERT INTO equipe6h15.enseignants VALUES(default, 'Louis-Philippe Normand', 'Images/photoProfileDefault.png', 'louisphilippenormand.php', 14);
+INSERT INTO equipe6h15.enseignants VALUES(default, 'Luc Morin', 'Images/photoProfileDefault.png', 'lucmorin.php', 15);
+INSERT INTO equipe6h15.enseignants VALUES(default, 'Danielle Théberge', 'Images/photoProfileDefault.png', 'danielletheberge.php', 16);
+INSERT INTO equipe6h15.enseignants VALUES(default, 'Nicolas Morency', 'Images/photoProfileDefault.png', 'nicolasmorency.php', 17);
+INSERT INTO equipe6h15.enseignants VALUES(default, 'Richard Landry', 'Images/photoProfileDefault.png', 'richardlandry.php', 18);
+INSERT INTO equipe6h15.enseignants VALUES(default, 'Jacques Chabot', 'Images/photoProfileDefault.png', 'jacqueschabot.php', 19);
+INSERT INTO equipe6h15.enseignants VALUES(default, 'Normand Lemyre', 'Images/photoProfileDefault.png', 'nordmandlemyre.php', 20);
+INSERT INTO equipe6h15.enseignants VALUES(default, 'André Charon', 'Images/photoProfileDefault.png', 'andrecharon.php', 21);
+INSERT INTO equipe6h15.enseignants VALUES(default, 'Pierre Rajotte', 'Images/photoProfileDefault.png', 'pierrerajotte.php', 22);
+INSERT INTO equipe6h15.enseignants VALUES(default, 'Tuy Nguyen', 'Images/photoProfileDefault.png', 'tuynguyen.php', 23);
