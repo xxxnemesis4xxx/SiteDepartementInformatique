@@ -2,18 +2,18 @@
 if (isset($_POST['action'])) {
 	switch ($_POST['action']) {
 		case 'Ajouter Registre' :
-			newIndexElement();
+			newIndexElement(databaseConnection());
 			exit;
 		case 'Modifier Registre' :
-			modifierIndexElement();
+			modifierIndexElement(databaseConnection());
 			exit;
 		case 'Supprimer Registre' :
-			supprimerIndexElement();
+			supprimerIndexElement(databaseConnection());
 			exit;
 	}
 }
 
-function newIndexElement() {
+function databaseConnection() {
 	$servername = "localhost";
 	$username = "equipe6h15";
 	$password = "ebola-info";
@@ -25,7 +25,11 @@ function newIndexElement() {
 	if ($conn->connect_error) {
 			die("Erreur de connection: " . $conn->connect_error);
 	} 
+	
+	return $conn;
+}
 
+function newIndexElement($conn) {
 	$fichier = filter_input(INPUT_POST, 'fichier', FILTER_SANITIZE_STRING);
 	$colspan = $_POST['colspan'];
 	$rowspan = $_POST['rowspan'];
@@ -41,22 +45,9 @@ function newIndexElement() {
 	}
 	
 	$conn->close();
-	exit;
 }
 
-function modifierIndexElement() {
-	$servername = "localhost";
-	$username = "equipe6h15";
-	$password = "ebola-info";
-	$dbname = "equipe6h15";
-	
-	// Create connection
-	$conn = new mysqli($servername, $username, $password, $dbname);
-	// Check connection
-	if ($conn->connect_error) {
-			die("Erreur de connection: " . $conn->connect_error);
-	} 
-
+function modifierIndexElement($conn) {
 	$fichierId = $_POST['itemid'];
 	$fichier = filter_input(INPUT_POST, 'fichier', FILTER_SANITIZE_STRING);
 	$colspan = $_POST['colspan'];
@@ -73,22 +64,9 @@ function modifierIndexElement() {
 	}
 	
 	$conn->close();
-	exit;
 }
 
-function supprimerIndexElement() {
-	$servername = "localhost";
-	$username = "equipe6h15";
-	$password = "ebola-info";
-	$dbname = "equipe6h15";
-	
-	// Create connection
-	$conn = new mysqli($servername, $username, $password, $dbname);
-	// Check connection
-	if ($conn->connect_error) {
-			die("Erreur de connection: " . $conn->connect_error);
-	} 
-
+function supprimerIndexElement($conn) {
 	$fichierId = $_POST['itemid'];
 	
 	if (filter_var($fichierId,FILTER_VALIDATE_INT)) {
@@ -98,6 +76,5 @@ function supprimerIndexElement() {
 	}
 	
 	$conn->close();
-	exit;
 }
 ?>
