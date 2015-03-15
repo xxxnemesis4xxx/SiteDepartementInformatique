@@ -55,6 +55,16 @@
 						location.reload(true);
 					});
 				});
+				
+				$('#button4').click(function(){
+					var method = $(this).val();
+					var nomFichier = document.getElementById('nomFichier3').value;
+					var ajaxurl = 'adminfunctions.php',
+					data =  {'action': method,'fichier' : nomFichier};
+					$.post(ajaxurl, data, function (response) {
+						location.reload(true);
+					});
+				});
 			});
 	</script>
 </head>
@@ -158,7 +168,12 @@
 			</form>
 		</div>
 		<div id="4" style="display:none">
-			Hello 4
+			<form>
+				<br/><br/>
+				Nom du fichier <br/>
+				<input type="text" id="nomFichier3"/><br/>
+				<input id="button4" type="submit" name="Modifier" value="Ajouter Fichier"/>
+			</form>
 		</div>
 		<div id="5" style="display:none">
 			Hello 5
