@@ -1,0 +1,10 @@
+var _progress = document.getElementById('Barre de progression'),
+BoiteDeContenu = document.getElementById('BoiteDeContenu'),
+BoutonVoirImage = document.getElementById('BoutonVoirImage'),
+Image = document.getElementById("Aperçu"),
+NomImage = document.getElementById('LabelNomImage'),
+BoutonFermer = document.getElementById('BoutonFermer'),
+TumbnailsContainer = document.getElementById('Thumbnails'),
+InputFile = document.getElementById('InputFile'),
+ChoixDossier = document.getElementById('ChoixDossier'),
+ImageChoisie = null;
