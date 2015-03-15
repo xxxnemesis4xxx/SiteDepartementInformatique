@@ -14,6 +14,17 @@
 				CKEDITOR.disableAutoInline = true;
 				CKEDITOR.inline( 'editor1' );
 			});
+			
+			$(document).ready(function(){
+				$('.button').click(function(){
+					var content = CKEDITOR.instances.editor1.getData();
+					var ajaxurl = 'ajax.php',
+					data =  {'action': content,'fichier' : 'louisphilippenormand.txt'};
+					$.post(ajaxurl, data, function (response) {
+						alert("Sauvegarde Réussi!");
+					});
+				});
+			});
 		</script>
 	</head>
 	<body>
@@ -21,12 +32,17 @@
 			include("../header.php");
 			include("../verticalmenu.php");
 		?>
-		<form>
+		
 			<div class="contenu">
+			<form>
 					<div name="editor1" id="editor1" contenteditable="true">
+						<?php include("louisphilippenormand.txt"); ?>
 					</div>
+					
+					<input type="submit" class="button" name="insert" value="Sauvegarde" />
+			</form>
 			</div>
-		</form>
+		
 		<div class="contentFix"></div>
 		<?php 
 			include("../footer.php");
