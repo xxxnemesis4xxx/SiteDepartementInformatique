@@ -59,7 +59,7 @@
 	</script>
 </head>
 <body>
-		<table class="indexTable">
+		<table>
 		<?php
 			$servername = "localhost";
 			$username = "equipe6h15";
@@ -86,6 +86,21 @@
 			}
 			
 			$conn->close();
+		?>
+		</table>
+		<br/><br/>
+		<h2>Html Files</h2>
+		<table>
+		<?php
+			$directory = "../../";
+
+			//get all image files with a .txt extension.
+			$file= glob($directory . "*.html");
+
+			//print each file name
+			foreach($file as $filew) {
+				echo "<tr><td>" . substr($filew,6,strlen($filew)) . "</td></tr>";
+			}
 		?>
 		</table>
 		
