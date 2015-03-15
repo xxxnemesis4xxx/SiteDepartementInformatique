@@ -17,7 +17,7 @@
 			}
 			
 			$(document).ready(function(){
-				$('.button').click(function(){
+				$('#button1').click(function(){
 					var method = $(this).val();
 					var fichier = document.getElementById('nomFichier').value;
 					var colspan = document.getElementById('colspan').value;
@@ -26,6 +26,21 @@
 					var lastcol = document.getElementById('lastcols').checked;
 					var ajaxurl = 'adminfunctions.php',
 					data =  {'action': method,'fichier' : fichier, 'colspan' : colspan, 'rowspan' : rowspan, 'position' : position, 'lastcols' : lastcol};
+					$.post(ajaxurl, data, function (response) {
+						alert("Terminer!");
+					});
+				});
+				
+				$('#button2').click(function(){
+					var method = $(this).val();
+					var itemId = document.getElementById('itemId').value;
+					var fichier = document.getElementById('nomFichier2').value;
+					var colspan = document.getElementById('colspan2').value;
+					var rowspan = document.getElementById('rowspan2').value;
+					var position = document.getElementById('position2').value;
+					var lastcol = document.getElementById('lastcols2').checked;
+					var ajaxurl = 'adminfunctions.php',
+					data =  {'action': method,'itemid' : itemId, 'fichier' : fichier, 'colspan' : colspan, 'rowspan' : rowspan, 'position' : position, 'lastcols' : lastcol};
 					$.post(ajaxurl, data, function (response) {
 						alert("Terminer!");
 					});
@@ -76,6 +91,7 @@
 		<div id="1" style="display:none">
 			<form>
 				<br/><br/>
+				***Les champs doivent être remplis ***<br/>
 				Nom du fichier :<br/>
 				<input type="text" id="nomFichier"/><br/>
 				Colspan :<br/>
@@ -86,11 +102,27 @@
 				<input type="text" id="position"/> <br/>
 				Dernière colonne d'affichage : <br/>
 				<input type="checkbox" value="Oui" id="lastcols"/><br/>
-				<input class="button" type="submit" name="Ajouter" value="Ajouter Registre"/>
+				<input id="button1" type="submit" name="Ajouter" value="Ajouter Registre"/>
 			</form>
 		</div>
 		<div id="2" style="display:none">
-			Hello 2
+			<form>
+				<br/><br/>
+				***Les champs doivent être remplis ***<br/>
+				item Id <br/>
+				<input type="text" id="itemId"/><br/>
+				Nom du fichier :<br/>
+				<input type="text" id="nomFichier2"/><br/>
+				Colspan :<br/>
+				<input type="text" id="colspan2"/><br/>
+				Rowspan :<br/>
+				<input type="text" id="rowspan2"/><br/>
+				Position Affichage :<br/>
+				<input type="text" id="position2"/> <br/>
+				Dernière colonne d'affichage : <br/>
+				<input type="checkbox" value="Oui" id="lastcols2"/><br/>
+				<input id="button2" type="submit" name="Modifier" value="Modifier Registre"/>
+			</form>
 		</div>
 		<div id="3" style="display:none">
 			Hello 3
