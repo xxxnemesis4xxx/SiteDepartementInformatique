@@ -65,6 +65,16 @@
 						location.reload(true);
 					});
 				});
+				
+				$('#button6').click(function(){
+					var method = $(this).val();
+					var nomFichier = document.getElementById('nomFichier5').value;
+					var ajaxurl = 'adminfunctions.php',
+					data =  {'action': method,'fichier' : nomFichier};
+					$.post(ajaxurl, data, function (response) {
+						location.reload(true);
+					});
+				});
 			});
 	</script>
 </head>
@@ -164,7 +174,7 @@
 				<br/><br/>
 				item Id <br/>
 				<input type="text" id="itemId2"/><br/>
-				<input id="button3" type="submit" name="Modifier" value="Supprimer Registre"/>
+				<input id="button3" type="submit" name="Supprimer" value="Supprimer Registre"/>
 			</form>
 		</div>
 		<div id="4" style="display:none">
@@ -172,14 +182,19 @@
 				<br/><br/>
 				Nom du fichier <br/>
 				<input type="text" id="nomFichier3"/><br/>
-				<input id="button4" type="submit" name="Modifier" value="Ajouter Fichier"/>
+				<input id="button4" type="submit" value="Ajouter Fichier"/>
 			</form>
 		</div>
 		<div id="5" style="display:none">
 			Hello 5
 		</div>
 		<div id="6" style="display:none">
-			Hello 6
+			<form>
+				<br/><br/>
+				Nom du fichier <br/>
+				<input type="text" id="nomFichier5"/><br/>
+				<input id="button6" type="submit" value="Supprimer Fichier"/>
+			</form>
 		</div>
 		
 </body>
