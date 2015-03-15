@@ -10,6 +10,9 @@ if (isset($_POST['action'])) {
 		case 'Supprimer Registre' :
 			supprimerIndexElement(databaseConnection());
 			exit;
+		case 'Ajouter Fichier' :
+			nouvFichier();
+			exit;
 	}
 }
 
@@ -76,5 +79,15 @@ function supprimerIndexElement($conn) {
 	}
 	
 	$conn->close();
+}
+
+
+function nouvFichier() {
+	$fichier = "../../" . filter_input(INPUT_POST, 'fichier', FILTER_SANITIZE_STRING);
+
+	if ($fp = fopen($fichier,"w+")) {
+		fwrite($fp,"<style>\n   .default {\n   width: 100%\n   max-height : 100%;\n}\n</style>\n\n <a href...>\n   <img ... >\n </a>");
+		fclose($fp);
+	}
 }
 ?>
