@@ -45,6 +45,16 @@
 						alert("Terminer!");
 					});
 				});
+				
+				$('#button3').click(function(){
+					var method = $(this).val();
+					var itemId = document.getElementById('itemId2').value;
+					var ajaxurl = 'adminfunctions.php',
+					data =  {'action': method,'itemid' : itemId};
+					$.post(ajaxurl, data, function (response) {
+						alert("Terminer!");
+					});
+				});
 			});
 	</script>
 </head>
@@ -125,7 +135,12 @@
 			</form>
 		</div>
 		<div id="3" style="display:none">
-			Hello 3
+			<form>
+				<br/><br/>
+				item Id <br/>
+				<input type="text" id="itemId2"/><br/>
+				<input id="button3" type="submit" name="Modifier" value="Supprimer Registre"/>
+			</form>
 		</div>
 		<div id="4" style="display:none">
 			Hello 4
