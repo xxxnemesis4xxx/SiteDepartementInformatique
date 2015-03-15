@@ -1,6 +1,6 @@
 <header>
 	<div id="titre_logo">
-		<a href="http://cll.qc.ca" target="_blank"><img src="Images/logoLevis.png" alt="Cégep Lévis-Lauzon" /></a>
+		<a href="http://cll.qc.ca" target="_blank"><img src="http://205.236.12.52/projet/h2015/equipe6/Images/logoLevis.png" alt="Cégep Lévis-Lauzon" /></a>
 	</div>
 	<div id="titre_principal">
 		<h1>Techniques de l'informatique </h1>
