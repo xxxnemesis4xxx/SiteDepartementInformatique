@@ -1,10 +1,25 @@
 <html>
 <head>
 	<title>Update Page d'accueil</title>
+	
+	<script>
+			function showDiv() {
+				var selectBox = document.getElementById('ChoixOptions');
+				var divId = selectBox.options[selectBox.selectedIndex].value;
+				
+				for(i = 0; i < selectBox.length; i++)
+				{
+					document.getElementById(selectBox.options[i].value).style.display = "none";
+				}
+				
+				document.getElementById(divId).style.display = "block";
+			}
+	</script>
 </head>
 <body>
 		<table class="indexTable">
 		<?php
+			$state = 0;
 			$servername = "localhost";
 			$username = "equipe6h15";
 			$password = "ebola-info";
@@ -32,5 +47,34 @@
 			$conn->close();
 		?>
 		</table>
+		
+		<select style="display: block;width:200px;" id="ChoixOptions" size="5" onchange='showDiv()'>
+			<option value='1'>Ajouter un registre</option>
+			<option value='2'>Modifier un registre</option>
+			<option value='3'>Supprimer un registre</option>
+			<option value='4'>Ajouter un fichier</option>
+			<option value='5'>Modifier un fichier</option>
+			<option value='6'>Supprimer un fichier</option>
+		</select>
+		
+		<div id="1" style="display:none">
+			Hello 1
+		</div>
+		<div id="2" style="display:none">
+			Hello 2
+		</div>
+		<div id="3" style="display:none">
+			Hello 3
+		</div>
+		<div id="4" style="display:none">
+			Hello 4
+		</div>
+		<div id="5" style="display:none">
+			Hello 5
+		</div>
+		<div id="6" style="display:none">
+			Hello 6
+		</div>
+		
 </body>
 </html>
