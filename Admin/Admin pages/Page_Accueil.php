@@ -1,7 +1,8 @@
 <html>
+
 <head>
 	<title>Update Page d'accueil</title>
-	
+	<script src="http://205.236.12.52/projet/h2015/equipe6/javascript/jquery-1.11.2.min.js"></script>
 	<script>
 			function showDiv() {
 				var selectBox = document.getElementById('ChoixOptions');
@@ -14,12 +15,27 @@
 				
 				document.getElementById(divId).style.display = "block";
 			}
+			
+			$(document).ready(function(){
+				$('.button').click(function(){
+					var method = $(this).val();
+					var fichier = document.getElementById('nomFichier').value;
+					var colspan = document.getElementById('colspan').value;
+					var rowspan = document.getElementById('rowspan').value;
+					var position = document.getElementById('position').value;
+					var lastcol = document.getElementById('lastcols').checked;
+					var ajaxurl = 'adminfunctions.php',
+					data =  {'action': method,'fichier' : fichier, 'colspan' : colspan, 'rowspan' : rowspan, 'position' : position, 'lastcols' : lastcol};
+					$.post(ajaxurl, data, function (response) {
+						alert("Terminer!");
+					});
+				});
+			});
 	</script>
 </head>
 <body>
 		<table class="indexTable">
 		<?php
-			$state = 0;
 			$servername = "localhost";
 			$username = "equipe6h15";
 			$password = "ebola-info";
@@ -36,7 +52,7 @@
 			$result = $conn->query($sql);
 			
 			if ($result->num_rows > 0) {
-				echo "<tr><td>Item ID</td><td>Nom du Fichier</td><td>Colspan</td><td>Rowspan</td><td>Position Affichage</td><td>Dernier column de la Ligne</td></tr>";
+				echo "<tr><td>Item ID</td><td>Nom du Fichier</td><td>Colspan</td><td>Rowspan</td><td>Position Affichage</td><td>Dernière colonne de la Ligne</td></tr>";
 				while ($current = $result->fetch_assoc()) {
 					echo "<tr>";
 					echo "<td>" . $current["itemId"] . "</td><td>" .  $current["nomFichier"] . "</td><td>" . $current["colspan"] . "</td><td>" .
@@ -58,7 +74,20 @@
 		</select>
 		
 		<div id="1" style="display:none">
-			Hello 1
+			<form>
+				<br/><br/>
+				Nom du fichier :<br/>
+				<input type="text" id="nomFichier"/><br/>
+				Colspan :<br/>
+				<input type="text" id="colspan"/><br/>
+				Rowspan :<br/>
+				<input type="text" id="rowspan"/><br/>
+				Position Affichage :<br/>
+				<input type="text" id="position"/> <br/>
+				Dernière colonne d'affichage : <br/>
+				<input type="checkbox" value="Oui" id="lastcols"/><br/>
+				<input class="button" type="submit" name="Ajouter" value="Ajouter Registre"/>
+			</form>
 		</div>
 		<div id="2" style="display:none">
 			Hello 2
