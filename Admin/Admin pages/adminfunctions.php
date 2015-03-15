@@ -13,6 +13,9 @@ if (isset($_POST['action'])) {
 		case 'Ajouter Fichier' :
 			nouvFichier();
 			exit;
+		case 'Supprimer Fichier' :
+			suppFichier();
+			exit;
 	}
 }
 
@@ -89,5 +92,10 @@ function nouvFichier() {
 		fwrite($fp,"<style>\n   .default {\n   width: 100%\n   max-height : 100%;\n}\n</style>\n\n <a href...>\n   <img ... >\n </a>");
 		fclose($fp);
 	}
+}
+
+function suppFichier() {
+	$fichier = "../../" . filter_input(INPUT_POST, 'fichier', FILTER_SANITIZE_STRING);
+	unlink($fichier);
 }
 ?>
