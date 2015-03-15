@@ -7,6 +7,9 @@ if (isset($_POST['action'])) {
 		case 'Modifier Registre' :
 			modifierIndexElement();
 			exit;
+		case 'Supprimer Registre' :
+			supprimerIndexElement();
+			exit;
 	}
 }
 
@@ -66,6 +69,31 @@ function modifierIndexElement() {
 		filter_var($position,FILTER_VALIDATE_INT) and (filter_var($lastcols, FILTER_VALIDATE_INT) or filter_var($lastcols, FILTER_VALIDATE_INT) === 0)) {
 			$insert_stmt = $conn->prepare("UPDATE displaymenu SET nomFichier = ?, colspan = ?, rowspan = ?, position = ?, lastCols = ? where itemId = ?");
 			$insert_stmt->bind_param('siiiii',$fichier,$colspan,$rowspan,$position,$lastcols,$fichierId);
+			$insert_stmt->execute();
+	}
+	
+	$conn->close();
+	exit;
+}
+
+function supprimerIndexElement() {
+	$servername = "localhost";
+	$username = "equipe6h15";
+	$password = "ebola-info";
+	$dbname = "equipe6h15";
+	
+	// Create connection
+	$conn = new mysqli($servername, $username, $password, $dbname);
+	// Check connection
+	if ($conn->connect_error) {
+			die("Erreur de connection: " . $conn->connect_error);
+	} 
+
+	$fichierId = $_POST['itemid'];
+	
+	if (filter_var($fichierId,FILTER_VALIDATE_INT)) {
+			$insert_stmt = $conn->prepare("DELETE FROM displaymenu where itemId = ?");
+			$insert_stmt->bind_param('i',$fichierId);
 			$insert_stmt->execute();
 	}
 	
