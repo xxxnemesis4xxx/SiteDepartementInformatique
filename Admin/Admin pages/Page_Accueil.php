@@ -27,7 +27,7 @@
 					var ajaxurl = 'adminfunctions.php',
 					data =  {'action': method,'fichier' : fichier, 'colspan' : colspan, 'rowspan' : rowspan, 'position' : position, 'lastcols' : lastcol};
 					$.post(ajaxurl, data, function (response) {
-						alert("Terminer!");
+						location.reload(true);
 					});
 				});
 				
@@ -42,7 +42,7 @@
 					var ajaxurl = 'adminfunctions.php',
 					data =  {'action': method,'itemid' : itemId, 'fichier' : fichier, 'colspan' : colspan, 'rowspan' : rowspan, 'position' : position, 'lastcols' : lastcol};
 					$.post(ajaxurl, data, function (response) {
-						alert("Terminer!");
+						location.reload(true);
 					});
 				});
 				
@@ -52,7 +52,7 @@
 					var ajaxurl = 'adminfunctions.php',
 					data =  {'action': method,'itemid' : itemId};
 					$.post(ajaxurl, data, function (response) {
-						alert("Terminer!");
+						location.reload(true);
 					});
 				});
 			});
