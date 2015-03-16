@@ -16,6 +16,11 @@ if (isset($_POST['action'])) {
 		case 'Supprimer Fichier' :
 			suppFichier();
 			exit;
+		case 'Obtenir Fichier' :
+			exit(obtFichier());
+		case 'Modifier Fichier' :
+			modFichier();
+			exit;
 	}
 }
 
@@ -97,5 +102,21 @@ function nouvFichier() {
 function suppFichier() {
 	$fichier = "../../" . filter_input(INPUT_POST, 'fichier', FILTER_SANITIZE_STRING);
 	unlink($fichier);
+}
+
+function obtFichier() {
+	$fichier = "../../" . filter_input(INPUT_POST, 'fichier', FILTER_SANITIZE_STRING);
+	$content = file_get_contents($fichier);
+	
+	return $content;
+}
+
+function modFichier() {
+	$fichier = "../../" . filter_input(INPUT_POST, 'fichier', FILTER_SANITIZE_STRING);
+	$content = $_POST['content'];
+	if ($fp = fopen($fichier,"w+")) {
+		fwrite($fp,$content);
+		fclose($fp);
+	}
 }
 ?>
