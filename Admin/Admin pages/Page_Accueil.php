@@ -66,6 +66,28 @@
 					});
 				});
 				
+				$('#button5').click(function(){
+					var method = $(this).val();
+					var nomFichier = document.getElementById('nomFichier4').value;
+					$("#fichierhidden").val(nomFichier);
+					var ajaxurl = 'adminfunctions.php',
+					data =  {'action': method,'fichier' : nomFichier};
+					$.post(ajaxurl, data, function (response) {
+						$("#modText").text(response);
+					});
+				});
+				
+				$('#button55').click(function(){
+					var method = $(this).val();
+					var nomFichier = document.getElementById('fichierhidden').value;
+					var content = document.getElementById('modText').value;
+					var ajaxurl = 'adminfunctions.php',
+					data =  {'action': method,'fichier' : nomFichier, 'content' : content};
+					$.post(ajaxurl, data, function (response) {
+						location.reload(true);
+					});
+				});
+				
 				$('#button6').click(function(){
 					var method = $(this).val();
 					var nomFichier = document.getElementById('nomFichier5').value;
@@ -186,7 +208,18 @@
 			</form>
 		</div>
 		<div id="5" style="display:none">
-			Hello 5
+			<form>
+				<br/><br/>
+				Nom du fichier <br/>
+				<input type="text" id="nomFichier4"/><br/>
+				<input id="button5" type="button" value="Obtenir Fichier"/>
+			</form>
+			
+			<form>
+				<textarea id="modText" style="width:100%; height : 250px;" contentEditable="true"></textarea>
+				<input id="fichierhidden" type="hidden" />
+				<input id="button55" type="button" value="Modifier Fichier"/>
+			</form>
 		</div>
 		<div id="6" style="display:none">
 			<form>
