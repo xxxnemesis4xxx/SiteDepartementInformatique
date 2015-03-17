@@ -19,6 +19,9 @@
 				var spinner = $( "#position" ).spinner();
 				$( "#position" ).spinner( "option", "min", 1);
 				
+				var spinner = $( "#positiontitre" ).spinner();
+				$( "#positiontitre" ).spinner( "option", "min", 1);
+				
 				$( "#sortable" ).sortable({
 				  revert: true
 				});
@@ -312,8 +315,40 @@
 						</ul></i>
 				
 				<div id="sm21" style="display:block">
+				---------------------------------------------------------------<br/>
 					<form>
+						Titre du lien : <br/>
+						<input type="text" id="" /><br/>
+						Adresse du lien : <br/>
+						<input type="text" id="" /><br/>
+						À quelle position souhaitez-vous voir apparaître votre titre<br/>
+						<input id="positiontitre"/><br/><br/>
+						Niveau du lien : 
+						<select id="layer" >
+							<option value="layer1">Niveau 1</option>
+							<option value="layer2">Niveau 2</option>
+							<option value="layer3">Niveau 3</option>
+						</select><br/>
+						<i>
+						<ul>
+							<li>Niveau 1
+								<ul>
+									<li>Niveau 2
+										<ul>
+											<li>Niveau 3</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+						</ul>
+						</i><br/>
+						Couleur html(Ex : #fff): <br/>
+						<input type="text" id="htmlcolor"/><br/>
+						Ouvrir sur une nouvelle page :
+						<input type="checkbox" id="newpage"><br/><br/>
 						
+						<input type="button" value="Ajouter Lien Vertical"/>
+						<br/><br/>
 					<form>
 				</div>
 				
