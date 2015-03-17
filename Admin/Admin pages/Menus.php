@@ -37,6 +37,32 @@
 					});
 				});
 				
+				$("#obtlien").click(function() {
+					var method = $(this).val();
+					var idlien = document.getElementById('idlienmod').value;
+					var ajaxurl = 'adminfunctions.php',
+					data = {'action' : method,'idlien' : idlien};
+					$.post(ajaxurl, data, function (response) {
+						var result = jQuery.parseJSON(response);
+						$("#positionmodifier").val(result.position);
+						$("#lienmodifier").val(result.lien);
+						$("#nomlienmodifier").val(result.titre);
+					});
+				});
+				
+				$("#modlien").click(function() {
+					var method = $(this).val();
+					var idlien = document.getElementById('idlienmod').value;
+					var position = document.getElementById('positionmodifier').value;
+					var lien = document.getElementById('lienmodifier').value;
+					var titre = document.getElementById('nomlienmodifier').value;
+					var ajaxurl = 'adminfunctions.php',
+					data = {'action' : method,'idlien' : idlien, 'position' : position, 'lien' :  lien, 'titre' :titre};
+					$.post(ajaxurl, data, function (response) {
+						location.reload(true);
+					});
+				});
+				
 				$('#supplien').click(function(){
 					var method = $(this).val();
 					var idlien = document.getElementById('idlien').value;
@@ -154,45 +180,6 @@
 				</div>
 				
 				<div id="sm12" style="display:none">
-					<br/>
-					Choisir l'option que vous souhaitez ?<br/>
-					<select id="troisiememenu1" onchange='showDivThirdMenu1()'>
-						<option value="tm11">Modifier la position</option>
-						<option value="tm12">Modifier les informations</option>
-					</select><br/><br/>
-					
-					<div id="tm11" style="display : block">
-						<ul id="sortable">
-							<?php
-								$servername = "localhost";
-								$username = "equipe6h15";
-								$password = "ebola-info";
-								$dbname = "equipe6h15";
-								
-								// Create connection
-								$conn = new mysqli($servername, $username, $password, $dbname);
-								// Check connection
-								if ($conn->connect_error) {
-										die("Erreur de connection: " . $conn->connect_error);
-								} 
-								
-								$sql = "select * from lienmenuderoulant order by renderHtmlPosition;";
-								$result = $conn->query($sql);
-								
-								if ($result->num_rows > 0) {
-									while ($current = $result->fetch_assoc()) {
-										echo "<li class=\"ui-state-default\">" . $current['menuId'] . " - " . utf8_encode($current["nomLien"]) . "</li>";
-										$Position++;
-									}
-								}
-								
-								$conn->close();
-							?>
-						</ul></i><br/>
-						<input type="button" id="modposlink" value="Sauvegarder Position Liens"/>
-					</div>
-					
-					<div id="tm12" style="display : none">
 						<br/><br/>
 						<i>Voici la liste actuelle des liens avec leur id :
 						<ul style="list-style : none">
@@ -214,8 +201,7 @@
 								
 								if ($result->num_rows > 0) {
 									while ($current = $result->fetch_assoc()) {
-										echo "<li>" . $current['menuId'] . " - " . utf8_encode($current["nomLien"]) . "</li>";
-										$Position++;
+										echo "<li>Item Id : " . $current['menuId'] . " - Item Position : ". $current['renderHtmlPosition'] . " - " . utf8_encode($current["nomLien"]) . "</li>";
 									}
 								}
 								
@@ -224,15 +210,16 @@
 						</ul></i>
 						<br/>
 						Id du lien : <br/>
-						<input type="text" id="idlien"/><br/>
-						<input type="button" id="supplien" value="Rechercher Lien"/><br/><br/>
+						<input type="text" id="idlienmod"/><br/>
+						<input type="button" id="obtlien" value="Obtenir Lien Information"/><br/><br/>
 						
 						Titre du lien :<br/>
 						<input type="text" id="nomlienmodifier"/><br/>
 						Adresse du lien :<br/>
 						<input type="text" id="lienmodifier"/><br/>
+						Position :<br/>
+						<input type="text" id="positionmodifier"/><br/>
 						<input type="button" id="modlien" value="Modifier Lien"/>
-					</div>
 				</div>
 				
 				<div id="sm13" style="display:none">
