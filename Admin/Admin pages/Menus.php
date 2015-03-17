@@ -28,6 +28,16 @@
 						location.reload(true);
 					});
 				});
+				
+				$('#supplien').click(function(){
+					var method = $(this).val();
+					var idlien = document.getElementById('idlien').value;
+					var ajaxurl = 'adminfunctions.php',
+					data =  {'action': method, 'idlien' : idlien};
+					$.post(ajaxurl, data, function (response) {
+						location.reload(true);
+					});
+				});
 			});
 		
 			function showDivFirstMenu() {
@@ -120,7 +130,6 @@
 								$conn->close();
 							?>
 						</ul></i>
-						
 						<input type="button" id="ajouterlien" value="Ajouter Lien"/>
 					<form>
 				</div>
@@ -130,7 +139,38 @@
 				</div>
 				
 				<div id="sm13" style="display:none">
-					Hello Div 3
+					<i>Voici la liste actuelle des liens avec leur id :
+						<ul style="list-style : none">
+							<?php
+								$servername = "localhost";
+								$username = "equipe6h15";
+								$password = "ebola-info";
+								$dbname = "equipe6h15";
+								
+								// Create connection
+								$conn = new mysqli($servername, $username, $password, $dbname);
+								// Check connection
+								if ($conn->connect_error) {
+										die("Erreur de connection: " . $conn->connect_error);
+								} 
+								
+								$sql = "select * from lienmenuderoulant order by renderHtmlPosition;";
+								$result = $conn->query($sql);
+								
+								if ($result->num_rows > 0) {
+									while ($current = $result->fetch_assoc()) {
+										echo "<li>" . $current['menuId'] . " - " . utf8_encode($current["nomLien"]) . "</li>";
+										$Position++;
+									}
+								}
+								
+								$conn->close();
+							?>
+						</ul></i>
+						<br/>
+						Id du lien : <br/>
+						<input type="text" id="idlien"/><br/>
+						<input type="button" id="supplien" value="Supprimer Lien"/>
 				</div>
 				
 			</div>
