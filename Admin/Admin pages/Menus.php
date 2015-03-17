@@ -75,6 +75,22 @@
 						location.reload(true);
 					});
 				});
+				
+				$('#newverticallink').click(function() {
+					var method = $(this).val();
+					var titre = document.getElementById('titleverticalmenu');
+					var link = document.getElementById('linkverticalmenu');
+					var position = document.getElementById('positiontitre');
+					var layerBox = document.getElementById('layer');
+					var layer = layerBox.options[layerBox.selectedIndex].value;
+					var htmlcolor = document.getElementById('htmlcolor');
+					var newpage = document.getElementById('lastcols').checked;
+					var ajaxurl = 'adminfunctions.php',
+					data =  {'action': method, 'titre' : titre, 'link' : link, 'position' : position, 'layer' : layer, 'htmlcolor' : htmlcolor, 'newpage' : newpage};
+					$.post(ajaxurl, data, function (response) {
+						location.reload(true);
+					});
+				});
 			});
 		
 			function showDivFirstMenu() {
@@ -313,14 +329,13 @@
 								$conn->close();
 							?>
 						</ul></i>
-				
-				<div id="sm21" style="display:block">
 				---------------------------------------------------------------<br/>
+				<div id="sm21" style="display:block">
 					<form>
 						Titre du lien : <br/>
-						<input type="text" id="" /><br/>
+						<input type="text" id="titleverticalmenu" /><br/>
 						Adresse du lien : <br/>
-						<input type="text" id="" /><br/>
+						<input type="text" id="linkverticalmenu" /><br/>
 						À quelle position souhaitez-vous voir apparaître votre titre<br/>
 						<input id="positiontitre"/><br/><br/>
 						Niveau du lien : 
@@ -347,7 +362,7 @@
 						Ouvrir sur une nouvelle page :
 						<input type="checkbox" id="newpage"><br/><br/>
 						
-						<input type="button" value="Ajouter Lien Vertical"/>
+						<input type="button" id="newverticallink" value="Ajouter Lien Vertical"/>
 						<br/><br/>
 					<form>
 				</div>
