@@ -23,10 +23,10 @@ sec_session_start();
 				$ArrayAdminPage = array();
 				foreach (new DirectoryIterator($FinalAdminPagesFolder) as $fileInfo)
 				{
-					if ($fileInfo->IsDir())
+					if ($fileInfo->IsDir() or $fileInfo->getFilename() == "adminfunctions.php")
 					continue;
 					$Extension = "." . $fileInfo->getExtension();
-
+			
 					switch($Extension)
 					{
 					   case ".html":
