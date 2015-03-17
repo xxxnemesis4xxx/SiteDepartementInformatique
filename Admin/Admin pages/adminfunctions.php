@@ -21,6 +21,9 @@ if (isset($_POST['action'])) {
 		case 'Modifier Fichier' :
 			modFichier();
 			exit;
+		case 'Ajouter Lien' :
+			ajouterLien(databaseConnection());
+			exit;
 	}
 }
 
@@ -118,5 +121,35 @@ function modFichier() {
 		fwrite($fp,$content);
 		fclose($fp);
 	}
+}
+
+function ajouterLien($conn) {
+	$nomlien = $_POST['nomlien'];
+	$lien = $_POST['lien'];
+	$position = $_POST['position'];
+	$maxPosition = 1;
+	
+	$sql = "select max(renderHtmlPosition) as max from lienmenuderoulant";
+	$result = $conn->query($sql);
+	
+	if ($result->num_rows > 0) {
+		$value = $result->fetch_assoc();
+		$maxPosition = $value['max'];
+	}
+	
+	if ($position <= $maxPosition) {
+		for ($i = $maxPosition; $position <= $i; $i--) {
+			$insert_stmt = $conn->prepare("UPDATE lienmenuderoulant set renderHtmlPosition = ? where renderHtmlPosition = ?");
+			$newval = $i + 1;
+			$insert_stmt->bind_param('ii', $newval, $i);
+			$insert_stmt->execute();
+		}
+	}
+	
+	$insert_stmt = $conn->prepare("INSERT INTO lienmenuderoulant (nomLien,lien,renderHtmlPosition) VALUES (?,?,?)");
+	$insert_stmt->bind_param('ssi',$nomlien,$lien,$position);
+	$insert_stmt->execute();
+	
+	$conn->close();
 }
 ?>
