@@ -7,6 +7,10 @@
 		<title>Menu</title>
 		<script src="http://205.236.12.52/projet/h2015/equipe6/javascript/jquery-1.11.2.min.js"></script>
 		<script src="http://205.236.12.52/projet/h2015/equipe6/javascript/jquery-ui.min.js"></script>
+		<style>
+		  #sortable { list-style-type: none; margin: 0; padding: 0; margin-bottom: 10px; }
+		  #sortable li { margin: 5px; padding: 5px; width: 150px; }
+		 </style>
 		<link rel="stylesheet" href="http://205.236.12.52/projet/h2015/equipe6/javascript/jquery-ui.min.css">
 		<link rel="stylesheet" href="http://205.236.12.52/projet/h2015/equipe6/javascript/jquery-ui.theme.min.css">
 
@@ -14,6 +18,10 @@
 			$(function() {
 				var spinner = $( "#position" ).spinner();
 				$( "#position" ).spinner( "option", "min", 1);
+				
+				$( "#sortable" ).sortable({
+				  revert: true
+				});
 			});
 			
 			$(document).ready(function(){
@@ -64,6 +72,17 @@
 			
 			function showDivSecondMenu2() {
 				var selectBox = document.getElementById('deuxiememenu2');
+				var divId = selectBox.options[selectBox.selectedIndex].value;
+				for(i = 0; i < selectBox.length; i++)
+				{
+					document.getElementById(selectBox.options[i].value).style.display = "none";
+				}
+				
+				document.getElementById(divId).style.display = "block";
+			}
+			
+			function showDivThirdMenu1() {
+				var selectBox = document.getElementById('troisiememenu1');
 				var divId = selectBox.options[selectBox.selectedIndex].value;
 				for(i = 0; i < selectBox.length; i++)
 				{
@@ -135,7 +154,85 @@
 				</div>
 				
 				<div id="sm12" style="display:none">
-					Hello Div 2
+					<br/>
+					Choisir l'option que vous souhaitez ?<br/>
+					<select id="troisiememenu1" onchange='showDivThirdMenu1()'>
+						<option value="tm11">Modifier la position</option>
+						<option value="tm12">Modifier les informations</option>
+					</select><br/><br/>
+					
+					<div id="tm11" style="display : block">
+						<ul id="sortable">
+							<?php
+								$servername = "localhost";
+								$username = "equipe6h15";
+								$password = "ebola-info";
+								$dbname = "equipe6h15";
+								
+								// Create connection
+								$conn = new mysqli($servername, $username, $password, $dbname);
+								// Check connection
+								if ($conn->connect_error) {
+										die("Erreur de connection: " . $conn->connect_error);
+								} 
+								
+								$sql = "select * from lienmenuderoulant order by renderHtmlPosition;";
+								$result = $conn->query($sql);
+								
+								if ($result->num_rows > 0) {
+									while ($current = $result->fetch_assoc()) {
+										echo "<li class=\"ui-state-default\">" . $current['menuId'] . " - " . utf8_encode($current["nomLien"]) . "</li>";
+										$Position++;
+									}
+								}
+								
+								$conn->close();
+							?>
+						</ul></i><br/>
+						<input type="button" id="modposlink" value="Sauvegarder Position Liens"/>
+					</div>
+					
+					<div id="tm12" style="display : none">
+						<br/><br/>
+						<i>Voici la liste actuelle des liens avec leur id :
+						<ul style="list-style : none">
+							<?php
+								$servername = "localhost";
+								$username = "equipe6h15";
+								$password = "ebola-info";
+								$dbname = "equipe6h15";
+								
+								// Create connection
+								$conn = new mysqli($servername, $username, $password, $dbname);
+								// Check connection
+								if ($conn->connect_error) {
+										die("Erreur de connection: " . $conn->connect_error);
+								} 
+								
+								$sql = "select * from lienmenuderoulant order by renderHtmlPosition;";
+								$result = $conn->query($sql);
+								
+								if ($result->num_rows > 0) {
+									while ($current = $result->fetch_assoc()) {
+										echo "<li>" . $current['menuId'] . " - " . utf8_encode($current["nomLien"]) . "</li>";
+										$Position++;
+									}
+								}
+								
+								$conn->close();
+							?>
+						</ul></i>
+						<br/>
+						Id du lien : <br/>
+						<input type="text" id="idlien"/><br/>
+						<input type="button" id="supplien" value="Rechercher Lien"/><br/><br/>
+						
+						Titre du lien :<br/>
+						<input type="text" id="nomlienmodifier"/><br/>
+						Adresse du lien :<br/>
+						<input type="text" id="lienmodifier"/><br/>
+						<input type="button" id="modlien" value="Modifier Lien"/>
+					</div>
 				</div>
 				
 				<div id="sm13" style="display:none">
