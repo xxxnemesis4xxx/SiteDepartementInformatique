@@ -24,6 +24,9 @@ if (isset($_POST['action'])) {
 		case 'Ajouter Lien' :
 			ajouterLien(databaseConnection());
 			exit;
+		case 'Supprimer Lien' :
+			supprimerLien(databaseConnection());
+			exit;
 	}
 }
 
@@ -151,5 +154,39 @@ function ajouterLien($conn) {
 	$insert_stmt->execute();
 	
 	$conn->close();
+}
+
+function supprimerLien($conn) {
+	$id = $_POST['idlien'];
+	$maxPosition = 1;
+	$itemPosition = 0;
+	
+	$sql = "select max(renderHtmlPosition) as max from lienmenuderoulant";
+	$result = $conn->query($sql);
+	
+	if ($result->num_rows > 0) {
+		$value = $result->fetch_assoc();
+		$maxPosition = $value['max'];
+	}
+	
+	$insert_stmt = $conn->prepare("select renderHtmlPosition from lienmenuderoulant where menuId = ?");
+	$insert_stmt->bind_param('i',$id);
+	$insert_stmt->execute();
+	$insert_stmt->store_result();
+	$result = $insert_stmt->fetch();
+	$itemPosition = $result['renderHtmlPosition'];
+	
+	$insert_stmt = $conn->prepare("DELETE FROM lienmenuderoulant where menuId = ?");
+	$insert_stmt->bind_param('i',$id);
+	$insert_stmt->execute();
+
+	if ($itemPosition < $maxPosition) {
+		for ($i = $itemPosition; $i < $maxPosition; $i++) {
+			$insert_stmt = $conn->prepare("UPDATE lienmenuderoulant set renderHtmlPosition = ? where renderHtmlPosition = ?");
+			$newval = $i + 1;
+			$insert_stmt->bind_param('ii', $i, $newval);
+			$insert_stmt->execute();
+		}
+	}
 }
 ?>
