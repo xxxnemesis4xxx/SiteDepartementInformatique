@@ -510,6 +510,7 @@ ul.vertical_menu li ul li:hover ul {
 .dimensionTable td {
 	padding : 0px;
 	width : 25%;
+	height : 226px;
 }
 
 .dimensionTable img {
