@@ -46,7 +46,6 @@ CREATE TABLE IF NOT EXISTS equipe6h15.verticalmenu(
 menuId INT NOT NULL auto_increment PRIMARY KEY,
 nomLien VARCHAR(100) NOT NULL,
 lien VARCHAR(20000),
-position INT NOT NULL,
 layer INT NOT NULL,
 renderHtmlPosition INT NOT NULL,
 htmlCouleur VARCHAR(6) NOT NULL,                  
@@ -54,55 +53,55 @@ openNewPage boolean NOT NULL default FALSE,
 CONSTRAINT fk_verticalmenu_renderHtmlPosition FOREIGN KEY (`renderHtmlPosition`) REFERENCES equipe6h15.verticalmenu(`menuId`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=INNODB DEFAULT CHARSET=utf8;
 
-INSERT INTO equipe6h15.verticalmenu VALUES (default,'Programmes', 'http://205.236.12.52/projet/h2015/equipe6/programmes.php', 1, 1, 1, '008747', false);
-INSERT INTO equipe6h15.verticalmenu VALUES (default,'Gestion', 'http://cll.qc.ca/programmes/techniques/techniques-de-linformatique-informatique-de-gestion-420-aa/', 1, 2, 1, '873400', true);
-INSERT INTO equipe6h15.verticalmenu VALUES (default,'Industrielle', 'http://cll.qc.ca/programmes/techniques/techniques-de-linformatique-informatique-industrielle-420-ab/', 2, 2, 1, '870020', true);
-INSERT INTO equipe6h15.verticalmenu VALUES (default,'Réseaux', 'http://cll.qc.ca/programmes/techniques/informatique-gestion-de-reseaux/', 3, 2, 1, '240087', true);
-INSERT INTO equipe6h15.verticalmenu VALUES (default,'Événements', 'http://205.236.12.52/projet/h2015/equipe6/evenement.php', 2, 1, 2, 'cf2130', false);
-INSERT INTO equipe6h15.verticalmenu VALUES (default,'Activités', 'http://205.236.12.52/projet/h2015/equipe6/activite.php', 1, 2, 2, 'fecf54', false);
-INSERT INTO equipe6h15.verticalmenu VALUES (default,'Foire de l\'emploie', 'http://205.236.12.52/projet/h2015/equipe6/foireemploi.php', 3, 2, 2, '2B2F56', false);
-INSERT INTO equipe6h15.verticalmenu VALUES (default,'Rallye', 'http://205.236.12.52/projet/h2015/equipe6/rallye.php', 4, 2, 2, '1A0DDB', false);
-INSERT INTO equipe6h15.verticalmenu VALUES (default,'Remise des Diplomes', 'http://205.236.12.52/projet/h2015/equipe6/diplome.php', 5, 2, 2, '836E37', false);
-INSERT INTO equipe6h15.verticalmenu VALUES (default,'Vidéos Promotionnelles', 'http://205.236.12.52/projet/h2015/equipe6/videopromo.php', 6, 2, 2, 'CB4CD3', false);
-INSERT INTO equipe6h15.verticalmenu VALUES (default,'Enseignants', 'http://205.236.12.52/projet/h2015/equipe6/enseignant.php', 3 , 1, 3, 'AEAEAE', false);
-INSERT INTO equipe6h15.verticalmenu VALUES (default,'Actuellement', NULL, 1, 2, 3, '957777', false);
-INSERT INTO equipe6h15.verticalmenu VALUES (default,'Yvan Morrissey', 'http://205.236.12.52/projet/h2015/equipe6/enseignant/yvanmorrissey.php', 1, 3, 3, '8C2F19', false);
-INSERT INTO equipe6h15.verticalmenu VALUES (default,'Stéphane Mercier', 'http://205.236.12.52/projet/h2015/equipe6/enseignant/stephanemercier.php', 2, 3, 3, '779395', FALSE);
-INSERT INTO equipe6h15.verticalmenu VALUES (default,'Christian Asselin', 'http://205.236.12.52/projet/h2015/equipe6/enseignant/christianasselin.php', 3, 3, 3, '8C1919', false);
-INSERT INTO equipe6h15.verticalmenu VALUES (default,'Serge Lévesque', 'http://205.236.12.52/projet/h2015/equipe6/enseignant/sergelevesque.php', 4, 3, 3, '6E3E33', false);
-INSERT INTO equipe6h15.verticalmenu VALUES (default,'Olivier Lafleur', 'http://205.236.12.52/projet/h2015/equipe6/enseignant/olivierlafleur.php', 5, 3, 3, '382723', false);
-INSERT INTO equipe6h15.verticalmenu VALUES (default,'Mélissa Clermont', 'http://205.236.12.52/projet/h2015/equipe6/enseignant/melissaclermont.php', 6, 3, 3, 'F0AB80', false);
-INSERT INTO equipe6h15.verticalmenu VALUES (default,'Gilles Champagne', 'http://205.236.12.52/projet/h2015/equipe6/enseignant/gilleschampagne.php', 7, 3, 3, 'A18964', false);
-INSERT INTO equipe6h15.verticalmenu VALUES (default,'Marc Deslandes', 'http://205.236.12.52/projet/h2015/equipe6/enseignant/marcdeslandes.php', 8, 3, 3, '1B1306', false);
-INSERT INTO equipe6h15.verticalmenu VALUES (default,'Nelson Marceau', 'http://205.236.12.52/projet/h2015/equipe6/enseignant/nelsonmarceau.php', 9, 3, 3, '7C7C7C', false);
-INSERT INTO equipe6h15.verticalmenu VALUES (default,'Lise Provencher', 'http://205.236.12.52/projet/h2015/equipe6/enseignant/liseprovencher.php', 10, 3, 3, '493E2E', false);
-INSERT INTO equipe6h15.verticalmenu VALUES (default,'Jocelyne Lapointe', 'http://205.236.12.52/projet/h2015/equipe6/enseignant/jocelynelapointe.php', 11, 3, 3, 'A1855A', false);
-INSERT INTO equipe6h15.verticalmenu VALUES (default,'Josée Lainesse', 'http://205.236.12.52/projet/h2015/equipe6/enseignant/joseelainesse.php', 12, 3, 3, 'A99F33', false);
-INSERT INTO equipe6h15.verticalmenu VALUES (default,'Guillaume Michaud', 'http://205.236.12.52/projet/h2015/equipe6/enseignant/guillaumemichaud.php', 13, 3, 3, '575008', false);
-INSERT INTO equipe6h15.verticalmenu VALUES (default,'Technicien(s)', NULL, 2, 2, 4, '779395', false);
-INSERT INTO equipe6h15.verticalmenu VALUES (default,'Louis-Philippe Normand', 'http://205.236.12.52/projet/h2015/equipe6/enseignant/louisphilippenormand.php', 1, 3, 4, '6B7C37', false);
-INSERT INTO equipe6h15.verticalmenu VALUES (default,'À la retraite', NULL, 3, 2, 5, '599959', false);
-INSERT INTO equipe6h15.verticalmenu VALUES (default,'Luc Morin', 'http://205.236.12.52/projet/h2015/equipe6/enseignant/lucmorin.php', 1, 3, 5, '759612', false);
-INSERT INTO equipe6h15.verticalmenu VALUES (default,'Danielle Théberge', 'http://205.236.12.52/projet/h2015/equipe6/enseignant/danielletheberge.php', 2, 3, 5, 'B1EA0A', false);
-INSERT INTO equipe6h15.verticalmenu VALUES (default,'Nicolas Morency', 'http://205.236.12.52/projet/h2015/equipe6/enseignant/nicolasmorency.php', 3, 3, 5, '7EEA0A', false);
-INSERT INTO equipe6h15.verticalmenu VALUES (default,'Richard Landry', 'http://205.236.12.52/projet/h2015/equipe6/enseignant/richardlandry.php', 4, 3, 5, '2E5109', false);
-INSERT INTO equipe6h15.verticalmenu VALUES (default,'Jacques Chabot', 'http://205.236.12.52/projet/h2015/equipe6/enseignant/jacqueschabot.php', 5, 3, 5, '1B2D07', false);
-INSERT INTO equipe6h15.verticalmenu VALUES (default,'Normand Lemyre', 'http://205.236.12.52/projet/h2015/equipe6/enseignant/nordmandlemyre.php', 6, 3, 5, '11D031', false);
-INSERT INTO equipe6h15.verticalmenu VALUES (default,'André Charon', 'http://205.236.12.52/projet/h2015/equipe6/enseignant/andrecharon.php', 7, 3, 5, '2D843C', false);
-INSERT INTO equipe6h15.verticalmenu VALUES (default,'Pierre Rajotte', 'http://205.236.12.52/projet/h2015/equipe6/enseignant/pierrerajotte.php', 8, 3, 5, '2D8460', false);
-INSERT INTO equipe6h15.verticalmenu VALUES (default,'Tuy Nguyen', 'http://205.236.12.52/projet/h2015/equipe6/enseignant/tuynguyen.php', 9, 3, 5, '45D096', false);
-INSERT INTO equipe6h15.verticalmenu VALUES (default,'Club Robotique', 'http://205.236.12.52/projet/h2015/equipe6/clubrobot.php', 4, 1, 6, 'EFEC00', false);
-INSERT INTO equipe6h15.verticalmenu VALUES (default,'Liens Utilies',NULL, 6, 1, 8, 'DB00FF', false);
-INSERT INTO equipe6h15.verticalmenu VALUES (default,'Alternance Travail-Études', 'http://cll.qc.ca/programmes/alternance-travail-etudes/', 1, 2, 8, '9AFF3C', true);
-INSERT INTO equipe6h15.verticalmenu VALUES (default,'MSDNAA', 'http://e5.onthehub.com/WebStore/ProductsByMajorVersionList.aspx?ws=6c5a70be-a08b-e011-969d-0030487d8897&vsro=8&JSEnabled=1', 2, 2, 8, '4B7347', true);
-INSERT INTO equipe6h15.verticalmenu VALUES (default,'PDEA', 'http://www.clevislauzon.qc.ca/informatique/PDEA%20Version%20officielle%202010.pdf', 3, 2, 8, '0CC291', true);
-INSERT INTO equipe6h15.verticalmenu VALUES (default,'Stages', NULL, 5, 1, 7, '6F4876', false);
-INSERT INTO equipe6h15.verticalmenu VALUES (default,'Critères d\'admissibilités','http://205.236.12.52/projet/h2015/equipe6/stagecritere.php', 1, 2, 7, 'B1EA0A', false);
-INSERT INTO equipe6h15.verticalmenu VALUES (default,'Dates des Stages','http://205.236.12.52/projet/h2015/equipe6/datestages.php', 2, 2, 7, '2E5109', false);
-INSERT INTO equipe6h15.verticalmenu VALUES (default,'Document d\'information', 'http://www.cll.qc.ca/informatique/2014_Lettre_stage_H-2014GIR_1.pdf' , 3, 2, 7, '1B2D07', true);
-INSERT INTO equipe6h15.verticalmenu VALUES (default,'Formation des Étudiants', 'http://205.236.12.52/projet/h2015/equipe6/formationetudiant.php', 4, 2, 7, '2D843C', false);
-INSERT INTO equipe6h15.verticalmenu VALUES (default,'Responsables des Stages', 'http://205.236.12.52/projet/h2015/equipe6/responsablestage.php', 5, 2, 7, '11D031', false);
-INSERT INTO equipe6h15.verticalmenu VALUES (default,'Stages en France', 'http://205.236.12.52/projet/h2015/equipe6/france.php', 6, 2, 7, '45D096', false);
+INSERT INTO equipe6h15.verticalmenu VALUES (default,'Programmes', 'http://205.236.12.52/projet/h2015/equipe6/programmes.php', 1, 1, '008747', false);
+INSERT INTO equipe6h15.verticalmenu VALUES (default,'Gestion', 'http://cll.qc.ca/programmes/techniques/techniques-de-linformatique-informatique-de-gestion-420-aa/',  2, 2, '873400', true);
+INSERT INTO equipe6h15.verticalmenu VALUES (default,'Industrielle', 'http://cll.qc.ca/programmes/techniques/techniques-de-linformatique-informatique-industrielle-420-ab/', 2, 3, '870020', true);
+INSERT INTO equipe6h15.verticalmenu VALUES (default,'Réseaux', 'http://cll.qc.ca/programmes/techniques/informatique-gestion-de-reseaux/', 2, 4, '240087', true);
+INSERT INTO equipe6h15.verticalmenu VALUES (default,'Événements', 'http://205.236.12.52/projet/h2015/equipe6/evenement.php', 1, 5, 'cf2130', false);
+INSERT INTO equipe6h15.verticalmenu VALUES (default,'Activités', 'http://205.236.12.52/projet/h2015/equipe6/activite.php', 2, 6, 'fecf54', false);
+INSERT INTO equipe6h15.verticalmenu VALUES (default,'Foire de l\'emploie', 'http://205.236.12.52/projet/h2015/equipe6/foireemploi.php', 2, 7, '2B2F56', false);
+INSERT INTO equipe6h15.verticalmenu VALUES (default,'Rallye', 'http://205.236.12.52/projet/h2015/equipe6/rallye.php', 2, 8, '1A0DDB', false);
+INSERT INTO equipe6h15.verticalmenu VALUES (default,'Remise des Diplomes', 'http://205.236.12.52/projet/h2015/equipe6/diplome.php', 2, 9, '836E37', false);
+INSERT INTO equipe6h15.verticalmenu VALUES (default,'Vidéos Promotionnelles', 'http://205.236.12.52/projet/h2015/equipe6/videopromo.php', 2, 10, 'CB4CD3', false);
+INSERT INTO equipe6h15.verticalmenu VALUES (default,'Enseignants', 'http://205.236.12.52/projet/h2015/equipe6/enseignant.php', 1, 11, 'AEAEAE', false);
+INSERT INTO equipe6h15.verticalmenu VALUES (default,'Actuellement', NULL, 2, 12, '957777', false);
+INSERT INTO equipe6h15.verticalmenu VALUES (default,'Yvan Morrissey', 'http://205.236.12.52/projet/h2015/equipe6/enseignant/yvanmorrissey.php', 3, 13, '8C2F19', false);
+INSERT INTO equipe6h15.verticalmenu VALUES (default,'Stéphane Mercier', 'http://205.236.12.52/projet/h2015/equipe6/enseignant/stephanemercier.php', 3, 14, '779395', FALSE);
+INSERT INTO equipe6h15.verticalmenu VALUES (default,'Christian Asselin', 'http://205.236.12.52/projet/h2015/equipe6/enseignant/christianasselin.php', 3, 15, '8C1919', false);
+INSERT INTO equipe6h15.verticalmenu VALUES (default,'Serge Lévesque', 'http://205.236.12.52/projet/h2015/equipe6/enseignant/sergelevesque.php', 3, 16, '6E3E33', false);
+INSERT INTO equipe6h15.verticalmenu VALUES (default,'Olivier Lafleur', 'http://205.236.12.52/projet/h2015/equipe6/enseignant/olivierlafleur.php', 3, 17, '382723', false);
+INSERT INTO equipe6h15.verticalmenu VALUES (default,'Mélissa Clermont', 'http://205.236.12.52/projet/h2015/equipe6/enseignant/melissaclermont.php', 3, 18, 'F0AB80', false);
+INSERT INTO equipe6h15.verticalmenu VALUES (default,'Gilles Champagne', 'http://205.236.12.52/projet/h2015/equipe6/enseignant/gilleschampagne.php', 3, 19, 'A18964', false);
+INSERT INTO equipe6h15.verticalmenu VALUES (default,'Marc Deslandes', 'http://205.236.12.52/projet/h2015/equipe6/enseignant/marcdeslandes.php', 3, 20, '1B1306', false);
+INSERT INTO equipe6h15.verticalmenu VALUES (default,'Nelson Marceau', 'http://205.236.12.52/projet/h2015/equipe6/enseignant/nelsonmarceau.php', 3, 21, '7C7C7C', false);
+INSERT INTO equipe6h15.verticalmenu VALUES (default,'Lise Provencher', 'http://205.236.12.52/projet/h2015/equipe6/enseignant/liseprovencher.php', 3, 22, '493E2E', false);
+INSERT INTO equipe6h15.verticalmenu VALUES (default,'Jocelyne Lapointe', 'http://205.236.12.52/projet/h2015/equipe6/enseignant/jocelynelapointe.php', 3, 23, 'A1855A', false);
+INSERT INTO equipe6h15.verticalmenu VALUES (default,'Josée Lainesse', 'http://205.236.12.52/projet/h2015/equipe6/enseignant/joseelainesse.php', 3, 24, 'A99F33', false);
+INSERT INTO equipe6h15.verticalmenu VALUES (default,'Guillaume Michaud', 'http://205.236.12.52/projet/h2015/equipe6/enseignant/guillaumemichaud.php', 3, 25, '575008', false);
+INSERT INTO equipe6h15.verticalmenu VALUES (default,'Technicien(s)', NULL, 2, 26, '779395', false);
+INSERT INTO equipe6h15.verticalmenu VALUES (default,'Louis-Philippe Normand', 'http://205.236.12.52/projet/h2015/equipe6/enseignant/louisphilippenormand.php', 3, 27, '6B7C37', false);
+INSERT INTO equipe6h15.verticalmenu VALUES (default,'À la retraite', NULL, 2, 28, '599959', false);
+INSERT INTO equipe6h15.verticalmenu VALUES (default,'Luc Morin', 'http://205.236.12.52/projet/h2015/equipe6/enseignant/lucmorin.php', 3, 29, '759612', false);
+INSERT INTO equipe6h15.verticalmenu VALUES (default,'Danielle Théberge', 'http://205.236.12.52/projet/h2015/equipe6/enseignant/danielletheberge.php', 3, 30, 'B1EA0A', false);
+INSERT INTO equipe6h15.verticalmenu VALUES (default,'Nicolas Morency', 'http://205.236.12.52/projet/h2015/equipe6/enseignant/nicolasmorency.php', 3, 31, '7EEA0A', false);
+INSERT INTO equipe6h15.verticalmenu VALUES (default,'Richard Landry', 'http://205.236.12.52/projet/h2015/equipe6/enseignant/richardlandry.php', 3, 32, '2E5109', false);
+INSERT INTO equipe6h15.verticalmenu VALUES (default,'Jacques Chabot', 'http://205.236.12.52/projet/h2015/equipe6/enseignant/jacqueschabot.php', 3, 33, '1B2D07', false);
+INSERT INTO equipe6h15.verticalmenu VALUES (default,'Normand Lemyre', 'http://205.236.12.52/projet/h2015/equipe6/enseignant/nordmandlemyre.php', 3, 34, '11D031', false);
+INSERT INTO equipe6h15.verticalmenu VALUES (default,'André Charon', 'http://205.236.12.52/projet/h2015/equipe6/enseignant/andrecharon.php', 3, 35, '2D843C', false);
+INSERT INTO equipe6h15.verticalmenu VALUES (default,'Pierre Rajotte', 'http://205.236.12.52/projet/h2015/equipe6/enseignant/pierrerajotte.php', 3, 36, '2D8460', false);
+INSERT INTO equipe6h15.verticalmenu VALUES (default,'Tuy Nguyen', 'http://205.236.12.52/projet/h2015/equipe6/enseignant/tuynguyen.php', 3, 37, '45D096', false);
+INSERT INTO equipe6h15.verticalmenu VALUES (default,'Club Robotique', 'http://205.236.12.52/projet/h2015/equipe6/clubrobot.php', 1, 38, 'EFEC00', false);
+INSERT INTO equipe6h15.verticalmenu VALUES (default,'Liens Utilies',NULL, 1, 39, 'DB00FF', false);
+INSERT INTO equipe6h15.verticalmenu VALUES (default,'Alternance Travail-Études', 'http://cll.qc.ca/programmes/alternance-travail-etudes/', 2, 40, '9AFF3C', true);
+INSERT INTO equipe6h15.verticalmenu VALUES (default,'MSDNAA', 'http://e5.onthehub.com/WebStore/ProductsByMajorVersionList.aspx?ws=6c5a70be-a08b-e011-969d-0030487d8897&vsro=8&JSEnabled=1', 2, 41, '4B7347', true);
+INSERT INTO equipe6h15.verticalmenu VALUES (default,'PDEA', 'http://www.clevislauzon.qc.ca/informatique/PDEA%20Version%20officielle%202010.pdf', 2, 42, '0CC291', true);
+INSERT INTO equipe6h15.verticalmenu VALUES (default,'Stages', NULL, 1, 43, '6F4876', false);
+INSERT INTO equipe6h15.verticalmenu VALUES (default,'Critères d\'admissibilités','http://205.236.12.52/projet/h2015/equipe6/stagecritere.php', 2, 44, 'B1EA0A', false);
+INSERT INTO equipe6h15.verticalmenu VALUES (default,'Dates des Stages','http://205.236.12.52/projet/h2015/equipe6/datestages.php', 2, 45, '2E5109', false);
+INSERT INTO equipe6h15.verticalmenu VALUES (default,'Document d\'information', 'http://www.cll.qc.ca/informatique/2014_Lettre_stage_H-2014GIR_1.pdf' , 2, 46, '1B2D07', true);
+INSERT INTO equipe6h15.verticalmenu VALUES (default,'Formation des Étudiants', 'http://205.236.12.52/projet/h2015/equipe6/formationetudiant.php', 2, 47, '2D843C', false);
+INSERT INTO equipe6h15.verticalmenu VALUES (default,'Responsables des Stages', 'http://205.236.12.52/projet/h2015/equipe6/responsablestage.php', 2, 48, '11D031', false);
+INSERT INTO equipe6h15.verticalmenu VALUES (default,'Stages en France', 'http://205.236.12.52/projet/h2015/equipe6/france.php', 2, 49, '45D096', false);
 
 
 /***************************************************
