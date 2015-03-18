@@ -47,7 +47,7 @@ menuId INT NOT NULL auto_increment PRIMARY KEY,
 nomLien VARCHAR(100) NOT NULL,
 lien VARCHAR(20000),
 layer INT NOT NULL,
-renderHtmlPosition INT NOT NULL,
+renderHtmlPosition INT NOT NULL UNIQUE,
 htmlCouleur VARCHAR(6) NOT NULL,                  
 openNewPage boolean NOT NULL default FALSE,
 CONSTRAINT fk_verticalmenu_renderHtmlPosition FOREIGN KEY (`renderHtmlPosition`) REFERENCES equipe6h15.verticalmenu(`menuId`) ON DELETE CASCADE ON UPDATE CASCADE
