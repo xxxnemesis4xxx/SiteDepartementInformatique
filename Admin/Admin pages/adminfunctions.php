@@ -32,6 +32,9 @@ if (isset($_POST['action'])) {
 		case 'Modifier Lien' :
 			modifierLien(databaseConnection());
 			exit;
+		case 'Ajouter Lien Vertical' :
+			ajouterVerticalLien(databaseConnection());
+			exit;
 	}
 }
 
@@ -132,7 +135,7 @@ function modFichier() {
 }
 
 function ajouterLien($conn) {
-	$nomlien = $_POST['nomlien'];
+	$nomlien = utf8_decode($_POST['nomlien']);
 	$lien = $_POST['lien'];
 	$position = $_POST['position'];
 	$maxPosition = 1;

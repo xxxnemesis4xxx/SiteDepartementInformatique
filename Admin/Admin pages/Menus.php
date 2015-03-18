@@ -78,17 +78,17 @@
 				
 				$('#newverticallink').click(function() {
 					var method = $(this).val();
-					var titre = document.getElementById('titleverticalmenu');
-					var link = document.getElementById('linkverticalmenu');
-					var position = document.getElementById('positiontitre');
+					var titre = document.getElementById('titleverticalmenu').value;
+					var link = document.getElementById('linkverticalmenu').value;
+					var position = document.getElementById('positiontitre').value;
 					var layerBox = document.getElementById('layer');
 					var layer = layerBox.options[layerBox.selectedIndex].value;
-					var htmlcolor = document.getElementById('htmlcolor');
-					var newpage = document.getElementById('lastcols').checked;
+					var htmlcolor = document.getElementById('htmlcolor').value;
+					var newpage = document.getElementById('newpage').checked;
 					var ajaxurl = 'adminfunctions.php',
 					data =  {'action': method, 'titre' : titre, 'link' : link, 'position' : position, 'layer' : layer, 'htmlcolor' : htmlcolor, 'newpage' : newpage};
 					$.post(ajaxurl, data, function (response) {
-						location.reload(true);
+						alert(response);
 					});
 				});
 			});
@@ -144,7 +144,6 @@
 			Qu'elle menu voulez-vous modifier ? <br/>
 			<select id="menu" onchange='showDivFirstMenu()'>
 				<option value="menuhorizontale">Menu Horizontale</option>
-				<option value="menuverticale">Menu Vertical</option>
 			</select>
 			
 			<div id="menuhorizontale" style="display:block">
@@ -276,104 +275,6 @@
 						<input type="button" id="supplien" value="Supprimer Lien"/>
 				</div>
 				
-			</div>
-			
-			<div id="menuverticale" style="display:none">
-				<br/><br/>
-				Choisir l'option que vous souhaitez ?<br/>
-				<select id="deuxiememenu2" onchange='showDivSecondMenu2()'>
-					<option value="sm21">Ajouter</option>
-					<option value="sm22">Modifier</option>
-					<option value="sm23">Supprimer</option>
-				</select>
-				
-				<style>
-							ul, ul ul, ul ul ul {
-								list-style : none;
-							}
-						</style>
-						<ul><i>
-							<?php
-								$servername = "localhost";
-								$username = "equipe6h15";
-								$password = "ebola-info";
-								$dbname = "equipe6h15";
-							
-								// Create connection
-								$conn = new mysqli($servername, $username, $password, $dbname);
-								// Check connection
-								if ($conn->connect_error) {
-										die("Erreur de connection: " . $conn->connect_error);
-								} 
-								
-								$sql = "select * from verticalmenu order by renderHtmlPosition, layer,position;";
-								$result = $conn->query($sql);
-							
-								if ($result->num_rows > 0) {
-									$current = $result->fetch_assoc();
-									while($current != null) {
-										$next = $result->fetch_assoc();
-										if ($current["layer"] ==  $next["layer"]) {
-											echo "<li>Position : " . $current["position"] . " - " .utf8_encode($current["nomLien"]) ."</li>";
-										} elseif ($current["layer"] < $next["layer"]) {
-											echo "<li>Position : " . $current["position"] . " - " .utf8_encode($current["nomLien"]) . "<ul>";
-										} elseif ($current["layer"] > $next["layer"]) {
-											echo "<li>Position : " . $current["position"] . " - " . utf8_encode($current["nomLien"]) 
-											. (($current["layer"] - $next["layer"] == 1)?"</li></ul></li>":"</li></ul></li></ul></li>");
-										}
-												
-										$current = $next;
-									}
-								}
-								
-								$conn->close();
-							?>
-						</ul></i>
-				---------------------------------------------------------------<br/>
-				<div id="sm21" style="display:block">
-					<form>
-						Titre du lien : <br/>
-						<input type="text" id="titleverticalmenu" /><br/>
-						Adresse du lien : <br/>
-						<input type="text" id="linkverticalmenu" /><br/>
-						À quelle position souhaitez-vous voir apparaître votre titre<br/>
-						<input id="positiontitre"/><br/><br/>
-						Niveau du lien : 
-						<select id="layer" >
-							<option value="layer1">Niveau 1</option>
-							<option value="layer2">Niveau 2</option>
-							<option value="layer3">Niveau 3</option>
-						</select><br/>
-						<i>
-						<ul>
-							<li>Niveau 1
-								<ul>
-									<li>Niveau 2
-										<ul>
-											<li>Niveau 3</li>
-										</ul>
-									</li>
-								</ul>
-							</li>
-						</ul>
-						</i><br/>
-						Couleur html(Ex : #fff): <br/>
-						<input type="text" id="htmlcolor"/><br/>
-						Ouvrir sur une nouvelle page :
-						<input type="checkbox" id="newpage"><br/><br/>
-						
-						<input type="button" id="newverticallink" value="Ajouter Lien Vertical"/>
-						<br/><br/>
-					<form>
-				</div>
-				
-				<div id="sm22" style="display:none">
-					Hello Div 2
-				</div>
-				
-				<div id="sm23" style="display:none">
-					Hello Div 3
-				</div>
 			</div>
 		</p>
 	</body>
