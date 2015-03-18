@@ -1,4 +1,10 @@
 <header>
+	<?php
+		include_once $_SERVER['DOCUMENT_ROOT'] . '/projet/h2015/equipe6/Connexion/db_connect.php';
+		include_once $_SERVER['DOCUMENT_ROOT'] . '/projet/h2015/equipe6/Connexion/functions.php';
+		 
+		sec_session_start();
+	?>
 	<div id="titre_logo">
 		<a href="http://cll.qc.ca" target="_blank"><img src="http://205.236.12.52/projet/h2015/equipe6/Images/logoLevis.png" alt="Cégep Lévis-Lauzon" /></a>
 	</div>
