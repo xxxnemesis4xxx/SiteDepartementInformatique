@@ -8,7 +8,7 @@ sec_session_start();
 <html xmlns="http://www.w3.org/1999/xhtml">
   	<head>
     	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    	<title>Apache2 Ubuntu Default Page: It works</title>
+    	<title>Admin</title>
   	</head>
   	<body>
 		
@@ -49,8 +49,8 @@ sec_session_start();
 			}
 		?>
 		<script type="text/javascript">
-		var anc_onglet = 'Empty';
-		ChangeTab(anc_onglet);
+			var anc_onglet = 'Upload';
+			ChangeTab(anc_onglet);
 		</script>
         <?php else : ?>
             <p>
