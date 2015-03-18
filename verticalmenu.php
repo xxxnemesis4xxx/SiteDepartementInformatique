@@ -12,7 +12,7 @@
 				die("Erreur de connection: " . $conn->connect_error);
 		} 
 		
-		$sql = "select * from verticalmenu order by renderHtmlPosition, layer,position;";
+		$sql = "select * from verticalmenu order by renderHtmlPosition;";
 		$result = $conn->query($sql);
 	
 		if ($result->num_rows > 0) {
