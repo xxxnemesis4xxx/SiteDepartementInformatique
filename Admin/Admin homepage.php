@@ -9,49 +9,32 @@ sec_session_start();
   	<head>
     	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     	<title>Admin</title>
+		<style>
+			a {
+				padding-left : 20px;
+				font-size : 20px;
+			}
+		</style>
   	</head>
   	<body>
-		
         <?php if (login_check($mysqli) == true && isset($_SESSION['DroitsEnseignant']) && $_SESSION['DroitsEnseignant'] == "Tout les droits") : ?>
-		<link rel="stylesheet" type="text/css" href="CSS/Tab.css">
-		
-		<div id="AdminTabs" class="Tabs">
+			<p style="font-size : 30px">Voici les différents menus disponibles :</p>
+			<ul>
+				<li><a href="http://205.236.12.52/projet/h2015/equipe6/">Accueil</a></li>
 			<?php
-				$root = $_SERVER['DOCUMENT_ROOT'] . "/projet/h2015/equipe6";
+				$root = $_SERVER['DOCUMENT_ROOT'];
+				$ip = $_SERVER['SERVER_NAME'];
+				$default = "/projet/h2015/equipe6";
 				$AdminPagesFolder = "/Admin/Admin pages";
-				$FinalAdminPagesFolder = "$root$AdminPagesFolder";
-				$ArrayAdminPage = array();
+				$FinalAdminPagesFolder = "$root$default$AdminPagesFolder";
 				foreach (new DirectoryIterator($FinalAdminPagesFolder) as $fileInfo)
 				{
-					if ($fileInfo->IsDir() or $fileInfo->getFilename() == "adminfunctions.php")
-					continue;
-					$Extension = "." . $fileInfo->getExtension();
-			
-					switch($Extension)
-					{
-					   case ".html":
-					   case ".php":
-							$FileName = $fileInfo->getBasename($Extension);
-							array_push($ArrayAdminPage, array($FileName, $Extension));
-						  break;
+					if ($fileInfo != "." && $fileInfo != ".." && $fileInfo != "adminfunctions.php") {
+						echo "<li><a href=\"http://" . $ip.$default.$AdminPagesFolder . "/" . $fileInfo ."\">" . explode(".",$fileInfo)[0]. "</a></li>";
 					}
 				}
 			?>
-		</div>
-		<div id="AdminContent" class="Content">
-		</div>
-		
-		<script type="text/javascript" src="Javascript/Init Tab.js"></script>
-		<script type="text/javascript" src="Javascript/Tab.js"></script>
-		<?php
-			foreach ($ArrayAdminPage as $Value) {
-				echo "<script type='text/javascript'>CreateTab('$Value[0]', '$Value[1]');</script>\n";
-			}
-		?>
-		<script type="text/javascript">
-			var anc_onglet = 'Upload';
-			ChangeTab(anc_onglet);
-		</script>
+			</ul>
         <?php else : ?>
             <p>
                 <span class="error">Vous n'avez pas le droit d'accéder à cette Page!</span> Vous devez vous <a href="http://205.236.12.52/projet/h2015/equipe6/Connexion/index.php">connecter</a>.
