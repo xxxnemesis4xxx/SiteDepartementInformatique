@@ -54,7 +54,7 @@ sec_session_start();
 		</script>
         <?php else : ?>
             <p>
-                <span class="error">You are not authorized to access this page.</span> Please <a href="index.php">login</a>.
+                <span class="error">Vous n'avez pas le droit d'accéder à cette Page!</span> Vous devez vous <a href="http://205.236.12.52/projet/h2015/equipe6/Connexion/index.php">connecter</a>.
             </p>
         <?php endif; ?>
 	</body>
