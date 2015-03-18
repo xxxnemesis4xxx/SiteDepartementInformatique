@@ -38,6 +38,7 @@
 					></script>
 				</div>
 			</div>
+			<div class="contentFix"></div>
 		<?php 
 			include("footer.php");
 		?>
