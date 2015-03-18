@@ -29,7 +29,7 @@ sec_session_start();
 				$FinalAdminPagesFolder = "$root$default$AdminPagesFolder";
 				foreach (new DirectoryIterator($FinalAdminPagesFolder) as $fileInfo)
 				{
-					if ($fileInfo != "." && $fileInfo != "..") {
+					if ($fileInfo != "." && $fileInfo != ".." && $fileInfo != "adminfunctions.php") {
 						echo "<li><a href=\"http://" . $ip.$default.$AdminPagesFolder . "/" . $fileInfo ."\">" . explode(".",$fileInfo)[0]. "</a></li>";
 					}
 				}
