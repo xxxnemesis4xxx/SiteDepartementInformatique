@@ -21,6 +21,20 @@ if (isset($_POST['action'])) {
 		case 'Modifier Fichier' :
 			modFichier();
 			exit;
+		case 'Ajouter Lien' :
+			ajouterLien(databaseConnection());
+			exit;
+		case 'Supprimer Lien' :
+			supprimerLien(databaseConnection());
+			exit;
+		case 'Obtenir Lien Information' :
+			exit(obtLienInformation(databaseConnection()));
+		case 'Modifier Lien' :
+			modifierLien(databaseConnection());
+			exit;
+		case 'Ajouter Lien Vertical' :
+			ajouterVerticalLien(databaseConnection());
+			exit;
 	}
 }
 
@@ -118,5 +132,152 @@ function modFichier() {
 		fwrite($fp,$content);
 		fclose($fp);
 	}
+}
+
+function ajouterLien($conn) {
+	$nomlien = utf8_decode($_POST['nomlien']);
+	$lien = $_POST['lien'];
+	$position = $_POST['position'];
+	$maxPosition = 1;
+	
+	$sql = "select max(renderHtmlPosition) as max from lienmenuderoulant";
+	$result = $conn->query($sql);
+	
+	if ($result->num_rows > 0) {
+		$value = $result->fetch_assoc();
+		$maxPosition = $value['max'];
+	}
+	
+	if ($position <= $maxPosition) {
+		for ($i = $maxPosition; $position <= $i; $i--) {
+			$insert_stmt = $conn->prepare("UPDATE lienmenuderoulant set renderHtmlPosition = ? where renderHtmlPosition = ?");
+			$newval = $i + 1;
+			$insert_stmt->bind_param('ii', $newval, $i);
+			$insert_stmt->execute();
+		}
+	}
+	
+	$insert_stmt = $conn->prepare("INSERT INTO lienmenuderoulant (nomLien,lien,renderHtmlPosition) VALUES (?,?,?)");
+	$insert_stmt->bind_param('ssi',$nomlien,$lien,$position);
+	$insert_stmt->execute();
+	
+	$conn->close();
+}
+
+function supprimerLien($conn) {
+	$id = $_POST['idlien'];
+	$maxPosition = 1;
+	$itemPosition = 0;
+	
+	$sql = "select max(renderHtmlPosition) as max from lienmenuderoulant";
+	$result = $conn->query($sql);
+	
+	if ($result->num_rows > 0) {
+		$value = $result->fetch_assoc();
+		$maxPosition = $value['max'];
+	}
+	
+	$insert_stmt = $conn->prepare("select renderHtmlPosition from lienmenuderoulant where menuId = ?");
+	$insert_stmt->bind_param('i',$id);
+	$insert_stmt->execute();
+	$insert_stmt->store_result();
+	$result = $insert_stmt->fetch();
+	$itemPosition = $result['renderHtmlPosition'];
+	
+	$insert_stmt = $conn->prepare("DELETE FROM lienmenuderoulant where menuId = ?");
+	$insert_stmt->bind_param('i',$id);
+	$insert_stmt->execute();
+
+	if ($itemPosition < $maxPosition) {
+		for ($i = $itemPosition; $i < $maxPosition; $i++) {
+			$insert_stmt = $conn->prepare("UPDATE lienmenuderoulant set renderHtmlPosition = ? where renderHtmlPosition = ?");
+			$newval = $i + 1;
+			$insert_stmt->bind_param('ii', $i, $newval);
+			$insert_stmt->execute();
+		}
+	}
+}
+
+function obtLienInformation($conn) {
+	$idlien = $_POST['idlien'];
+	
+	$insert_stmt = $conn->prepare("select renderHtmlPosition,nomLien,lien from lienmenuderoulant where menuId = ?");
+	$insert_stmt->bind_param('i',$idlien);
+	$insert_stmt->execute();
+	$insert_stmt->bind_result($itemPosition, $itemTitre,$itemLien);
+	$result = $insert_stmt->fetch();
+	
+	$conn->close();
+	
+	$bus = array();
+	$bus['titre'] = utf8_encode($itemTitre);
+	$bus['lien'] = utf8_encode($itemLien);
+	$bus['position'] = $itemPosition;
+
+	return html_entity_decode(json_encode($bus));
+}
+
+function modifierLien($conn) {
+	$idlien = $_POST['idlien'];
+	$titre = utf8_decode($_POST['titre']);
+	$lien = utf8_decode($_POST['lien']);
+	$position = $_POST['position'];
+	$positionDB = 0;
+	$maxPosition = 1;
+	
+	$insert_stmt = $conn->prepare("select renderHtmlPosition from lienmenuderoulant where menuId = ?");
+	$insert_stmt->bind_param('i',$idlien);
+	$insert_stmt->execute();
+	$insert_stmt->bind_result($positionDB);
+	$insert_stmt->fetch();
+	
+	$conn->close();
+	$conn = databaseConnection();
+	//Same position - Easy!
+	if ($positionDB == $position) {
+		$insert_stmt2 = $conn->prepare("update lienmenuderoulant set nomLien = ?, lien = ?  where menuId = ?");
+		$insert_stmt2->bind_param('ssi', $titre, $lien, $idlien);
+		$insert_stmt2->execute();
+	} else {
+		//Get the max Position
+		$sql = "select max(renderHtmlPosition) as max from lienmenuderoulant";
+		$result = $conn->query($sql);
+		
+		if ($result->num_rows > 0) {
+			$value = $result->fetch_assoc();
+			$maxPosition = $value['max'];
+		}
+		//Easy!
+		if ($position > $maxPosition) {
+			$newposition = $maxPosition + 1;
+			$insert_stmt = $conn->prepare("UPDATE lienmenuderoulant SET nomLien = ?, lien = ?, renderHtmlPosition = ? where menuId = ?");
+			$insert_stmt->bind_param('ssii', $titre,$lien, $newposition ,$idlien);
+			$insert_stmt->execute();
+			
+			for ($i = $positionDB; $i <= $maxPosition; $i++) {
+				$insert_stmt = $conn->prepare("UPDATE lienmenuderoulant set renderHtmlPosition = ? where renderHtmlPosition = ?");
+				$newval = $i + 1;
+				$insert_stmt->bind_param('ii', $i, $newval);
+				$insert_stmt->execute();
+			}
+		} else {
+			//Put current position at the end
+			$max = $maxPosition + 1;
+			$insert_stmt = $conn->prepare("UPDATE lienmenuderoulant SET renderHtmlPosition = ? where renderHtmlPosition = ?");
+			$insert_stmt->bind_param('ii', $max ,$position);
+			$insert_stmt->execute();
+			
+			//Set the new value at the current position
+			$insert_stmt = $conn->prepare("UPDATE lienmenuderoulant SET nomLien = ?, lien = ?, renderHtmlPosition = ? where menuId = ?");
+			$insert_stmt->bind_param('ssii', $titre,$lien, $position ,$idlien);
+			$insert_stmt->execute();
+			
+			//Value at the end take the position of the value that took his place
+			$insert_stmt = $conn->prepare("UPDATE lienmenuderoulant SET renderHtmlPosition = ? where renderHtmlPosition = ?");
+			$insert_stmt->bind_param('ii', $positionDB ,$max);
+			$insert_stmt->execute();
+		}
+	}
+	$conn->close();
 }
 ?>
