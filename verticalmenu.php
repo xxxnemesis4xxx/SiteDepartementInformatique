@@ -34,7 +34,17 @@
 					. (($current["openNewPage"] == true)?"target='_blank' ":"") 
 					. "style='border-left : 5px solid #" . $current["htmlCouleur"] 
 					. "'><span>" . utf8_encode($current["nomLien"]) 
-					. (($current["layer"] - $next["layer"] == 1)?"</span></a></li></ul></li>":"</span></a></li></ul></li></ul></li>");
+					. (($current["layer"] - $next["layer"] == 1)?
+						"</span></a></li></ul></li>":
+						"</span></a></li></ul></li>"
+					. (((login_check($mysqli) == true && isset($_SESSION['DroitsEnseignant']) && $_SESSION['DroitsEnseignant'] == "Tout les droits") == true)?
+						"<li>
+						<a href=\"http://205.236.12.52/projet/h2015/equipe6/enseignant.php\" style=\"border-left : 5px solid #AEAEAE\">
+						<span>Admin</span>
+						</a>
+						</li>":"")
+					.
+						"</ul>");
 				}
 						
 				$current = $next;
@@ -42,5 +52,4 @@
 		}
 		
 		$conn->close();
-	?>
-</ul>
+?>
