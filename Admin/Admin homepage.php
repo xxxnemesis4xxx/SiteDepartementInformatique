@@ -18,8 +18,9 @@ sec_session_start();
   	</head>
   	<body>
         <?php if (login_check($mysqli) == true && isset($_SESSION['DroitsEnseignant']) && $_SESSION['DroitsEnseignant'] == "Tout les droits") : ?>
-		
+			<p style="font-size : 30px">Voici les différents menus disponibles :</p>
 			<ul>
+				<li><a href="http://205.236.12.52/projet/h2015/equipe6/">Accueil</a></li>
 			<?php
 				$root = $_SERVER['DOCUMENT_ROOT'];
 				$ip = $_SERVER['SERVER_NAME'];
