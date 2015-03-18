@@ -8,7 +8,7 @@ sec_session_start();
 <html xmlns="http://www.w3.org/1999/xhtml">
   	<head>
     	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    	<title>Apache2 Ubuntu Default Page: It works</title>
+    	<title>Admin</title>
   	</head>
   	<body>
 		
@@ -49,12 +49,12 @@ sec_session_start();
 			}
 		?>
 		<script type="text/javascript">
-		var anc_onglet = 'Empty';
-		ChangeTab(anc_onglet);
+			var anc_onglet = 'Upload';
+			ChangeTab(anc_onglet);
 		</script>
         <?php else : ?>
             <p>
-                <span class="error">You are not authorized to access this page.</span> Please <a href="index.php">login</a>.
+                <span class="error">Vous n'avez pas le droit d'accéder à cette Page!</span> Vous devez vous <a href="http://205.236.12.52/projet/h2015/equipe6/Connexion/index.php">connecter</a>.
             </p>
         <?php endif; ?>
 	</body>
