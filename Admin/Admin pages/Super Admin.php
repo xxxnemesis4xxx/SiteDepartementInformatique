@@ -9,6 +9,13 @@
 		sec_session_start();
 	?>
 	<?php if (login_check($mysqli) == true && isset($_SESSION['DroitsEnseignant']) && $_SESSION['DroitsEnseignant'] == "Tout les droits") : ?>
+	<ul>
+		<li style="list-style: none;font-size:26px;">
+			<a href="http://205.236.12.52/projet/h2015/equipe6/Admin/Admin%20homepage.php" style="border : 2px solid black;background-color:gray">
+				<span style="color:rgb(255,224,100)">Retour</span>
+			</a>
+		</li>
+	</ul>
 <script type="text/javascript" src="/projet/h2015/equipe6/Admin/Javascript/Super Admin.js"></script>
 
 <div>
