@@ -128,8 +128,9 @@
 					var lien = document.getElementById('lienverticalmod').value;
 					var htmlcolor = document.getElementById('htmlcolorverticalmod').value;
 					var newpage = document.getElementById('newpageverticalmod').checked;
+					var position = document.getElementById('poslienmod').value;
 					var ajaxurl = 'adminfunctions.php',
-					data = {'action' : method,'idlien' : idlien, 'position' : position, 'lien' :  lien, 'titre' :titre};
+					data = {'action' : method, 'titre' : titre, 'lien' : lien, 'htmlcolor' : htmlcolor, 'newpage' : newpage, 'position' : position};
 					$.post(ajaxurl, data, function (response) {
 						location.reload(true);
 					});
