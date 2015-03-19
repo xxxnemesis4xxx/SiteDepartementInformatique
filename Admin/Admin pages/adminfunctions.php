@@ -330,7 +330,7 @@ function MoveFirstLayer() {
 	$position = $_POST['position'];
 	$layer = $_POST['layer'];
 	$htmlcolor = $_POST['htmlcolor'];
-	$newpage = ($_POST['newpage'] == true?1:0);
+	$newpage = ($_POST['newpage'] == 'true'?1:0);
 	$maxPosition = getmaxposition();
 	$positionValide = false;
 	
@@ -365,7 +365,7 @@ function MoveSecondLayer() {
 	$position = $_POST['position'];
 	$layer = $_POST['layer'];
 	$htmlcolor = $_POST['htmlcolor'];
-	$newpage = ($_POST['newpage'] == true?1:0);
+	$newpage = ($_POST['newpage'] == 'true'?1:0);
 	$positionValide = false;
 	
 	$sql = "select renderHtmlPosition from verticalmenu where layer = 1 or layer = 2";
@@ -374,7 +374,36 @@ function MoveSecondLayer() {
 	
 	if ($result->num_rows > 0) {
 		while($current = $result->fetch_assoc()) {
-			if ($position == $current['renderHtmlPosition'] or $position == $current['renderHtmlPosition']) {
+			if ($position == $current['renderHtmlPosition']) {
+				$positionValide = true;
+				break;
+			}
+		}
+	}
+	$conn->close();
+	
+	if ($positionValide == true) {
+		moveValueForInsertLayerTwo($position);
+		insertValueVerticalMenu($titre,$link,$layer,$position + 1,$htmlcolor,$newpage);
+	}
+}
+
+function MoveThirdLayer() {
+	$titre = $_POST['titre'];
+	$link = $_POST['link'];
+	$position = $_POST['position'];
+	$layer = $_POST['layer'];
+	$htmlcolor = $_POST['htmlcolor'];
+	$newpage = ($_POST['newpage'] == 'true'?1:0);
+	$positionValide = false;
+	
+	$sql = "select renderHtmlPosition from verticalmenu where layer = 2 or layer = 3";
+	$conn = databaseConnection();
+	$result = $conn->query($sql);
+	
+	if ($result->num_rows > 0) {
+		while($current = $result->fetch_assoc()) {
+			if ($position == $current['renderHtmlPosition']) {
 				$positionValide = true;
 				break;
 			}
@@ -395,6 +424,8 @@ function verticalnewlink() {
 		 MoveFirstLayer();
 	} else if ($layer == 2) {
 		MoveSecondLayer();
+	} else {
+		MoveThirdLayer();
 	}
 }
 ?>
