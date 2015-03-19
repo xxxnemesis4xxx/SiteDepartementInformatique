@@ -40,7 +40,9 @@ if (isset($_POST['action'])) {
 			exit;
 		case 'Obtenir Info Position' :
 			exit(obtInfoLienVertical());
-			
+		case 'Modifier Lien Vertical' :
+			modlinkvertical();
+			exit;
 	}
 }
 
@@ -508,4 +510,17 @@ function obtInfoLienVertical() {
 	return html_entity_decode(json_encode($bus));
 }
 
+function modlinkvertical() {
+	$titre = utf8_decode($_POST['titre']);
+	$lien = $_POST['lien'];
+	$htmlcolor = $_POST['htmlcolor'];
+	$newpage = ($_POST['newpage'] == 'true'?1:0);
+	$position = $_POST['position'];
+	
+	$conn = databaseConnection();
+	$insert_stmt = $conn->prepare("UPDATE verticalmenu SET nomLien = ?, lien = ?, htmlCouleur = ?, openNewPage = ? where renderHtmlPosition = ?");
+	$insert_stmt->bind_param('sssii',$titre,$lien,$htmlcolor,$newpage,$position);
+	$insert_stmt->execute();
+	$conn->close();
+}
 ?>
