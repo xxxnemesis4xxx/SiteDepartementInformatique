@@ -33,7 +33,15 @@ if (isset($_POST['action'])) {
 			modifierLien(databaseConnection());
 			exit;
 		case 'Ajouter Lien Vertical' :
-			ajouterVerticalLien(databaseConnection());
+			verticalnewlink();
+			exit;
+		case 'Supprimer Lien Vertical' :
+			verticalsupplink();
+			exit;
+		case 'Obtenir Info Position' :
+			exit(obtInfoLienVertical());
+		case 'Modifier Lien Vertical' :
+			modlinkvertical();
 			exit;
 	}
 }
@@ -278,6 +286,241 @@ function modifierLien($conn) {
 			$insert_stmt->execute();
 		}
 	}
+	$conn->close();
+}
+
+function getmaxposition() {
+	$sql = "select max(renderHtmlPosition) as max from verticalmenu";
+	$conn = databaseConnection();
+	$result = $conn->query($sql);
+	
+	$value = $result->fetch_assoc();
+	$conn->close();
+	
+	return $value['max'];
+}
+
+function insertValueVerticalMenu($nomLien,$lien,$layer,$renderHtmlPosition,$htmlCouleur,$newPage) {
+	$conn = databaseConnection();
+	$insert_stmt = $conn->prepare("INSERT INTO verticalmenu (nomLien,lien,layer,renderHtmlPosition,htmlCouleur, openNewPage) VALUES (?,?,?,?,?,?)");
+	$insert_stmt->bind_param('ssiisi',$nomLien,$lien,$layer,$renderHtmlPosition,$htmlCouleur,$newPage);
+	$insert_stmt->execute();
+	$conn->close();
+}
+
+function moveValueForInsertLayerOne($Position) {  
+	$maxPosition = getmaxposition();
+	for($i = $maxPosition; $Position <= $i; $i--) {
+		$conn = databaseConnection();
+		$insert_stmt = $conn->prepare("UPDATE verticalmenu SET renderHtmlPosition = ?  where renderHtmlPosition = ?");
+		$newVal = $i + 1;
+		$insert_stmt->bind_param('ii',$newVal,$i);
+		$insert_stmt->execute();
+		$conn->close();
+	}
+}
+
+function moveValueForInsertLayerTwo($Position) {  
+	$maxPosition = getmaxposition();
+	for($i = $maxPosition; $Position < $i; $i--) {
+		$conn = databaseConnection();
+		$insert_stmt = $conn->prepare("UPDATE verticalmenu SET renderHtmlPosition = ?  where renderHtmlPosition = ?");
+		$newVal = $i + 1;
+		$insert_stmt->bind_param('ii',$newVal,$i);
+		$insert_stmt->execute();
+		$conn->close();
+	}
+}
+
+function MoveFirstLayer() {
+	$titre = $_POST['titre'];
+	$link = $_POST['link'];
+	$position = $_POST['position'];
+	$layer = $_POST['layer'];
+	$htmlcolor = $_POST['htmlcolor'];
+	$newpage = ($_POST['newpage'] == 'true'?1:0);
+	$maxPosition = getmaxposition();
+	$positionValide = false;
+	
+	//Highest Position
+	if ($position > $maxPosition) {
+		$position = $maxPosition + 1;
+		insertValueVerticalMenu($titre,$link,$layer,$position,$htmlcolor,$newpage);
+	} else {
+		$sql = "select renderHtmlPosition from verticalmenu where layer = 1";
+		$conn = databaseConnection();
+		$result = $conn->query($sql);
+							
+		if ($result->num_rows > 0) {
+			while($current = $result->fetch_assoc()) {
+				if ($position == $current['renderHtmlPosition']) {
+					$positionValide = true;
+					break;
+				}
+			}
+		}
+		$conn->close();
+		if ($positionValide == true) {
+			moveValueForInsertLayerOne($position);
+			insertValueVerticalMenu($titre,$link,$layer,$position,$htmlcolor,$newpage);
+		}
+	}
+}
+
+function MoveSecondLayer() {
+	$titre = $_POST['titre'];
+	$link = $_POST['link'];
+	$position = $_POST['position'];
+	$layer = $_POST['layer'];
+	$htmlcolor = $_POST['htmlcolor'];
+	$newpage = ($_POST['newpage'] == 'true'?1:0);
+	$positionValide = false;
+	
+	$sql = "select renderHtmlPosition from verticalmenu where layer = 1 or layer = 2";
+	$conn = databaseConnection();
+	$result = $conn->query($sql);
+	
+	if ($result->num_rows > 0) {
+		while($current = $result->fetch_assoc()) {
+			if ($position == $current['renderHtmlPosition']) {
+				$positionValide = true;
+				break;
+			}
+		}
+	}
+	$conn->close();
+	
+	if ($positionValide == true) {
+		moveValueForInsertLayerTwo($position);
+		insertValueVerticalMenu($titre,$link,$layer,$position + 1,$htmlcolor,$newpage);
+	}
+}
+
+function MoveThirdLayer() {
+	$titre = $_POST['titre'];
+	$link = $_POST['link'];
+	$position = $_POST['position'];
+	$layer = $_POST['layer'];
+	$htmlcolor = $_POST['htmlcolor'];
+	$newpage = ($_POST['newpage'] == 'true'?1:0);
+	$positionValide = false;
+	
+	$sql = "select renderHtmlPosition from verticalmenu where layer = 2 or layer = 3";
+	$conn = databaseConnection();
+	$result = $conn->query($sql);
+	
+	if ($result->num_rows > 0) {
+		while($current = $result->fetch_assoc()) {
+			if ($position == $current['renderHtmlPosition']) {
+				$positionValide = true;
+				break;
+			}
+		}
+	}
+	$conn->close();
+	
+	if ($positionValide == true) {
+		moveValueForInsertLayerTwo($position);
+		insertValueVerticalMenu($titre,$link,$layer,$position + 1,$htmlcolor,$newpage);
+	}
+}
+
+function verticalnewlink() {
+	$layer = $_POST['layer'];
+	
+	if ($layer == 1) {
+		 MoveFirstLayer();
+	} else if ($layer == 2) {
+		MoveSecondLayer();
+	} else {
+		MoveThirdLayer();
+	}
+}
+
+function getLayerOfPosition($position) {
+	$conn = databaseConnection();
+	
+	$insert_stmt = $conn->prepare("select layer from verticalmenu where renderHtmlPosition = ?");
+	$insert_stmt->bind_param('i',$position);
+	$insert_stmt->execute();
+	
+	$insert_stmt->bind_result($itemPosition);
+	$insert_stmt->fetch();
+	
+	$conn->close();
+	
+	return $itemPosition;
+}
+
+function DeletePosition($Position) {
+	$conn = databaseConnection();
+	$insert_stmt = $conn->prepare("DELETE FROM verticalmenu where renderHtmlPosition = ?");
+	$insert_stmt->bind_param('i',$Position);
+	$insert_stmt->execute();
+	$conn->close();
+}
+
+function moveValuesAfterDelete($Position) {  
+	$maxPosition = getmaxposition(); 
+	for($i = $Position + 1; $i <= $maxPosition; $i++) {
+		$conn = databaseConnection();
+		$insert_stmt = $conn->prepare("UPDATE verticalmenu SET renderHtmlPosition = ?  where renderHtmlPosition = ?");
+		$newVal = $i - 1;
+		$insert_stmt->bind_param('ii',$newVal,$i);
+		$insert_stmt->execute();
+		$conn->close();
+	}
+}
+
+function verticalsupplink() {
+	$position = $_POST['position'];
+	$maxPosition = getmaxposition();
+	
+	if ($position >= $maxPosition) {
+		DeletePosition($maxPosition);
+	} else {
+		$nextLayer = getLayerOfPosition($position + 1);
+		$currentLayer = getLayerOfPosition($position);
+		
+		if ($currentLayer >= $nextLayer) {
+			DeletePosition($position);
+			moveValuesAfterDelete($position);
+		}
+	}
+}
+
+function obtInfoLienVertical() {
+	$position = $_POST['position'];
+	
+	$conn = databaseConnection();
+	$insert_stmt = $conn->prepare("select nomLien,lien,htmlCouleur,openNewPage from verticalmenu where renderHtmlPosition = ?");
+	$insert_stmt->bind_param('i',$position);
+	$insert_stmt->execute();
+	$insert_stmt->bind_result($nomLien, $lien,$htmlCouleur,$openNewPage);
+	$result = $insert_stmt->fetch();
+	
+	$conn->close();
+	
+	$bus = array();
+	$bus['titre'] = utf8_encode($nomLien);
+	$bus['lien'] = $lien;
+	$bus['couleur'] = $htmlCouleur;
+	$bus['newpage'] = ($openNewPage == 1)?true:false;
+
+	return html_entity_decode(json_encode($bus));
+}
+
+function modlinkvertical() {
+	$titre = utf8_decode($_POST['titre']);
+	$lien = $_POST['lien'];
+	$htmlcolor = $_POST['htmlcolor'];
+	$newpage = ($_POST['newpage'] == 'true'?1:0);
+	$position = $_POST['position'];
+	
+	$conn = databaseConnection();
+	$insert_stmt = $conn->prepare("UPDATE verticalmenu SET nomLien = ?, lien = ?, htmlCouleur = ?, openNewPage = ? where renderHtmlPosition = ?");
+	$insert_stmt->bind_param('sssii',$titre,$lien,$htmlcolor,$newpage,$position);
+	$insert_stmt->execute();
 	$conn->close();
 }
 ?>

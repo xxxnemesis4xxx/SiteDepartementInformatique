@@ -95,7 +95,44 @@
 					var ajaxurl = 'adminfunctions.php',
 					data =  {'action': method, 'titre' : titre, 'link' : link, 'position' : position, 'layer' : layer, 'htmlcolor' : htmlcolor, 'newpage' : newpage};
 					$.post(ajaxurl, data, function (response) {
+					});
+				});
+				   
+				$('#suppverticallink').click(function() {
+					var method = $(this).val();
+					var position = document.getElementById('positiontitresupp').value;
+					var ajaxurl = 'adminfunctions.php',
+					data =  {'action': method, 'position' : position};
+					$.post(ajaxurl, data, function (response) {
 						alert(response);
+					});
+				});
+				
+				$("#obtinfopos").click(function() {
+					var method = $(this).val();
+					var position = document.getElementById('poslienmod').value;
+					var ajaxurl = 'adminfunctions.php',
+					data = {'action' : method,'position' : position};
+					$.post(ajaxurl, data, function (response) {
+						var result = jQuery.parseJSON(response);
+						$("#nomverticalmod").val(result.titre);
+						$("#lienverticalmod").val(result.lien);
+						$("#htmlcolorverticalmod").val(result.couleur);
+						$("#newpageverticalmod").prop('checked',result.newpage);
+					});
+				});
+				
+				$("#modlienvertical").click(function() {
+					var method = $(this).val();
+					var titre = document.getElementById('nomverticalmod').value;
+					var lien = document.getElementById('lienverticalmod').value;
+					var htmlcolor = document.getElementById('htmlcolorverticalmod').value;
+					var newpage = document.getElementById('newpageverticalmod').checked;
+					var position = document.getElementById('poslienmod').value;
+					var ajaxurl = 'adminfunctions.php',
+					data = {'action' : method, 'titre' : titre, 'lien' : lien, 'htmlcolor' : htmlcolor, 'newpage' : newpage, 'position' : position};
+					$.post(ajaxurl, data, function (response) {
+						location.reload(true);
 					});
 				});
 			});
@@ -158,6 +195,7 @@
 			Qu'elle menu voulez-vous modifier ? <br/>
 			<select id="menu" onchange='showDivFirstMenu()'>
 				<option value="menuhorizontale">Menu Horizontale</option>
+				<option value="menuverticale">Menu Verticale</option>
 			</select>
 			
 			<div id="menuhorizontale" style="display:block">
@@ -290,11 +328,124 @@
 				</div>
 				
 			</div>
+			<div id="menuverticale" style="display:none">
+				<br/><br/>
+				Choisir l'option que vous souhaitez ?<br/>
+				<select id="deuxiememenu2" onchange='showDivSecondMenu2()'>
+					<option value="sm21">Ajouter</option>
+					<option value="sm22">Modifier</option>
+					<option value="sm23">Supprimer</option>
+				</select>
+				
+				<style>
+							ul, ul ul, ul ul ul {
+								list-style : none;
+							}
+						</style>
+						<ul><i>
+							<?php
+								$servername = "localhost";
+								$username = "equipe6h15";
+								$password = "ebola-info";
+								$dbname = "equipe6h15";
+							
+								// Create connection
+								$conn = new mysqli($servername, $username, $password, $dbname);
+								// Check connection
+								if ($conn->connect_error) {
+										die("Erreur de connection: " . $conn->connect_error);
+								} 
+								
+								$sql = "select * from verticalmenu order by renderHtmlPosition";
+								$result = $conn->query($sql);
+							
+								if ($result->num_rows > 0) {
+									$current = $result->fetch_assoc();
+									while($current != null) {
+										$next = $result->fetch_assoc();
+										if ($current["layer"] ==  $next["layer"]) {
+											echo "<li>Position : " . $current["renderHtmlPosition"] . " - " .utf8_encode($current["nomLien"]) ."</li>";
+										} elseif ($current["layer"] < $next["layer"]) {
+											echo "<li>Position : " . $current["renderHtmlPosition"] . " - " .utf8_encode($current["nomLien"]) . "<ul>";
+										} elseif ($current["layer"] > $next["layer"]) {
+											echo "<li>Position : " . $current["renderHtmlPosition"] . " - " . utf8_encode($current["nomLien"]) 
+											. (($current["layer"] - $next["layer"] == 1)?"</li></ul></li>":"</li></ul></li></ul></li>");
+										}
+												
+										$current = $next;
+									}
+								}
+								
+								$conn->close();
+							?>
+						</ul></i>
+				---------------------------------------------------------------<br/>
+				<div id="sm21" style="display:block">
+					<form>
+						Titre du lien : <br/>
+						<input type="text" id="titleverticalmenu" /><br/>
+						Adresse du lien : <br/>
+						<input type="text" id="linkverticalmenu" /><br/>
+						À quelle position souhaitez-vous voir apparaître votre titre<br/>
+						<input id="positiontitre"/><br/><br/>
+						Niveau du lien : 
+						<select id="layer" >
+							<option value="1">Niveau 1</option>
+							<option value="2">Niveau 2</option>
+							<option value="3">Niveau 3</option>
+						</select><br/>
+						<i>
+						<ul>
+							<li>Niveau 1
+								<ul>
+									<li>Niveau 2
+										<ul>
+											<li>Niveau 3</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+						</ul>
+						</i><br/>
+						Couleur html(Ex : #fff): <br/>
+						<input type="text" id="htmlcolor"/><br/>
+						Ouvrir sur une nouvelle page :
+						<input type="checkbox" id="newpage"><br/><br/>
+						
+						<input type="button" id="newverticallink" value="Ajouter Lien Vertical"/>
+						<br/><br/>
+					<form>
+				</div>
+				
+				<div id="sm22" style="display:none">
+					Position : <br/>
+					<input type="text" id="poslienmod"/><br/>
+					<input type="button" id="obtinfopos" value="Obtenir Info Position"/><br/><br/>
+					
+					Titre du lien :<br/>
+					<input type="text" id="nomverticalmod"/><br/>
+					Adresse du lien :<br/>
+					<input type="text" id="lienverticalmod"/><br/>
+					Couleur html(Ex : #fff): <br/>
+					<input type="text" id="htmlcolorverticalmod"/><br/>
+					Ouvrir sur une nouvelle page :
+					<input type="checkbox" id="newpageverticalmod"><br/><br/>
+					
+					<input type="button" id="modlienvertical" value="Modifier Lien Vertical"/>
+				</div>
+				
+				<div id="sm23" style="display:none">   
+					Indiquer la position de l'item que vous souhaitez supprimer<br/>
+					<input id="positiontitresupp"/><br/><br/>
+					<input type="button" id="suppverticallink" value="Supprimer Lien Vertical"/>
+					<br/><br/>
+				</div>
+			</div>
 		</p>
 	</body>
 </html>
 <?php else : ?>
-            <p>
-                <span class="error">Vous n'avez pas le droit d'accéder à cette Page!</span> Vous devez vous <a href="http://205.236.12.52/projet/h2015/equipe6/Connexion/index.php">connecter</a>.
-            </p>
-        <?php endif; ?>
+    <p>
+        <span class="error">Vous n'avez pas le droit d'accéder à cette Page!</span> Vous devez vous <a href="http://205.236.12.52/projet/h2015/equipe6/Connexion/index.php">connecter</a>.
+    </p>
+<?php endif; ?>
