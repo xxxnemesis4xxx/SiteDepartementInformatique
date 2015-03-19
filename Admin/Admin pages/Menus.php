@@ -107,6 +107,32 @@
 						alert(response);
 					});
 				});
+				
+				$("#obtlien").click(function() {
+					var method = $(this).val();
+					var idlien = document.getElementById('idlienmod').value;
+					var ajaxurl = 'adminfunctions.php',
+					data = {'action' : method,'idlien' : idlien};
+					$.post(ajaxurl, data, function (response) {
+						var result = jQuery.parseJSON(response);
+						$("#positionmodifier").val(result.position);
+						$("#lienmodifier").val(result.lien);
+						$("#nomlienmodifier").val(result.titre);
+					});
+				});
+				
+				$("#modlien").click(function() {
+					var method = $(this).val();
+					var idlien = document.getElementById('idlienmod').value;
+					var position = document.getElementById('positionmodifier').value;
+					var lien = document.getElementById('lienmodifier').value;
+					var titre = document.getElementById('nomlienmodifier').value;
+					var ajaxurl = 'adminfunctions.php',
+					data = {'action' : method,'idlien' : idlien, 'position' : position, 'lien' :  lien, 'titre' :titre};
+					$.post(ajaxurl, data, function (response) {
+						location.reload(true);
+					});
+				});
 			});
 		
 			function showDivFirstMenu() {
@@ -390,7 +416,20 @@
 				</div>
 				
 				<div id="sm22" style="display:none">
-					Hello Div 2
+					Position : <br/>
+					<input type="text" id="poslienmod"/><br/>
+					<input type="button" id="obtlien" value="Obtenir Info Position"/><br/><br/>
+					
+					Titre du lien :<br/>
+					<input type="text" id="nomverticalmod"/><br/>
+					Adresse du lien :<br/>
+					<input type="text" id="lienverticalmod"/><br/>
+					Couleur html(Ex : #fff): <br/>
+					<input type="text" id="htmlcolorverticalmod"/><br/>
+					Ouvrir sur une nouvelle page :
+					<input type="checkbox" id="newpageverticalmod"><br/><br/>
+					
+					<input type="button" id="modlien" value="Modifier Lien Vertical"/>
 				</div>
 				
 				<div id="sm23" style="display:none">   
@@ -404,7 +443,7 @@
 	</body>
 </html>
 <?php else : ?>
-            <p>
-                <span class="error">Vous n'avez pas le droit d'accéder à cette Page!</span> Vous devez vous <a href="http://205.236.12.52/projet/h2015/equipe6/Connexion/index.php">connecter</a>.
-            </p>
-        <?php endif; ?>
+    <p>
+        <span class="error">Vous n'avez pas le droit d'accéder à cette Page!</span> Vous devez vous <a href="http://205.236.12.52/projet/h2015/equipe6/Connexion/index.php">connecter</a>.
+    </p>
+<?php endif; ?>
