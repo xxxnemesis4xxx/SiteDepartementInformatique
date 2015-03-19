@@ -33,7 +33,7 @@ if (isset($_POST['action'])) {
 			modifierLien(databaseConnection());
 			exit;
 		case 'Ajouter Lien Vertical' :
-			ajouterVerticalLien(databaseConnection());
+			verticalnewlink();
 			exit;
 	}
 }
@@ -279,5 +279,48 @@ function modifierLien($conn) {
 		}
 	}
 	$conn->close();
+}
+
+function getmaxposition() {
+	$sql = "select max(renderHtmlPosition) as max from verticalmenu";
+	$conn = databaseConnection();
+	$result = $conn->query($sql);
+	
+	$value = $result->fetch_assoc();
+	$conn->close();
+	
+	return $value['max'];
+}
+
+function insertValueVerticalMenu($nomLien,$lien,$layer,$renderHtmlPosition,$htmlCouleur,$newPage) {
+	$conn = databaseConnection();
+	$insert_stmt = $conn->prepare("INSERT INTO verticalmenu (nomLien,lien,layer,renderHtmlPosition,htmlCouleur, openNewPage) VALUES (?,?,?,?,?,?)");
+	$insert_stmt->bind_param('ssiisi',$nomLien,$lien,$layer,$renderHtmlPosition,$htmlCouleur,$newPage);
+	$insert_stmt->execute();
+	$conn->close();
+}
+
+function MoveFirstLayer() {
+	$titre = $_POST['titre'];
+	$link = $_POST['link'];
+	$position = $_POST['position'];
+	$layer = $_POST['layer'];
+	$htmlcolor = $_POST['htmlcolor'];
+	$newpage = ($_POST['newpage'] == true?1:0);
+	$maxPosition = getmaxposition();
+	
+	//Highest Position
+	if ($position > $maxPosition) {
+		$position = $maxPosition + 1;
+		insertValueVerticalMenu($titre,$link,$layer,$position,$htmlcolor,$newpage);
+	}
+}
+
+function verticalnewlink() {
+	$layer = $_POST['layer'];
+	
+	if ($layer == 1) {
+		 MoveFirstLayer();
+	}
 }
 ?>
