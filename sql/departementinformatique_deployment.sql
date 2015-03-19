@@ -49,8 +49,7 @@ lien VARCHAR(20000),
 layer INT NOT NULL,
 renderHtmlPosition INT NOT NULL UNIQUE,
 htmlCouleur VARCHAR(6) NOT NULL,                  
-openNewPage boolean NOT NULL default FALSE,
-CONSTRAINT fk_verticalmenu_renderHtmlPosition FOREIGN KEY (`renderHtmlPosition`) REFERENCES equipe6h15.verticalmenu(`menuId`) ON DELETE CASCADE ON UPDATE CASCADE
+openNewPage boolean NOT NULL default FALSE
 ) ENGINE=INNODB DEFAULT CHARSET=utf8;
 
 INSERT INTO equipe6h15.verticalmenu VALUES (default,'Programmes', 'http://205.236.12.52/projet/h2015/equipe6/programmes.php', 1, 1, '008747', false);
