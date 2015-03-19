@@ -95,6 +95,15 @@
 					var ajaxurl = 'adminfunctions.php',
 					data =  {'action': method, 'titre' : titre, 'link' : link, 'position' : position, 'layer' : layer, 'htmlcolor' : htmlcolor, 'newpage' : newpage};
 					$.post(ajaxurl, data, function (response) {
+					});
+				});
+				   
+				$('#suppverticallink').click(function() {
+					var method = $(this).val();
+					var position = document.getElementById('positiontitresupp').value;
+					var ajaxurl = 'adminfunctions.php',
+					data =  {'action': method, 'position' : position};
+					$.post(ajaxurl, data, function (response) {
 						alert(response);
 					});
 				});
@@ -384,8 +393,11 @@
 					Hello Div 2
 				</div>
 				
-				<div id="sm23" style="display:none">
-					Hello Div 3
+				<div id="sm23" style="display:none">   
+					Indiquer la position de l'item que vous souhaitez supprimer<br/>
+					<input id="positiontitresupp"/><br/><br/>
+					<input type="button" id="suppverticallink" value="Supprimer Lien Vertical"/>
+					<br/><br/>
 				</div>
 			</div>
 		</p>
