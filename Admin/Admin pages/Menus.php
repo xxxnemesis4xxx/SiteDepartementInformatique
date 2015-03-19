@@ -353,9 +353,9 @@
 						<input id="positiontitre"/><br/><br/>
 						Niveau du lien : 
 						<select id="layer" >
-							<option value="layer1">Niveau 1</option>
-							<option value="layer2">Niveau 2</option>
-							<option value="layer3">Niveau 3</option>
+							<option value="1">Niveau 1</option>
+							<option value="2">Niveau 2</option>
+							<option value="3">Niveau 3</option>
 						</select><br/>
 						<i>
 						<ul>
