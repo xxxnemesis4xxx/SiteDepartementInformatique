@@ -108,25 +108,26 @@
 					});
 				});
 				
-				$("#obtlien").click(function() {
+				$("#obtinfopos").click(function() {
 					var method = $(this).val();
-					var idlien = document.getElementById('idlienmod').value;
+					var position = document.getElementById('poslienmod').value;
 					var ajaxurl = 'adminfunctions.php',
-					data = {'action' : method,'idlien' : idlien};
+					data = {'action' : method,'position' : position};
 					$.post(ajaxurl, data, function (response) {
 						var result = jQuery.parseJSON(response);
-						$("#positionmodifier").val(result.position);
-						$("#lienmodifier").val(result.lien);
-						$("#nomlienmodifier").val(result.titre);
+						$("#nomverticalmod").val(result.titre);
+						$("#lienverticalmod").val(result.lien);
+						$("#htmlcolorverticalmod").val(result.couleur);
+						$("#newpageverticalmod").prop('checked',result.newpage);
 					});
 				});
 				
-				$("#modlien").click(function() {
+				$("#modlienvertical").click(function() {
 					var method = $(this).val();
-					var idlien = document.getElementById('idlienmod').value;
-					var position = document.getElementById('positionmodifier').value;
-					var lien = document.getElementById('lienmodifier').value;
-					var titre = document.getElementById('nomlienmodifier').value;
+					var titre = document.getElementById('nomverticalmod').value;
+					var lien = document.getElementById('lienverticalmod').value;
+					var htmlcolor = document.getElementById('htmlcolorverticalmod').value;
+					var newpage = document.getElementById('newpageverticalmod').checked;
 					var ajaxurl = 'adminfunctions.php',
 					data = {'action' : method,'idlien' : idlien, 'position' : position, 'lien' :  lien, 'titre' :titre};
 					$.post(ajaxurl, data, function (response) {
@@ -418,7 +419,7 @@
 				<div id="sm22" style="display:none">
 					Position : <br/>
 					<input type="text" id="poslienmod"/><br/>
-					<input type="button" id="obtlien" value="Obtenir Info Position"/><br/><br/>
+					<input type="button" id="obtinfopos" value="Obtenir Info Position"/><br/><br/>
 					
 					Titre du lien :<br/>
 					<input type="text" id="nomverticalmod"/><br/>
@@ -429,7 +430,7 @@
 					Ouvrir sur une nouvelle page :
 					<input type="checkbox" id="newpageverticalmod"><br/><br/>
 					
-					<input type="button" id="modlien" value="Modifier Lien Vertical"/>
+					<input type="button" id="modlienvertical" value="Modifier Lien Vertical"/>
 				</div>
 				
 				<div id="sm23" style="display:none">   

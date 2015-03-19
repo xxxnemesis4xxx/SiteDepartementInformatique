@@ -38,6 +38,9 @@ if (isset($_POST['action'])) {
 		case 'Supprimer Lien Vertical' :
 			verticalsupplink();
 			exit;
+		case 'Obtenir Info Position' :
+			exit(obtInfoLienVertical());
+			
 	}
 }
 
@@ -483,4 +486,26 @@ function verticalsupplink() {
 		}
 	}
 }
+
+function obtInfoLienVertical() {
+	$position = $_POST['position'];
+	
+	$conn = databaseConnection();
+	$insert_stmt = $conn->prepare("select nomLien,lien,htmlCouleur,openNewPage from verticalmenu where renderHtmlPosition = ?");
+	$insert_stmt->bind_param('i',$position);
+	$insert_stmt->execute();
+	$insert_stmt->bind_result($nomLien, $lien,$htmlCouleur,$openNewPage);
+	$result = $insert_stmt->fetch();
+	
+	$conn->close();
+	
+	$bus = array();
+	$bus['titre'] = utf8_encode($nomLien);
+	$bus['lien'] = $lien;
+	$bus['couleur'] = $htmlCouleur;
+	$bus['newpage'] = ($openNewPage == 1)?true:false;
+
+	return html_entity_decode(json_encode($bus));
+}
+
 ?>
