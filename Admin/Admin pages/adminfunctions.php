@@ -312,6 +312,18 @@ function moveValueForInsertLayerOne($Position) {
 	}
 }
 
+function moveValueForInsertLayerTwo($Position) {  
+	$maxPosition = getmaxposition();
+	for($i = $maxPosition; $Position < $i; $i--) {
+		$conn = databaseConnection();
+		$insert_stmt = $conn->prepare("UPDATE verticalmenu SET renderHtmlPosition = ?  where renderHtmlPosition = ?");
+		$newVal = $i + 1;
+		$insert_stmt->bind_param('ii',$newVal,$i);
+		$insert_stmt->execute();
+		$conn->close();
+	}
+}
+
 function MoveFirstLayer() {
 	$titre = $_POST['titre'];
 	$link = $_POST['link'];
@@ -347,11 +359,42 @@ function MoveFirstLayer() {
 	}
 }
 
+function MoveSecondLayer() {
+	$titre = $_POST['titre'];
+	$link = $_POST['link'];
+	$position = $_POST['position'];
+	$layer = $_POST['layer'];
+	$htmlcolor = $_POST['htmlcolor'];
+	$newpage = ($_POST['newpage'] == true?1:0);
+	$positionValide = false;
+	
+	$sql = "select renderHtmlPosition from verticalmenu where layer = 1 or layer = 2";
+	$conn = databaseConnection();
+	$result = $conn->query($sql);
+	
+	if ($result->num_rows > 0) {
+		while($current = $result->fetch_assoc()) {
+			if ($position == $current['renderHtmlPosition'] or $position == $current['renderHtmlPosition']) {
+				$positionValide = true;
+				break;
+			}
+		}
+	}
+	$conn->close();
+	
+	if ($positionValide == true) {
+		moveValueForInsertLayerTwo($position);
+		insertValueVerticalMenu($titre,$link,$layer,$position + 1,$htmlcolor,$newpage);
+	}
+}
+
 function verticalnewlink() {
 	$layer = $_POST['layer'];
 	
 	if ($layer == 1) {
 		 MoveFirstLayer();
+	} else if ($layer == 2) {
+		MoveSecondLayer();
 	}
 }
 ?>
