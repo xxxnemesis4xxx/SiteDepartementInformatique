@@ -113,7 +113,7 @@ function supprimerIndexElement($conn) {
 
 
 function nouvFichier() {
-	$fichier = "../../" . filter_input(INPUT_POST, 'fichier', FILTER_SANITIZE_STRING);
+	$fichier = "../" . filter_input(INPUT_POST, 'fichier', FILTER_SANITIZE_STRING);
 
 	if ($fp = fopen($fichier,"w+")) {
 		fwrite($fp,"<style>\n   .default {\n   width: 100%\n   max-height : 100%;\n}\n</style>\n\n <a href...>\n   <img ... >\n </a>");
@@ -122,19 +122,19 @@ function nouvFichier() {
 }
 
 function suppFichier() {
-	$fichier = "../../" . filter_input(INPUT_POST, 'fichier', FILTER_SANITIZE_STRING);
+	$fichier = "../" . filter_input(INPUT_POST, 'fichier', FILTER_SANITIZE_STRING);
 	unlink($fichier);
 }
 
 function obtFichier() {
-	$fichier = "../../" . filter_input(INPUT_POST, 'fichier', FILTER_SANITIZE_STRING);
+	$fichier = "../" . filter_input(INPUT_POST, 'fichier', FILTER_SANITIZE_STRING);
 	$content = file_get_contents($fichier);
 	
 	return $content;
 }
 
 function modFichier() {
-	$fichier = "../../" . filter_input(INPUT_POST, 'fichier', FILTER_SANITIZE_STRING);
+	$fichier = "../" . filter_input(INPUT_POST, 'fichier', FILTER_SANITIZE_STRING);
 	$content = $_POST['content'];
 	if ($fp = fopen($fichier,"w+")) {
 		fwrite($fp,$content);
