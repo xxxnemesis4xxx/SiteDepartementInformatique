@@ -31,7 +31,7 @@
 								die("Erreur de connection: " . $conn->connect_error);
 						} 
 						
-						$sql = "SELECT * from lienmenuderoulant;";
+						$sql = "SELECT * from lienmenuderoulant order by renderHtmlPosition;";
 						$result = $conn->query($sql);
 		
 						if ($result->num_rows > 0) {
