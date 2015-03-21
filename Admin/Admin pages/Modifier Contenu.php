@@ -12,57 +12,32 @@
 		if (login_check($mysqli) == true && isset($_SESSION['DroitsEnseignant']) && $_SESSION['DroitsEnseignant'] == "Tout les droits") : ?>
 	<head>
 		<title>Modifier Contenu</title>
-		<script src="http://205.236.12.52/projet/h2015/equipe6/javascript/jquery-1.11.2.min.js"></script>
-		<script src="http://205.236.12.52/projet/h2015/equipe6/javascript/jquery-ui.min.js"></script>
-		<link rel="stylesheet" href="http://205.236.12.52/projet/h2015/equipe6/javascript/jquery-ui.min.css">
-		<link rel="stylesheet" href="http://205.236.12.52/projet/h2015/equipe6/javascript/jquery-ui.theme.min.css">
 		<script>
 			$(document).ready(function(){
-				$('#button1').click(function(){
+				$('#obtfichierphp').click(function(){
 						var method = $(this).val();
-						var nomFichier = document.getElementById('nomFichier4').value;
-						$("#fichierhidden").val(nomFichier);
+						var nomFichier = document.getElementById('nomFichierPhp').value;
+						$("#fichierhiddenphp").val(nomFichier);
 						var ajaxurl = 'adminfunctions.php',
 						data =  {'action': method,'fichier' : nomFichier};
 						$.post(ajaxurl, data, function (response) {
-							$("#modText").text(response);
+							$("#modTextPHP").text(response);
 						});
 					});
-					
-				$( "#dialog-confirm" ).dialog({
-				  autoOpen: false,
-				  resizable: false,
-				  height:250,
-				  width:370,
-				  modal: true,
-				  buttons: {
-					"Sauvegarder": function() {
-						var method = 'Modifier Fichier';
-						var nomFichier = document.getElementById('fichierhidden').value;
-						var content = document.getElementById('modText').value;
-						var ajaxurl = 'adminfunctions.php',
-						data =  {'action': method,'fichier' : nomFichier, 'content' : content};
-						$.post(ajaxurl, data, function (response) {
-							location.reload(true);
-						});
-					   $( this ).dialog( "close" );
-					},
-					Cancel: function() {
-					  $( this ).dialog( "close" );
-					}
-				  }
-				});
-					
-				$('#button2').click(function(){
-					$( "#dialog-confirm" ).dialog("open");
+
+				$('#sauvmodphp').click(function(){
+					var method = 'Modifier Fichier';
+					var nomFichier = document.getElementById('fichierhiddenphp').value;
+					var content = document.getElementById('modTextPHP').value;
+					var ajaxurl = 'adminfunctions.php',
+					data =  {'action': method,'fichier' : nomFichier, 'content' : content};
+					$.post(ajaxurl, data, function (response) {
+					});
 				});
 			});
 		</script>
 	</head>
 	<body>
-		<div id="dialog-confirm" title="Modification?">
-		  <p><span class="ui-icon ui-icon-alert" style="float:left; margin:0 7px 20px 0;"></span>Êtes-vous certain de vouloir modifier le fichier? Les modifications seront permanentes</p>
-		</div>
 		<p>Voici la liste des fichier que vous pouvez modifier : <br/>
 		<b><i>
 		<table>
@@ -87,14 +62,14 @@
 		<form>
 				<br/><br/>
 				Nom du fichier <br/>
-				<input type="text" id="nomFichier4"/><br/>
-				<input id="button1" type="button" value="Obtenir Fichier"/>
+				<input type="text" id="nomFichierPhp"/><br/>
+				<input id="obtfichierphp" type="button" value="Obtenir Fichier"/>
 		</form>
 		
 		<form>
-			<textarea id="modText" style="width:100%; height : 250px;" contentEditable="true"></textarea>
-			<input id="fichierhidden" type="hidden" />
-			<input id="button2" type="button" value="Modifier Fichier"/>
+			<textarea id="modTextPHP" style="width:100%; height : 250px;" contentEditable="true"></textarea>
+			<input id="fichierhiddenphp" type="hidden" />
+			<input id="sauvmodphp" type="button" value="Modifier Fichier"/>
 		</form>
 	</body>
 </html>
