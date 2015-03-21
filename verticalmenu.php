@@ -17,9 +17,7 @@
 	
 		if ($result->num_rows > 0) {
 			$current = $result->fetch_assoc();
-			while($current != null) {
-				$next = $result->fetch_assoc();
-				if ($next == null) {
+			if ($next == null) {
 					if(login_check($mysqli) == true && isset($_SESSION['DroitsEnseignant']) && $_SESSION['DroitsEnseignant'] == "Tout les droits") {
 						echo "<li>
 						<a href=\"http://205.236.12.52/projet/h2015/equipe6/Admin/Admin%20homepage.php\" style=\"border-left : 5px solid #AEAEAE\">
@@ -28,6 +26,8 @@
 						</li>";
 					}
 				}
+			while($current != null) {
+				$next = $result->fetch_assoc();
 				if ($current["layer"] ==  $next["layer"]) {
 					echo "<li><a href='". $current["lien"] . "' " 
 					. (($current["openNewPage"] == true)?"target='_blank' ":"") 

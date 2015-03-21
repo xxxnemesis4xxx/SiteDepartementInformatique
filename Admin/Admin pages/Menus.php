@@ -88,7 +88,7 @@
 					var ajaxurl = 'adminfunctions.php',
 					data =  {'action': method, 'position' : position};
 					$.post(ajaxurl, data, function (response) {
-						alert(response);
+						location.reload(true);
 					});
 				});
 				
