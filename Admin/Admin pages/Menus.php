@@ -384,7 +384,7 @@
 							</li>
 						</ul>
 						</i><br/>
-						Couleur html(Ex : #fff): <br/>
+						Couleur html(Ex : fff ou 121212): <br/>
 						<input type="text" id="htmlcolor"/><br/>
 						Ouvrir sur une nouvelle page :
 						<input type="checkbox" id="newpage"><br/><br/>
@@ -403,7 +403,7 @@
 					<input type="text" id="nomverticalmod"/><br/>
 					Adresse du lien :<br/>
 					<input type="text" id="lienverticalmod"/><br/>
-					Couleur html(Ex : #fff): <br/>
+					Couleur html(Ex : fff ou 121212): <br/>
 					<input type="text" id="htmlcolorverticalmod"/><br/>
 					Ouvrir sur une nouvelle page :
 					<input type="checkbox" id="newpageverticalmod"><br/><br/>
