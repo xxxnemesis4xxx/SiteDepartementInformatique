@@ -32,6 +32,7 @@
 					var ajaxurl = 'adminfunctions.php',
 					data =  {'action': method,'fichier' : nomFichier, 'content' : content};
 					$.post(ajaxurl, data, function (response) {
+						location.reload(true);
 					});
 				});
 				
@@ -42,6 +43,8 @@
 					var ajaxurl = 'adminfunctions.php',
 					data =  {'action': method,'fichier' : nomFichier, 'content' : content};
 					$.post(ajaxurl, data, function (response) {
+						var url = '../preview' + nomFichier;
+						window.open(url, '_blank');
 					});
 				});
 			});
@@ -80,7 +83,7 @@
 			<textarea id="modTextPHP" style="width:100%; height : 250px;" contentEditable="true"></textarea>
 			<input id="fichierhiddenphp" type="hidden" />
 			<input id="sauvmodphp" type="button" value="Modifier Fichier"/>
-			<input id="previewmodphp" type="button" value="Voir les Modification"/>
+			<input id="previewmodphp" type="button" value="Voir les Modifications"/>
 		</form>
 	</body>
 </html>
