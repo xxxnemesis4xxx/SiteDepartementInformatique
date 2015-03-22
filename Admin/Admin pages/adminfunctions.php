@@ -43,6 +43,9 @@ if (isset($_POST['action'])) {
 		case 'Modifier Lien Vertical' :
 			modlinkvertical();
 			exit;
+		case 'Voir les Modifications' :
+			modFichierPreview();
+			exit;
 	}
 }
 
@@ -135,6 +138,16 @@ function obtFichier() {
 
 function modFichier() {
 	$fichier = "../" . filter_input(INPUT_POST, 'fichier', FILTER_SANITIZE_STRING);
+	$content = $_POST['content'];
+	if ($fp = fopen($fichier,"w+")) {
+		fwrite($fp,$content);
+		fclose($fp);
+		unlink('../preview' . filter_input(INPUT_POST, 'fichier', FILTER_SANITIZE_STRING));
+	}
+}
+
+function modFichierPreview() {
+	$fichier = "../preview" . filter_input(INPUT_POST, 'fichier', FILTER_SANITIZE_STRING);
 	$content = $_POST['content'];
 	if ($fp = fopen($fichier,"w+")) {
 		fwrite($fp,$content);
