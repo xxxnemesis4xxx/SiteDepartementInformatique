@@ -44,8 +44,7 @@
 					{
 						while($current = $result->fetch_assoc()) {
 							echo "<h2 class=\"sousTitre\">" . $current['Nom'] . "</h2>";
-							if ($current["Prix"] > 0)
-							{
+							if ($current["Prix"] > 0) {
 								echo '<div id="paypal1">';
 								echo '<script async="async" src="https://www.paypalobjects.com/js/external/paypal-button.min.js?merchant=somerandomassemail@stuff.com" ';
 										echo 'data-button="buynow" ';
@@ -62,9 +61,18 @@
 									echo '></script>';
 								echo '</div>';
 							}
+							
+							$sql2 = "SELECT * FROM ParticipantsActivite P JOIN Activites A ON A.id = P.ActiviteId WHERE A.id = " . $current["ID"];
+							$result2 = $conn->query($sql2);
+							if ($result2->num_rows > 0) {
+								echo "<p class=\"textTemplate\">";
+								while($participant = $result2->fetch_assoc()) {
+									printf("   - %s  %s  %s<br/>", $participant["DateInscription"], $participant["Prenom"], $participant["Nom"]);
+								}
+								echo "</p>";
+							}
 						}
 					}
-					
 					$conn->close();
 				?>
 			</div>
