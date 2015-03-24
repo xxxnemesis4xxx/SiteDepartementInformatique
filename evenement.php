@@ -6,6 +6,13 @@
 	 	<title>
 	 		Événements
 	 	</title>
+		<style>
+					#paypal1 {
+					  display: block;
+					  padding-left: 9%;
+					  margin-top: -50;
+					}
+		</style>
 	</head>
 	<body>
 		<?php
@@ -14,19 +21,12 @@
 		?>
 			<div class="contenu">
 				<h1 class="titreTemplate">Les Événements </h1>
-				<style>
-					#paypal1 {
-					  display: block;
-					  padding-left: 9%;
-					  margin-top: -50;
-					}
-				</style>
+				
 				<?php
 					$servername = "localhost";
 					$username = "equipe6h15";
 					$password = "ebola-info";
 					$dbname = "equipe6h15";
-					$TableName = "Activites";
 					date_default_timezone_set('America/New_York');
 					$currentDate = date('Y-m-d');
 					
@@ -37,12 +37,15 @@
 							die("Erreur de connection: " . $conn->connect_error);
 					} 
 					
+					//Select Activites where current date is inferior 
 					$sql = "select * from Activites where Date >= '" . $currentDate. "'";
 					$result = $conn->query($sql);
 				
 					if ($result->num_rows > 0)
 					{
+						//Fetch results
 						while($current = $result->fetch_assoc()) {
+							//Display Activites Name + Paypal button. 
 							echo "<h2 class=\"sousTitre\">" . $current['Nom'] . "</h2>";
 							if ($current["Prix"] > 0) {
 								echo '<div id="paypal1">';
@@ -62,6 +65,7 @@
 								echo '</div>';
 							}
 							
+							//Display Participants currently subcribed to the Activity
 							$sql2 = "SELECT * FROM ParticipantsActivite P JOIN Activites A ON A.id = P.ActiviteId WHERE A.id = " . $current["ID"];
 							$result2 = $conn->query($sql2);
 							if ($result2->num_rows > 0) {
