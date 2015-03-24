@@ -11,7 +11,6 @@
 		var heightDiv = $(".contenu").height();
 		var heightMenu = $(".vertical_menu").height();
 		var result = heightDiv-heightMenu;
-		alert(result);
 		
 		if (heightDiv > heightMenu) {
 			$(".contentFix").height(result);
