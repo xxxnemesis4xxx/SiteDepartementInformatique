@@ -42,6 +42,25 @@
 					{
 						while($current = $result->fetch_assoc()) {
 							echo "<h2 class=\"sousTitre\">" . $current['Nom'] . "</h2>";
+							if ($current["Prix"] > 0)
+							{
+								echo '<div id="paypal1">';
+								echo '<script async="async" src="https://www.paypalobjects.com/js/external/paypal-button.min.js?merchant=somerandomassemail@stuff.com" ';
+										echo 'data-button="buynow" ';
+										echo 'data-name="' . $current["Nom"] . '"';
+										echo 'data-quantity="1" ';
+										echo 'data-amount="' . $current["Prix"] . '"';
+										echo 'data-currency="USD" ';
+										echo 'data-shipping="0" ';
+										echo 'data-tax="0" ';
+										echo 'data-tamere="0" ';
+										echo 'data-callback="http://205.236.12.52/projet/h2015/equipe6/Inscription.php" ';
+										echo 'data-custom="' . $current["ID"] . '"';
+										echo 'data-env="sandbox"';
+									echo '></script>';
+								echo '</div>';
+							}
+							/*
 							echo "<div id=\"paypal1\">" 
 							.   "<script async=\"async\" src=\"https://www.paypalobjects.com/js/external/paypal-button.min.js?merchant=Wargamer3@hotmail.com\"" 
 							.	"data-button=\"buynow\"" 
@@ -53,8 +72,10 @@
 							.	"data-tax=\"0\"" 
 							.	"data-callback=\"http://205.236.12.52/projet/h2015/equipe6/evenement.php\"" 
 							.	"data-env=\"sandbox\""
+							.	"data-country=\"ca-fr\""
 							.	"></script>"
 							. "</div>";
+							*/
 						}
 					}
 					
