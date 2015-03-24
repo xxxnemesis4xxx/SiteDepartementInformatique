@@ -27,6 +27,8 @@
 					$password = "ebola-info";
 					$dbname = "equipe6h15";
 					$TableName = "Activites";
+					date_default_timezone_set('America/New_York');
+					$currentDate = date('Y-m-d');
 					
 					// Create connection
 					$conn = new mysqli($servername, $username, $password, $dbname);
@@ -35,7 +37,7 @@
 							die("Erreur de connection: " . $conn->connect_error);
 					} 
 					
-					$sql = "select * from Activites";
+					$sql = "select * from Activites where Date >= '" . $currentDate. "'";
 					$result = $conn->query($sql);
 				
 					if ($result->num_rows > 0)
@@ -60,22 +62,6 @@
 									echo '></script>';
 								echo '</div>';
 							}
-							/*
-							echo "<div id=\"paypal1\">" 
-							.   "<script async=\"async\" src=\"https://www.paypalobjects.com/js/external/paypal-button.min.js?merchant=Wargamer3@hotmail.com\"" 
-							.	"data-button=\"buynow\"" 
-							.	"data-name=\"Cegep\"" 
-							.	"data-quantity=\"1\"" 
-							.	"data-amount=\"100\"" 
-							.	"data-currency=\"USD\"" 
-							.	"data-shipping=\"0\"" 
-							.	"data-tax=\"0\"" 
-							.	"data-callback=\"http://205.236.12.52/projet/h2015/equipe6/evenement.php\"" 
-							.	"data-env=\"sandbox\""
-							.	"data-country=\"ca-fr\""
-							.	"></script>"
-							. "</div>";
-							*/
 						}
 					}
 					
