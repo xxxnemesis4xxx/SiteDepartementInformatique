@@ -17,8 +17,8 @@
 				<style>
 					#paypal1 {
 					  display: block;
-					  padding-left: 70%;
-					  margin-top: -38;
+					  padding-left: 9%;
+					  margin-top: -50;
 					}
 				</style>
 				<?php
