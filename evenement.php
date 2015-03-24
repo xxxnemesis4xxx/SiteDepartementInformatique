@@ -12,13 +12,8 @@
 			include("header.php");
 			include("verticalmenu.php");
 		?>
-		
-			
 			<div class="contenu">
 				<h1 class="titreTemplate">Les Événements </h1>
-				<p class="textTemplate">
-					Voici un texte ou je place le bouton paypal a cote!
-				</p>
 				<style>
 					#paypal1 {
 					  display: block;
@@ -26,17 +21,45 @@
 					  margin-top: -38;
 					}
 				</style>
-				<div id="paypal1">
-					<script src="https://www.paypalobjects.com/js/external/paypal-button.min.js?merchant=somerandomassemail@stuff.com" async="async" 
-						data-name="Nom activité" 
-						data-button="buynow" 
-						data-quantity="1" 
-						data-currency="CAN" 
-						data-shipping="0" 
-						data-tax="0" 
-						data-env="sandbox"
-					></script>
-				</div>
+				<?php
+					$servername = "localhost";
+					$username = "equipe6h15";
+					$password = "ebola-info";
+					$dbname = "equipe6h15";
+					$TableName = "Activites";
+					
+					// Create connection
+					$conn = new mysqli($servername, $username, $password, $dbname);
+					// Check connection
+					if ($conn->connect_error) {
+							die("Erreur de connection: " . $conn->connect_error);
+					} 
+					
+					$sql = "select * from Activites";
+					$result = $conn->query($sql);
+				
+					if ($result->num_rows > 0)
+					{
+						while($current = $result->fetch_assoc()) {
+							echo "<h2 class=\"sousTitre\">" . $current['Nom'] . "</h2>";
+							echo "<div id=\"paypal1\">" 
+							.   "<script async=\"async\" src=\"https://www.paypalobjects.com/js/external/paypal-button.min.js?merchant=Wargamer3@hotmail.com\"" 
+							.	"data-button=\"buynow\"" 
+							.	"data-name=\"Cegep\"" 
+							.	"data-quantity=\"1\"" 
+							.	"data-amount=\"100\"" 
+							.	"data-currency=\"USD\"" 
+							.	"data-shipping=\"0\"" 
+							.	"data-tax=\"0\"" 
+							.	"data-callback=\"http://205.236.12.52/projet/h2015/equipe6/evenement.php\"" 
+							.	"data-env=\"sandbox\""
+							.	"></script>"
+							. "</div>";
+						}
+					}
+					
+					$conn->close();
+				?>
 			</div>
 			<div class="contentFix"></div>
 		<?php 
